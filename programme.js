@@ -203,7 +203,7 @@ function render(id){
   set('pb-lbl',t.pb_lbl);
   set('pb-text',p.pb[lang]);
   set('sol-lbl',t.sol_lbl);
-  set('sol-text',p.sol[lang]);
+  if(p.sol)set('sol-text',p.sol[lang]);
   set('roi-text',p.kpi[lang]);
 
   // Disclaimer
@@ -257,4 +257,4 @@ function initNav(){
   });
 }
 
-document.addEventListener('DOMContentLoaded',init);
+document.addEventListener('DOMContentLoaded
