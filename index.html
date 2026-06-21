@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alchimia Corporate — Teambuilding & Conciergerie B2B | Belgique</title>
+<meta name="description" content="Alchimia Corporate — Teambuilding immersif et conciergerie corporate en Belgique et à l'international.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:oklch(22% 0.035 195)}
+body{font-family:'Epilogue',sans-serif;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* ═══ GATE ═══ */
+#gate{
+  position:fixed;inset:0;z-index:100;
+  display:flex;overflow:hidden;
+}
+.gate-panel{
+  flex:1;display:flex;align-items:flex-end;
+  padding:clamp(2.5rem,5vw,5rem) clamp(2rem,5vw,5rem) clamp(3rem,7vh,6rem);
+  cursor:pointer;
+  transition:flex .38s cubic-bezier(0.16,1,0.3,1);
+  position:relative;overflow:hidden;
+}
+.gate-panel:focus-visible{outline:2px solid oklch(72% 0.09 75);outline-offset:-4px}
+.gate-left{background:oklch(22% 0.035 195)}
+.gate-right{background:oklch(95% 0.008 85)}
+#gate:has(.gate-left:hover) .gate-left{flex:1.32}
+#gate:has(.gate-left:hover) .gate-right{flex:0.68}
+#gate:has(.gate-right:hover) .gate-right{flex:1.32}
+#gate:has(.gate-right:hover) .gate-left{flex:0.68}
+.gate-left::before,.gate-right::before{content:'';position:absolute;inset:0;pointer-events:none}
+.gate-left::before{background:radial-gradient(ellipse 80% 60% at 70% 20%,oklch(46% 0.08 200 / 0.2) 0%,transparent 60%)}
+.gate-right::before{background:radial-gradient(ellipse 70% 50% at 30% 25%,oklch(72% 0.09 75 / 0.1) 0%,transparent 60%)}
+.gate-left::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.055;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E")}
+.gate-panel-inner{max-width:42ch;position:relative;z-index:1}
+.gate-tag{
+  display:block;font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+.gate-left .gate-tag{color:oklch(72% 0.09 75)}
+.gate-right .gate-tag{color:oklch(46% 0.08 200)}
+.gate-h{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:clamp(2.4rem,5vw,4.2rem);
+  font-weight:800;line-height:1.08;letter-spacing:-.025em;
+  margin-bottom:1.25rem;
+}
+.gate-left .gate-h{color:oklch(97% 0.005 85)}
+.gate-right .gate-h{color:oklch(22% 0.035 195)}
+.gate-p{
+  font-family:'Epilogue',sans-serif;
+  font-size:.93rem;line-height:1.72;max-width:38ch;margin-bottom:2.5rem;
+}
+.gate-left .gate-p{color:oklch(78% 0.015 195)}
+.gate-right .gate-p{color:oklch(38% 0.02 195)}
+.gate-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.88rem;font-weight:700;
+  padding:.75rem 1.5rem;border-radius:4px;
+  transition:transform .22s cubic-bezier(0.16,1,0.3,1),box-shadow .22s;
+}
+.gate-left .gate-cta{background:oklch(63% 0.14 40);color:oklch(98% 0.005 85)}
+.gate-right .gate-cta{background:oklch(22% 0.035 195);color:oklch(97% 0.005 85)}
+.gate-panel:hover .gate-cta{transform:translateX(5px);box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.gate-divider{width:1px;flex-shrink:0;background:oklch(72% 0.09 75 / 0.25);position:relative;z-index:10;transform-origin:top center;animation:gate-divider-in .9s cubic-bezier(0.16,1,0.3,1) .3s both}
+
+/* Logo — fond sombre fixe, pas de mix-blend-mode (évite le problème stacking context) */
+.gate-center{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  z-index:20;display:flex;flex-direction:column;align-items:center;
+  padding:1.6rem 2rem 1.4rem;pointer-events:none;
+}
+.gate-logo{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  pointer-events:auto;
+  background:oklch(18% 0.03 195 / 0.7);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  padding:10px 18px 9px;border-radius:8px;
+  border:1px solid oklch(97% 0.005 85 / 0.1);
+}
+.gate-logo-a{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:1.08rem;font-weight:800;letter-spacing:-.01em;
+  color:oklch(97% 0.005 85);
+}
+.gate-logo-b{
+  font-size:.48rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:oklch(72% 0.09 75);
+}
+.gate-lang{margin-top:.7rem;display:flex;align-items:center;gap:6px;pointer-events:auto}
+.glang{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-size:.68rem;font-weight:700;letter-spacing:.08em;
+  background:oklch(18% 0.03 195 / 0.55);
+  border:1px solid oklch(97% 0.005 85 / 0.12);
+  border-radius:4px;cursor:pointer;
+  padding:4px 9px;
+  color:oklch(97% 0.005 85);
+  transition:background .15s,border-color .15s;
+}
+.glang.active{background:oklch(97% 0.005 85 / 0.15);border-color:oklch(97% 0.005 85 / 0.3)}
+.glang:not(.active){opacity:.5}
+.gate-lang .sep{color:oklch(97% 0.005 85);font-size:.6rem;opacity:.25}
+#gate.exiting{transform:translateY(-100%);transition:transform .52s cubic-bezier(0.7,0,0.84,0);pointer-events:none}
+
+@keyframes gate-divider-in{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+@media(max-width:600px){
+  #gate{flex-direction:column}
+  .gate-divider{width:100%;height:1px}
+  .gate-panel{align-items:flex-start;padding:2.5rem 1.75rem 2.25rem;flex:1 !important;}
+  .gate-h{font-size:clamp(1.75rem,8vw,2.4rem)}
+  .gate-center{
+    position:static;transform:none;width:100%;
+    background:oklch(22% 0.035 195);
+    padding:1.25rem 1.75rem;flex-direction:row;
+    justify-content:space-between;align-items:center;
+  }
+  .gate-logo{background:none;border:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;flex-direction:row;align-items:baseline;gap:6px}
+  .gate-p{margin-bottom:1.75rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .gate-panel,.gate-divider{animation:none;transition:none}
+  #gate.exiting{transition:opacity .2s;opacity:0;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="gate" role="dialog" aria-label="Choisissez votre service" aria-modal="true">
+  <div class="gate-center">
+    <div class="gate-logo" id="gate-logo-link">
+      <span class="gate-logo-a">Alchimia</span>
+      <span class="gate-logo-b">Corporate</span>
+    </div>
+    <div class="gate-lang">
+      <button class="glang active" id="glang-fr" aria-label="Français">FR</button>
+      <span class="sep">/</span>
+      <button class="glang" id="glang-en" aria-label="English">EN</button>
+    </div>
+  </div>
+
+  <div class="gate-panel gate-left" id="panel-tb" role="button" tabindex="0" aria-label="Teambuilding et Formation">
+    <div class="gate-panel-inner">
+      <span class="gate-tag" data-i="tb_tag">Teambuilding &amp; Formation</span>
+      <h2 class="gate-h" data-i="tb_h">Transformer<br>votre équipe.</h2>
+      <p class="gate-p" data-i="tb_p">Expériences immersives et formations ancrées dans les neurosciences.</p>
+      <div class="gate-cta">
+        <span data-i="tb_cta">Explorer les programmes</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="gate-divider" aria-hidden="true"></div>
+
+  <div class="gate-panel gate-right" id="panel-cv" role="button" tabindex="0" aria-label="Conciergerie Corporate">
+    <div class="gate-panel-inner">
+      <span class="gate-tag" data-i="cv_tag">Conciergerie Corporate</span>
+      <h2 class="gate-h" data-i="cv_h">Votre assistant<br>personnel.</h2>
+      <p class="gate-p" data-i="cv_p">Un contact dédié pour tous vos voyages d'affaires, incentives et événements.</p>
+      <div class="gate-cta">
+        <span data-i="cv_cta">Découvrir la conciergerie</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="gate.js"></script>
+</body>
+</html>
