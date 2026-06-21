@@ -7,6 +7,8 @@ const PROGS={
     type:{fr:'Crise CODIR',en:'CODIR Crisis'},
     emoji:'⚡',
     img:'img_centrale_1.png',
+    pb:{fr:'Votre CODIR croit bien fonctionner — jusqu\'à ce que la pression révèle les silences, les positions camouflées et les décisions jamais vraiment prises.',en:'Your CODIR believes it functions well — until real pressure exposes the silences, hidden positions and decisions never truly made.'},
+    kpi:{fr:'−40% sur le temps de décision · +35% d\'exécution · NPS 72–89',en:'−40% decision time · +35% execution · NPS 72–89'},
     intro:{
       fr:'Un scénario de crise fictif, conçu à partir d\'un diagnostic confidentiel de votre propre organisation, éclate en temps réel dans une salle de contrôle militaro-industrielle. Pendant six heures, votre CODIR fait face à ce qu\'il n\'a jamais vu — sans téléphone, sans script, sous caméra. Le lendemain matin, il regarde les images.',
       en:'A fictional crisis scenario, designed from a confidential diagnostic of your own organisation, erupts in real time in a military-grade control room. For six hours, your CODIR faces what it has never seen — without phones, without scripts, on camera. The next morning, it watches the footage.'
@@ -34,6 +36,8 @@ const PROGS={
     type:{fr:'Intégration d\'équipes',en:'Team Integration'},
     emoji:'🌙',
     img:'img_frontiere_0.png',
+    pb:{fr:'Deux équipes coexistent sans se faire confiance. Les séminaires de fusion n\'ont rien changé. Les silos résistent.',en:'Two teams coexist without trust. Post-merger seminars changed nothing. Silos persist.'},
+    kpi:{fr:'−52% de méfiance intergroupes · +340% d\'interactions · NPS 78–92',en:'−52% intergroup mistrust · +340% interactions · NPS 78–92'},
     intro:{
       fr:'Deux équipes arrivent séparément. Elles repartent ensemble — transformées par une nuit que leurs cerveaux n\'oublieront pas. Conçu pour les post-fusions, les réorganisations et toutes les situations où la méfiance entre groupes a résisté à tout ce qu\'on a essayé.',
       en:'Two teams arrive separately. They leave together — transformed by a night their brains will not forget. Designed for post-mergers, reorganisations, and every situation where intergroup mistrust has resisted everything that has been tried.'
@@ -61,6 +65,8 @@ const PROGS={
     type:{fr:'Performance commerciale',en:'Sales Performance'},
     emoji:'🎭',
     img:'img_miroir_0.png',
+    pb:{fr:'Vos commerciaux répètent les mêmes erreurs face aux clients difficiles — sans jamais les voir. Les formations classiques n\'y changent rien.',en:'Your salespeople repeat the same mistakes with difficult clients — without ever seeing them. Classical training changes nothing.'},
+    kpi:{fr:'+23–31% de taux de conversion · 87% de rétention · NPS 81–94',en:'+23–31% conversion rate · 87% retention · NPS 81–94'},
     intro:{
       fr:'Pendant une journée, des acteurs professionnels jouent vos clients les plus difficiles. Vos commerciaux croient vivre de vrais rendez-vous. Tout est filmé. Le lendemain matin, chacun regarde — pour la première fois — qui il est vraiment en face d\'un client difficile.',
       en:'For one day, professional actors play your most difficult clients. Your salespeople believe they are in real appointments. Everything is filmed. The next morning, each person watches — for the first time — who they really are facing a difficult client.'
@@ -88,6 +94,8 @@ const PROGS={
     type:{fr:'Négociation GIGN',en:'GIGN Negotiation'},
     emoji:'🎯',
     img:'img_silence_0.png',
+    pb:{fr:'Sous pression, vos équipes argumentent, cèdent trop vite ou se bloquent. Aucun cadre de négociation ne résiste quand l\'amygdale prend le contrôle.',en:'Under pressure, your teams argue, concede too fast or freeze. No negotiation framework survives when the amygdala takes over.'},
+    kpi:{fr:'+19% de valeur des accords · −43% de conflits internes · NPS 85–94',en:'+19% deal value · −43% internal conflicts · NPS 85–94'},
     intro:{
       fr:'D\'anciens négociateurs du GIGN, du BRI, du RAID et du FBI transmettent leurs techniques exactes sur deux jours — avec exercices filmés en cellules de négociation réelles. Ce qui se transmet ici ne s\'apprend nulle part ailleurs.',
       en:'Former GIGN, BRI, RAID and FBI negotiators teach their exact techniques over two days — with filmed exercises in real negotiation cells. What is transmitted here cannot be learned anywhere else.'
@@ -122,7 +130,8 @@ const PT={
     cta_p:'Décrivez-nous votre contexte. Nous revenons sous 24h avec une proposition adaptée.',
     cta_btn:'Prendre contact',
     pb_lbl:'Le problème',
-    sol_lbl:'La solution'
+    sol_lbl:'La solution',
+    disclaimer:'Programme exemple — chaque déploiement est entièrement conçu sur mesure à partir d\'un diagnostic de votre organisation.'
   },
   en:{
     back:'← All programmes',
@@ -134,7 +143,8 @@ const PT={
     cta_p:'Tell us your context. We respond within 24h with a tailored proposal.',
     cta_btn:'Get in touch',
     pb_lbl:'The challenge',
-    sol_lbl:'The approach'
+    sol_lbl:'The approach',
+    disclaimer:'Example programme — every deployment is fully tailored from a diagnostic of your specific organisation.'
   }
 };
 
@@ -145,88 +155,105 @@ function init(){
   if(saved&&(saved==='fr'||saved==='en'))lang=saved;
 
   const id=new URLSearchParams(window.location.search).get('id');
-  if(!PROGS[id]){window.location.href='teambuilding.html';return;}
+  if(!id||!PROGS[id]){window.location.href='teambuilding.html';return;}
 
-  document.getElementById('btn-fr').addEventListener('click',function(){setLang('fr');});
-  document.getElementById('btn-en').addEventListener('click',function(){setLang('en');});
+  var btnFr=document.getElementById('btn-fr');
+  var btnEn=document.getElementById('btn-en');
+  if(btnFr)btnFr.addEventListener('click',function(){setLang('fr');});
+  if(btnEn)btnEn.addEventListener('click',function(){setLang('en');});
 
   render(id);
-  initScrollAnim();
   initNav();
+  initScrollAnim();
 }
 
 function setLang(l){
   lang=l;
   sessionStorage.setItem('alchimia-lang',l);
-  document.getElementById('btn-fr').classList.toggle('active',l==='fr');
-  document.getElementById('btn-en').classList.toggle('active',l==='en');
-  const id=new URLSearchParams(window.location.search).get('id');
-  render(id);
+  var btnFr=document.getElementById('btn-fr');
+  var btnEn=document.getElementById('btn-en');
+  if(btnFr)btnFr.classList.toggle('active',l==='fr');
+  if(btnEn)btnEn.classList.toggle('active',l==='en');
+  var id=new URLSearchParams(window.location.search).get('id');
+  if(id&&PROGS[id])render(id);
 }
 
+function set(id,text){var el=document.getElementById(id);if(el)el.textContent=text;}
+function setHtml(id,html){var el=document.getElementById(id);if(el)el.innerHTML=html;}
+
 function render(id){
-  const p=PROGS[id];
-  const t=PT[lang];
+  var p=PROGS[id];
+  var t=PT[lang];
+  if(!p||!t)return;
 
   document.title=p.name[lang]+' — Alchimia Corporate';
 
   // Hero
-  document.getElementById('hero').style.backgroundImage='url('+p.img+')';
-  document.getElementById('hero-type').textContent=p.type[lang];
-  document.getElementById('hero-emoji').textContent=p.emoji;
-  document.getElementById('hero-name').textContent=p.name[lang];
-  document.getElementById('hero-sub').textContent=p.sub[lang];
+  var hero=document.getElementById('hero');
+  if(hero)hero.style.backgroundImage='url('+p.img+')';
+  set('hero-type',p.type[lang]);
+  set('hero-emoji',p.emoji);
+  set('hero-name',p.name[lang]);
+  set('hero-sub',p.sub[lang]);
 
-  // Back link
+  // Back links
   document.querySelectorAll('.back-lnk').forEach(function(el){el.textContent=t.back;});
 
   // Framing
-  document.getElementById('pb-lbl').textContent=t.pb_lbl;
-  document.getElementById('pb-text').textContent=p.pb[lang];
-  document.getElementById('sol-lbl').textContent=t.sol_lbl;
-  document.getElementById('sol-text').textContent=p.sol[lang];
+  set('pb-lbl',t.pb_lbl);
+  set('pb-text',p.pb[lang]);
+  set('sol-lbl',t.sol_lbl);
+  set('sol-text',p.sol[lang]);
+  set('roi-text',p.kpi[lang]);
+
+  // Disclaimer
+  set('disclaimer-text',t.disclaimer);
 
   // Intro
-  document.getElementById('intro-text').textContent=p.intro[lang];
+  set('intro-text',p.intro[lang]);
 
   // Sections
-  document.getElementById('lbl-mech').textContent=t.section_mech;
-  document.getElementById('mechanism-text').innerHTML=p.mechanism[lang].split('\n\n').map(function(para){return'<p>'+para+'</p>';}).join('');
+  set('lbl-mech',t.section_mech);
+  setHtml('mechanism-text',p.mechanism[lang].split('\n\n').map(function(para){return'<p>'+para+'</p>';}).join(''));
 
-  document.getElementById('lbl-psy').textContent=t.section_psy;
-  document.getElementById('psychology-text').innerHTML=p.psychology[lang].split('\n\n').map(function(para){return'<p>'+para+'</p>';}).join('');
+  set('lbl-psy',t.section_psy);
+  setHtml('psychology-text',p.psychology[lang].split('\n\n').map(function(para){return'<p>'+para+'</p>';}).join(''));
 
   // Results
-  document.getElementById('lbl-res').textContent=t.section_res;
-  document.getElementById('results-grid').innerHTML=p.results.map(function(r){
-    return'<div class="stat-card fade"><div class="stat-num">'+r.num+'</div><div class="stat-lbl">'+r.lbl[lang]+'</div>'+(r.src?'<div class="stat-src">'+r.src+'</div>':'')+'</div>';
-  }).join('');
-  document.getElementById('nps-lbl').textContent=t.nps_lbl;
-  document.getElementById('nps-val').textContent=p.nps;
+  set('lbl-res',t.section_res);
+  setHtml('results-grid',p.results.map(function(r){
+    return'<div class="stat-card"><div class="stat-num">'+r.num+'</div><div class="stat-lbl">'+r.lbl[lang]+'</div>'+(r.src?'<div class="stat-src">'+r.src+'</div>':'')+'</div>';
+  }).join(''));
+  set('nps-lbl',t.nps_lbl);
+  set('nps-val',p.nps);
 
   // CTA
-  document.getElementById('cta-h').textContent=t.cta_h;
-  document.getElementById('cta-p').textContent=t.cta_p;
-  document.getElementById('cta-btn').textContent=t.cta_btn;
+  set('cta-h',t.cta_h);
+  set('cta-p',t.cta_p);
+  set('cta-btn',t.cta_btn);
 
-  // Language buttons
-  document.getElementById('btn-fr').classList.toggle('active',lang==='fr');
-  document.getElementById('btn-en').classList.toggle('active',lang==='en');
-
-  // Re-init scroll anim after re-render
-  initScrollAnim();
+  // Lang buttons
+  var btnFr=document.getElementById('btn-fr');
+  var btnEn=document.getElementById('btn-en');
+  if(btnFr)btnFr.classList.toggle('active',lang==='fr');
+  if(btnEn)btnEn.classList.toggle('active',lang==='en');
 }
 
 function initScrollAnim(){
-  const obs=new IntersectionObserver(function(entries){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.anim').forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
-  },{threshold:.08});
-  document.querySelectorAll('.fade').forEach(function(el){el.classList.remove('in');obs.observe(el);});
+  },{threshold:.06,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.anim').forEach(function(el){obs.observe(el);});
 }
 
 function initNav(){
   window.addEventListener('scroll',function(){
-    document.getElementById('nav').classList.toggle('scrolled',window.scrollY>30);
+    var nav=document.getElementById('nav');
+    if(nav)nav.classList.toggle('scrolled',window.scrollY>30);
   });
 }
 

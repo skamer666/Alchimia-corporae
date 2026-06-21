@@ -180,19 +180,22 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .tb-f.on,.tb-f:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
 .tb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .tb-card{display:block;text-decoration:none;color:inherit;background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:transform .22s var(--ease-expo),box-shadow .22s}
-.tb-card:hover{transform:translateY(-5px) scale(1.012);box-shadow:var(--shadow-lg)}
-.tb-img{height:210px;background-size:cover;background-position:center;position:relative;overflow:hidden}
-.tb-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,oklch(0% 0 0 / 0.5))}
-.tb-emoji-img{position:absolute;bottom:10px;right:12px;font-size:1.6rem;z-index:2}
-.tb-body{padding:1.25rem 1.35rem 1.45rem}
-.tb-type-chip{display:inline-block;margin-bottom:.7rem}
-.tb-card h3{font-size:1rem;color:var(--navy);margin-bottom:.9rem;font-weight:700;letter-spacing:-.01em}
-.tb-pb,.tb-sol{margin:.6rem 0}
-.tb-pb-lbl,.tb-sol-lbl{display:block;font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:3px}
-.tb-pb-lbl{color:var(--coral)}
-.tb-sol-lbl{color:var(--teal)}
-.tb-pb p,.tb-sol p{font-size:.78rem;line-height:1.55;margin:0;color:var(--body)}
-.tb-discover{display:inline-block;margin-top:.9rem;font-size:.78rem;font-weight:700;color:var(--teal);font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.01em}
+.tb-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.tb-img{height:190px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.tb-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,oklch(0% 0 0 / 0.18) 0%,oklch(0% 0 0 / 0.45) 100%)}
+.tb-type-over{position:absolute;top:10px;left:10px;z-index:2}
+.tb-emoji-img{position:absolute;bottom:10px;right:12px;font-size:1.5rem;z-index:2}
+.tb-body{padding:1.3rem 1.4rem 1.5rem}
+.tb-name{font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.75rem}
+.tb-pb-block{margin-bottom:.9rem}
+.tb-pb-lbl{display:block;font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--coral);margin-bottom:.35rem}
+.tb-pb-text{font-size:.92rem;line-height:1.5;margin:0;color:var(--navy);font-weight:600;font-family:'Bricolage Grotesque',sans-serif}
+.tb-kpi-block{background:oklch(48% 0.12 190 / 0.07);border-left:3px solid var(--teal);padding:.65rem .8rem;border-radius:0 6px 6px 0;margin-bottom:.9rem}
+.tb-kpi-lbl{display:block;font-size:.56rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--teal);margin-bottom:.25rem}
+.tb-kpi-text{font-size:.8rem;font-weight:700;color:var(--teal);margin:0;font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.01em}
+.tb-card-footer{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding-top:.75rem;border-top:1px solid var(--border)}
+.tb-example{font-size:.6rem;color:var(--muted);font-style:italic;line-height:1.3;flex:1}
+.tb-discover{font-size:.74rem;font-weight:700;color:var(--teal);font-family:'Bricolage Grotesque',sans-serif;white-space:nowrap}
 .tb-card:hover .tb-discover{text-decoration:underline}
 
 /* ─── FORMATION ─── */
@@ -569,15 +572,4 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       <div class="foot-col"><h4 data-i18n="ft_other">Autres services</h4><ul>
         <li><a href="conciergerie.html" data-i18n="ft_conc">Conciergerie</a></li>
         <li><a href="#eco" data-i18n="ft_eco">Éco-responsabilité</a></li>
-        <li><a href="#contact" data-i18n="ft_ct">Contact</a></li>
-        <li><a href="index.html" data-i18n="ft_home">Accueil</a></li>
-      </ul></div>
-      <div class="foot-col"><h4 data-i18n="ft_leg">Légal</h4><ul>
-        <li><a href="#" data-i18n="ft_priv">Confidentialité</a></li>
-        <li><a href="#" data-i18n="ft_ment">Mentions légales</a></li>
-        <li><a href="#" data-i18n="ft_cgv">CGV</a></li>
-      </ul></div>
-    </div>
-    <div class="foot-bottom">
-      <p class="foot-copy" data-i18n="ft_copy">© 2026 Alchimia Corporate SRL — Belgique.</p>
-      <div class="foot-eco"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0
+   

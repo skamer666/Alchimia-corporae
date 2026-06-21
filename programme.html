@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ── */
 :root{
   --navy:oklch(22% 0.06 260);
   --teal:oklch(48% 0.12 190);
@@ -18,7 +17,7 @@
   --body:oklch(35% 0.02 260);
   --muted:oklch(55% 0.02 260);
   --border:oklch(89% 0.01 260);
-  --shadow-lg:0 12px 40px oklch(0% 0 0 / 0.12);
+  --shadow-lg:0 16px 48px oklch(0% 0 0 / 0.13);
   --ease-expo:cubic-bezier(0.19,1,0.22,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -26,258 +25,176 @@ html{scroll-behavior:smooth}
 body{font-family:'Epilogue',sans-serif;font-weight:400;color:var(--body);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;color:var(--navy)}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
 p{margin-bottom:1.1em}
 p:last-child{margin-bottom:0}
 
-/* ── NAV ── */
-#nav{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:oklch(98% 0.004 85 / 0.97);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-  transition:box-shadow .25s;
-}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:oklch(98% 0.004 85 / 0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
 #nav.scrolled{box-shadow:0 2px 20px oklch(0% 0 0 / 0.08)}
 .nav-inner{max-width:1160px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
 .nav-logo span{color:var(--teal)}
-.nav-right{display:flex;align-items:center;gap:1rem}
 .lang-sw{display:flex;gap:4px}
 .lang-sw button{font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;padding:4px 10px;border-radius:20px;border:1.5px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .18s}
 .lang-sw button.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.back-lnk{font-family:'Bricolage Grotesque',sans-serif;font-size:.78rem;font-weight:600;color:var(--teal);white-space:nowrap}
+.back-lnk{font-family:'Bricolage Grotesque',sans-serif;font-size:.78rem;font-weight:600;color:var(--teal)}
 .back-lnk:hover{text-decoration:underline}
 
-/* ── HERO ── */
-#hero{
-  width:100%;height:72vh;min-height:480px;
-  background-size:cover;background-position:center;
-  position:relative;display:flex;align-items:flex-end;
-  margin-top:64px;
-}
-#hero::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,oklch(0% 0 0 / 0.15) 0%,oklch(0% 0 0 / 0.72) 100%);
-}
-.hero-content{
-  position:relative;z-index:2;
-  width:100%;max-width:860px;margin:0 auto;
-  padding:0 2rem 3.5rem;
-}
-.hero-type-row{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
-.chip-hero{
-  display:inline-block;padding:5px 14px;border-radius:20px;
-  background:oklch(100% 0 0 / 0.15);backdrop-filter:blur(8px);
-  color:#fff;font-family:'Bricolage Grotesque',sans-serif;
-  font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  border:1px solid oklch(100% 0 0 / 0.25);
-}
-#hero-emoji{font-size:2rem}
-#hero-name{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:clamp(2rem,5vw,3.4rem);font-weight:800;
-  color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:.5rem;
-}
-#hero-sub{color:oklch(100% 0 0 / 0.75);font-size:1.05rem;font-weight:300}
+/* HERO */
+#hero{width:100%;height:68vh;min-height:440px;background-size:cover;background-position:center;position:relative;display:flex;align-items:flex-end;margin-top:64px}
+#hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,oklch(0% 0 0 / 0.1) 0%,oklch(0% 0 0 / 0.75) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:860px;margin:0 auto;padding:0 2rem 3rem}
+.hero-chip{display:inline-block;padding:5px 14px;border-radius:20px;background:oklch(100% 0 0 / 0.15);backdrop-filter:blur(8px);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;border:1px solid oklch(100% 0 0 / 0.25);margin-bottom:.9rem}
+#hero-emoji{font-size:1.8rem;display:block;margin-bottom:.4rem}
+#hero-name{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1;margin-bottom:.5rem}
+#hero-sub{color:oklch(100% 0 0 / 0.72);font-size:1.05rem;font-weight:300}
 
-/* ── LAYOUT ── */
+/* FRAMING — problème / ROI */
+.framing{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.framing-pb{padding:2.5rem 2.5rem 2.5rem 2rem;border-right:1px solid var(--border)}
+.framing-roi{padding:2.5rem 2rem 2.5rem 2.5rem;background:oklch(48% 0.12 190 / 0.04)}
+.frame-lbl{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:.5rem}
+.lbl-pb{color:var(--coral)}
+.lbl-roi{color:var(--teal)}
+#pb-text{font-size:1.05rem;font-weight:600;font-family:'Bricolage Grotesque',sans-serif;color:var(--navy);line-height:1.45;margin:0}
+#roi-text{font-size:1.15rem;font-weight:800;font-family:'Bricolage Grotesque',sans-serif;color:var(--teal);line-height:1.35;letter-spacing:-.02em;margin:0}
+
+/* DISCLAIMER BANNER */
+.disclaimer-banner{background:oklch(55% 0.04 70 / 0.08);border-top:3px solid var(--sable);padding:1.25rem 2rem;text-align:center}
+#disclaimer-text{font-size:.78rem;color:var(--sable);font-style:italic}
+
+/* LAYOUT */
 .container{max-width:820px;margin:0 auto;padding:0 2rem}
-.wide{max-width:1060px;margin:0 auto;padding:0 2rem}
 
-/* ── FRAMING STRIP ── */
-.framing{
-  display:grid;grid-template-columns:1fr 1fr;gap:0;
-  border-bottom:1px solid var(--border);
-}
-.framing-cell{padding:2.5rem 2rem;border-right:1px solid var(--border)}
-.framing-cell:last-child{border-right:none}
-.framing-lbl{
-  display:block;font-size:.6rem;text-transform:uppercase;
-  letter-spacing:.12em;font-weight:700;margin-bottom:.6rem;
-}
-.framing-lbl.pb{color:var(--coral)}
-.framing-lbl.sol{color:var(--teal)}
-.framing-cell p{font-size:.92rem;line-height:1.6;color:var(--body)}
+/* INTRO */
+.intro-text{font-size:1.08rem;line-height:1.75;color:var(--navy);font-weight:400;padding:3.5rem 0 3rem;border-bottom:1px solid var(--border)}
 
-/* ── CONTENT ── */
-.content-wrap{padding:5rem 0}
-.content-section{margin-bottom:4rem}
-.section-label{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:.62rem;font-weight:700;text-transform:uppercase;
-  letter-spacing:.12em;color:var(--teal);
-  display:block;margin-bottom:1.2rem;
-}
-.content-section .prose p{
-  font-size:.95rem;line-height:1.75;color:var(--body);
-  margin-bottom:1.2em;
-}
-.content-section .prose p:last-child{margin-bottom:0}
-.content-divider{
-  width:48px;height:3px;background:var(--teal);
-  border-radius:2px;margin-bottom:1.5rem;opacity:.5;
-}
+/* CONTENT SECTIONS */
+.content-wrap{padding:4rem 0}
+.content-section{margin-bottom:3.5rem}
+.section-label{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--teal);margin-bottom:1.1rem}
+.section-bar{width:40px;height:3px;background:var(--teal);border-radius:2px;margin-bottom:1.5rem;opacity:.45}
+.prose p{font-size:.95rem;line-height:1.8;color:var(--body);margin-bottom:1.25em}
+.prose p:last-child{margin-bottom:0}
 
-/* ── INTRO ── */
-.intro-text{
-  font-size:1.1rem;line-height:1.7;color:var(--navy);
-  font-weight:400;padding:3rem 0 4rem;
-  border-bottom:1px solid var(--border);
-}
+/* RESULTS */
+.results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:1.75rem}
+.stat-card{background:var(--lin);border-radius:10px;padding:1.5rem 1.35rem;border:1px solid var(--border)}
+.stat-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:var(--teal);letter-spacing:-.04em;line-height:1;margin-bottom:.4rem}
+.stat-lbl{font-size:.8rem;color:var(--navy);font-weight:500;line-height:1.4;margin-bottom:.3rem}
+.stat-src{font-size:.62rem;color:var(--muted)}
+.nps-row{margin-top:1.25rem;padding:1.1rem 1.35rem;background:oklch(48% 0.12 190 / 0.08);border-radius:10px;border:1px solid oklch(48% 0.12 190 / 0.2);display:flex;align-items:center;gap:1.25rem}
+#nps-lbl{font-size:.68rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.07em}
+#nps-val{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:800;color:var(--teal)}
 
-/* ── RESULTS ── */
-.results-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;
-  margin-top:2rem;
-}
-.stat-card{
-  background:var(--lin);border-radius:10px;
-  padding:1.6rem 1.4rem;
-  border:1px solid var(--border);
-}
-.stat-num{
-  font-family:'Bricolage Grotesque',sans-serif;
-  font-size:2.2rem;font-weight:800;color:var(--teal);
-  letter-spacing:-.04em;line-height:1;margin-bottom:.4rem;
-}
-.stat-lbl{font-size:.82rem;color:var(--navy);font-weight:500;line-height:1.4;margin-bottom:.35rem}
-.stat-src{font-size:.65rem;color:var(--muted)}
-.nps-row{
-  margin-top:1.5rem;padding:1.25rem 1.4rem;
-  background:oklch(48% 0.12 190 / 0.08);
-  border-radius:10px;border:1px solid oklch(48% 0.12 190 / 0.2);
-  display:flex;align-items:center;gap:1rem;
-}
-#nps-lbl{font-size:.75rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.06em}
-#nps-val{font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;font-weight:800;color:var(--teal)}
-
-/* ── CTA ── */
-.cta-section{
-  background:var(--navy);color:#fff;
-  border-radius:14px;padding:3rem;
-  text-align:center;margin:4rem 0;
-}
-.cta-section h2{color:#fff;font-size:1.5rem;margin-bottom:.75rem}
-.cta-section p{color:oklch(100% 0 0 / 0.65);margin-bottom:1.75rem;font-size:.92rem}
-.btn{
-  display:inline-block;padding:14px 32px;border-radius:8px;
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:700;
-  font-size:.88rem;cursor:pointer;transition:all .2s;border:none;
-  letter-spacing:-.01em;
-}
+/* CTA */
+.cta-section{background:var(--navy);color:#fff;border-radius:14px;padding:3rem;text-align:center;margin:4rem 0}
+.cta-section h2{color:#fff;font-size:1.45rem;margin-bottom:.65rem}
+.cta-section p{color:oklch(100% 0 0 / 0.6);margin-bottom:1.75rem;font-size:.9rem}
+.btn{display:inline-block;padding:14px 36px;border-radius:8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;transition:all .2s;border:none;letter-spacing:-.01em}
 .btn-white{background:#fff;color:var(--navy)}
 .btn-white:hover{background:var(--lin)}
 
-/* ── FADE ANIM ── */
-.fade{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease-expo),transform .6s var(--ease-expo)}
-.fade.in{opacity:1;transform:none}
+/* ENTRANCE ANIMATIONS — no IntersectionObserver dependency */
+.anim{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease-expo),transform .55s var(--ease-expo)}
+.anim.in{opacity:1;transform:none}
 
-/* ── FOOTER ── */
-.prog-footer{
-  border-top:1px solid var(--border);
-  padding:2rem;text-align:center;
-}
-.prog-footer a{font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:600;color:var(--teal)}
+/* FOOTER */
+.prog-footer{border-top:1px solid var(--border);padding:2rem;text-align:center}
 
-/* ── RESPONSIVE ── */
 @media(max-width:700px){
   .framing{grid-template-columns:1fr}
-  .framing-cell{border-right:none;border-bottom:1px solid var(--border);padding:1.75rem 1.25rem}
-  .framing-cell:last-child{border-bottom:none}
+  .framing-pb{border-right:none;border-bottom:1px solid var(--border);padding:1.75rem 1.25rem}
+  .framing-roi{padding:1.75rem 1.25rem}
   .results-grid{grid-template-columns:1fr}
-  #hero-name{font-size:clamp(1.6rem,6vw,2.5rem)}
+  #hero-name{font-size:clamp(1.6rem,7vw,2.2rem)}
   .cta-section{padding:2rem 1.25rem}
-  .container,.wide{padding:0 1.25rem}
-  .content-wrap{padding:3rem 0}
+  .container{padding:0 1.25rem}
+  .content-wrap{padding:2.5rem 0}
+  .disclaimer-banner{padding:1rem 1.25rem}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <div style="display:flex;align-items:center;gap:1.5rem">
-      <a href="teambuilding.html" class="back-lnk" id="back-top">← Tous les programmes</a>
+    <div style="display:flex;align-items:center;gap:1.75rem">
+      <a href="teambuilding.html" class="back-lnk">← Tous les programmes</a>
       <a href="index.html" class="nav-logo">Alchimia <span>Corporate</span></a>
     </div>
-    <div class="nav-right">
-      <div class="lang-sw">
-        <button id="btn-fr">FR</button>
-        <button id="btn-en">EN</button>
-      </div>
+    <div class="lang-sw">
+      <button id="btn-fr">FR</button>
+      <button id="btn-en">EN</button>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <div id="hero">
   <div class="hero-content">
-    <div class="hero-type-row">
-      <span class="chip-hero" id="hero-type"></span>
-      <span id="hero-emoji"></span>
-    </div>
+    <span class="hero-chip" id="hero-type"></span>
+    <span id="hero-emoji"></span>
     <h1 id="hero-name"></h1>
     <p id="hero-sub"></p>
   </div>
 </div>
 
-<!-- FRAMING : problème → solution -->
+<!-- PROBLÈME → ROI -->
 <div class="framing">
-  <div class="framing-cell fade">
-    <span class="framing-lbl pb" id="pb-lbl">Le problème</span>
+  <div class="framing-pb">
+    <span class="frame-lbl lbl-pb" id="pb-lbl">Le problème</span>
     <p id="pb-text"></p>
   </div>
-  <div class="framing-cell fade">
-    <span class="framing-lbl sol" id="sol-lbl">La solution</span>
-    <p id="sol-text"></p>
+  <div class="framing-roi">
+    <span class="frame-lbl lbl-roi" id="sol-lbl">ROI documenté</span>
+    <p id="roi-text"></p>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- DISCLAIMER -->
+<div class="disclaimer-banner">
+  <span id="disclaimer-text">Programme exemple — chaque déploiement est entièrement conçu sur mesure à partir d'un diagnostic de votre organisation.</span>
+</div>
+
+<!-- MAIN -->
 <div class="container">
-  <p class="intro-text fade" id="intro-text"></p>
+
+  <p class="intro-text anim" id="intro-text"></p>
 
   <div class="content-wrap">
 
-    <!-- EN QUOI ÇA CONSISTE -->
-    <div class="content-section fade">
+    <div class="content-section anim">
       <span class="section-label" id="lbl-mech">En quoi ça consiste</span>
-      <div class="content-divider"></div>
+      <div class="section-bar"></div>
       <div class="prose" id="mechanism-text"></div>
     </div>
 
-    <!-- PSYCHOLOGIE -->
-    <div class="content-section fade">
+    <div class="content-section anim">
       <span class="section-label" id="lbl-psy">La mécanique psychologique</span>
-      <div class="content-divider"></div>
+      <div class="section-bar"></div>
       <div class="prose" id="psychology-text"></div>
     </div>
 
-    <!-- RÉSULTATS -->
-    <div class="content-section fade">
+    <div class="content-section anim">
       <span class="section-label" id="lbl-res">Résultats documentés</span>
-      <div class="content-divider"></div>
+      <div class="section-bar"></div>
       <div class="results-grid" id="results-grid"></div>
-      <div class="nps-row fade">
+      <div class="nps-row">
         <span id="nps-lbl">NPS moyen</span>
         <span id="nps-val"></span>
       </div>
     </div>
 
-  </div><!-- /content-wrap -->
+  </div>
 
-  <!-- CTA -->
-  <div class="cta-section fade">
+  <div class="cta-section anim">
     <h2 id="cta-h">Demander ce programme</h2>
     <p id="cta-p">Décrivez-nous votre contexte. Nous revenons sous 24h avec une proposition adaptée.</p>
     <a href="teambuilding.html#contact" class="btn btn-white" id="cta-btn">Prendre contact</a>
   </div>
 
-</div><!-- /container -->
+</div>
 
-<!-- FOOTER -->
 <div class="prog-footer">
   <a href="teambuilding.html" class="back-lnk">← Tous les programmes</a>
 </div>
