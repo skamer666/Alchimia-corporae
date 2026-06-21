@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alchimia Corporate — Conciergerie Corporate B2B | Belgique</title>
+<meta name="description" content="Votre chargé de voyage dédié pour tous vos déplacements professionnels, incentives et événements corporate. Belgique et international.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:oklch(22% 0.035 195);
+  --navy-mid:oklch(27% 0.032 195);
+  --teal:oklch(46% 0.08 200);
+  --teal-dark:oklch(38% 0.08 200);
+  --teal-pale:oklch(95% 0.025 200);
+  --sable:oklch(72% 0.09 75);
+  --sable-dk:oklch(58% 0.09 75);
+  --coral:oklch(63% 0.14 40);
+  --coral-dk:oklch(54% 0.14 40);
+  --lin:oklch(95% 0.008 85);
+  --white:oklch(98% 0.004 85);
+  --txt:oklch(22% 0.035 195);
+  --muted:oklch(46% 0.02 195);
+  --border:oklch(46% 0.08 200 / 0.1);
+  --shadow-sm:0 1px 4px oklch(22% 0.035 195 / 0.07);
+  --shadow:0 4px 20px oklch(22% 0.035 195 / 0.09);
+  --shadow-lg:0 12px 48px oklch(22% 0.035 195 / 0.13);
+  --ease-expo:cubic-bezier(0.16,1,0.3,1);
+  --space-xs:4px; --space-sm:8px; --space-md:16px; --space-lg:24px;
+  --space-xl:32px; --space-2xl:48px; --space-3xl:64px; --space-4xl:96px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Epilogue',sans-serif;color:var(--txt);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;font-weight:700}
+h1{font-size:clamp(2.6rem,5.5vw,4.4rem);letter-spacing:-.025em}
+h2{font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:-.02em}
+h3{font-size:clamp(1rem,1.8vw,1.2rem);font-weight:600}
+p{color:var(--muted);line-height:1.75;font-size:.93rem}
+.eyebrow{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sable);margin-bottom:.9rem}
+.container{max-width:1160px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem)}
+section{padding:clamp(4rem,8vw,6.5rem) 0}
+.bg-lin{background:var(--lin)}
+.bg-navy{background:var(--navy)}
+
+/* BTN */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:.8rem 1.75rem;border-radius:4px;font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;border:none;transition:transform .2s var(--ease-expo),box-shadow .2s;letter-spacing:.01em}
+.btn-coral{background:var(--coral);color:var(--white)}
+.btn-coral:hover{background:var(--coral-dk);transform:translateY(-2px);box-shadow:0 6px 20px oklch(63% 0.14 40 / 0.3)}
+.btn-teal{background:var(--teal);color:var(--white)}
+.btn-teal:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 6px 20px oklch(46% 0.08 200 / 0.3)}
+.btn-ghost{background:transparent;color:var(--white);border:1.5px solid oklch(97% 0.005 85 / 0.3)}
+.btn-ghost:hover{background:oklch(97% 0.005 85 / 0.08);border-color:oklch(97% 0.005 85 / 0.55)}
+.btn-outline{background:transparent;color:var(--teal);border:1.5px solid var(--teal)}
+.btn-outline:hover{background:var(--teal-pale)}
+.btn-sable{background:var(--sable);color:var(--navy)}
+.btn-sable:hover{background:var(--sable-dk);transform:translateY(-2px)}
+
+/* FADE */
+.fade{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease-expo),transform .55s var(--ease-expo)}
+.fade.in{opacity:1;transform:none}
+.fade-right{opacity:0;transform:translateX(30px);transition:opacity .6s var(--ease-expo),transform .6s var(--ease-expo)}
+.fade-right.in{opacity:1;transform:none}
+
+/* ─── NAV ─── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:oklch(98% 0.004 85 / 0.97);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .25s;
+}
+#nav.scrolled{box-shadow:0 2px 28px oklch(22% 0.035 195 / 0.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;flex-direction:column;line-height:1;gap:3px}
+.nav-logo-a{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:800;color:var(--navy);letter-spacing:-.015em}
+.nav-logo-b{font-size:.5rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--sable)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:500;color:var(--muted);transition:color .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--teal)}
+.nav-right{display:flex;align-items:center;gap:.75rem}
+.lang-pill{display:flex;background:var(--lin);border-radius:5px;padding:3px;gap:2px}
+.lang-btn{font-family:'Bricolage Grotesque',sans-serif;font-size:.65rem;font-weight:700;padding:4px 9px;border-radius:3px;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all .15s;letter-spacing:.05em}
+.lang-btn.active{background:var(--white);color:var(--teal);box-shadow:var(--shadow-sm)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:1rem 2rem 1.5rem;border-bottom:1px solid var(--border);z-index:999;box-shadow:0 8px 30px oklch(0% 0 0 / 0.08)}
+.mob-menu.open{display:block}
+.mob-menu ul{list-style:none}
+.mob-menu li{border-bottom:1px solid var(--border)}
+.mob-menu a{display:block;padding:.8rem 0;font-family:'Bricolage Grotesque',sans-serif;font-size:.9rem;font-weight:500;color:var(--txt)}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;background:oklch(18% 0.028 185);
+  display:grid;align-items:center;
+  padding-top:68px;position:relative;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 75% 45%,oklch(72% 0.09 75 / 0.12) 0%,transparent 60%)}
+.hero-bg2{position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at -5% 80%,oklch(46% 0.08 200 / 0.3) 0%,transparent 60%)}
+.hero-lines{position:absolute;inset:-35%;width:170%;height:170%;opacity:.045;background-image:linear-gradient(oklch(97% 0.005 85 / 0.5) 1px,transparent 1px),linear-gradient(90deg,oklch(97% 0.005 85 / 0.5) 1px,transparent 1px);background-size:80px 80px;transform:rotate(15deg);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:5rem 0}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:oklch(72% 0.09 75 / 0.1);border:1px solid oklch(72% 0.09 75 / 0.25);padding:5px 14px;border-radius:20px;font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;color:var(--sable);letter-spacing:.05em;margin-bottom:1.6rem}
+.hero h1{color:var(--white);margin-bottom:1.4rem}
+.hero h1 span{color:var(--sable)}
+.hero-sub{font-size:1.05rem;color:oklch(97% 0.005 85 / 0.58);max-width:52ch;margin-bottom:2.5rem;line-height:1.75}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:4rem}
+.hero-divider{height:1px;background:oklch(97% 0.005 85 / 0.08);margin-bottom:3rem}
+.hero-pillars{display:flex;gap:2rem;flex-wrap:wrap}
+.hero-pillar{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;font-size:.8rem;font-weight:600;color:oklch(97% 0.005 85 / 0.7)}
+.hero-pillar-dot{width:6px;height:6px;border-radius:50%;background:var(--sable);flex-shrink:0}
+
+/* ─── CONCEPT ─── */
+.concept-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:5rem;align-items:start}
+.concept-card{background:var(--navy);border-radius:14px;padding:2.75rem;color:var(--white)}
+.concept-card h3{font-size:1.3rem;color:var(--white);margin-bottom:1rem}
+.concept-card > p{color:oklch(97% 0.005 85 / 0.55);font-size:.9rem;margin-bottom:2rem}
+.concept-feature{display:flex;align-items:flex-start;gap:.85rem;padding:.9rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.06)}
+.concept-feature:last-child{border-bottom:none}
+.cf-ico{width:34px;height:34px;flex-shrink:0;background:oklch(72% 0.09 75 / 0.12);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.cf-ico svg{width:15px;height:15px;stroke:var(--sable);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.concept-feature h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:2px}
+.concept-feature p{font-size:.78rem;color:oklch(97% 0.005 85 / 0.45);line-height:1.6}
+.concept-right h2{margin-bottom:1rem}
+.concept-right > p{margin-bottom:2rem;max-width:52ch}
+.concept-steps{display:flex;flex-direction:column;gap:0}
+.cstep{display:flex;gap:1.25rem;padding:1.1rem 0;border-bottom:1px solid var(--border)}
+.cstep:last-child{border-bottom:none}
+.cstep-num{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--teal-pale);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:700;color:var(--teal)}
+.cstep h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:2px}
+.cstep p{font-size:.8rem}
+
+/* ─── SERVICES ─── */
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.srv{background:var(--white);border-radius:10px;border:1px solid var(--border);padding:2rem;transition:box-shadow .2s,transform .2s;position:relative;overflow:hidden}
+.srv:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+.srv::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--border)}
+.srv-ico{width:44px;height:44px;border-radius:10px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.srv-ico svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.srv h3{font-size:.97rem;color:var(--navy);margin-bottom:.4rem}
+.srv > p{font-size:.82rem;margin-bottom:.9rem}
+.srv-tags{display:flex;flex-wrap:wrap;gap:5px}
+.srv-tag{font-family:'Bricolage Grotesque',sans-serif;font-size:.6rem;font-weight:700;padding:3px 9px;background:var(--lin);color:var(--muted);border-radius:20px}
+
+/* ─── DESTINATIONS ─── */
+.dest-section{background:var(--navy)}
+.dest-section .eyebrow{color:var(--sable)}
+.dest-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3.5rem;align-items:end}
+.dest-intro h2{color:var(--white)}
+.dest-intro > p{color:oklch(97% 0.005 85 / 0.52);font-size:.92rem}
+.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.dest{border-radius:10px;overflow:hidden;position:relative;cursor:default;height:200px}
+.dest-bg{position:absolute;inset:0;background:var(--c,var(--navy-mid));transition:transform .35s var(--ease-expo)}
+.dest-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,oklch(97% 0.005 85 / 0.09) 0%,transparent 45%,oklch(0% 0 0 / 0.28) 100%)}
+.dest:hover .dest-bg{transform:scale(1.04)}
+.dest::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,oklch(0% 0 0 / 0.72) 0%,transparent 55%)}
+.dest-body{position:absolute;bottom:0;left:0;right:0;z-index:1;padding:1.25rem 1rem .9rem}
+.dest-flag{font-size:1.5rem;display:block;margin-bottom:.25rem}
+.dest-city{font-family:'Bricolage Grotesque',sans-serif;font-size:.97rem;font-weight:700;color:var(--white);display:block;margin-bottom:.15rem}
+.dest-desc{font-size:.7rem;color:oklch(97% 0.005 85 / 0.55)}
+
+/* ─── ÉCO TRAVEL ─── */
+.eco-travel-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.eco-list{display:flex;flex-direction:column;gap:0;margin-top:2rem}
+.eco-row{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--border)}
+.eco-row:last-child{border-bottom:none}
+.eco-ico{width:36px;height:36px;flex-shrink:0;background:oklch(92% 0.02 155);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.eco-ico svg{width:17px;height:17px;stroke:oklch(36% 0.1 155);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.eco-row h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:2px}
+.eco-right-panel{background:var(--navy);border:1px solid oklch(72% 0.09 75 / 0.12);border-radius:14px;padding:2.75rem;color:var(--white)}
+.eco-right-panel h3{font-size:1.25rem;color:var(--white);margin-bottom:.8rem}
+.eco-right-panel > p{color:oklch(97% 0.005 85 / 0.6);font-size:.88rem;margin-bottom:2rem}
+.eco-promise-list{display:flex;flex-direction:column;gap:.7rem}
+.eco-promise{display:flex;gap:.75rem;align-items:flex-start}
+.eco-promise-check{color:var(--sable);font-size:1rem;flex-shrink:0;margin-top:.05rem}
+.eco-promise span{font-size:.84rem;color:oklch(97% 0.005 85 / 0.72)}
+
+/* ─── CONTACT ─── */
+.contact-section{background:var(--navy)}
+.contact-section .eyebrow{color:var(--sable)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.55fr;gap:5rem;margin-top:3rem}
+.ci h2{color:var(--white);margin-bottom:1rem}
+.ci > p{color:oklch(97% 0.005 85 / 0.55);font-size:.92rem;margin-bottom:2rem}
+.ci-row{display:flex;align-items:center;gap:11px;margin-bottom:.85rem}
+.ci-ico{width:34px;height:34px;background:oklch(97% 0.005 85 / 0.07);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-ico svg{width:15px;height:15px;stroke:var(--sable);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ci-row span{color:oklch(97% 0.005 85 / 0.68);font-size:.86rem}
+.ci-note{margin-top:2rem;padding:1.2rem;background:oklch(72% 0.09 75 / 0.1);border:1px solid oklch(72% 0.09 75 / 0.18);border-radius:7px;font-size:.8rem;color:var(--sable);line-height:1.6}
+.cf{background:oklch(97% 0.005 85 / 0.04);border:1px solid oklch(97% 0.005 85 / 0.08);border-radius:12px;padding:2.25rem}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.fg{margin-bottom:.85rem}
+.fg label{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;color:oklch(97% 0.005 85 / 0.48);letter-spacing:.04em;margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;background:oklch(97% 0.005 85 / 0.06);border:1px solid oklch(97% 0.005 85 / 0.1);border-radius:6px;padding:.65rem .95rem;color:var(--white);font-family:'Epilogue',sans-serif;font-size:.85rem;outline:none;transition:border-color .2s}
+.fg input::placeholder,.fg textarea::placeholder{color:oklch(97% 0.005 85 / 0.24)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:oklch(46% 0.08 200 / 0.65)}
+.fg select option{background:oklch(22% 0.035 195);color:var(--white)}
+.fg textarea{min-height:100px;resize:vertical}
+
+/* ─── FOOTER ─── */
+footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px solid oklch(97% 0.005 85 / 0.05)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.75rem}
+.foot-brand-a{font-family:'Bricolage Grotesque',sans-serif;font-size:1.25rem;font-weight:800;color:var(--white);display:block;letter-spacing:-.015em}
+.foot-brand-b{font-size:.48rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--sable);display:block;margin-top:3px;margin-bottom:1rem}
+.foot-desc{font-size:.8rem;color:oklch(97% 0.005 85 / 0.28);max-width:240px}
+.foot-col h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:oklch(97% 0.005 85 / 0.32);margin-bottom:.85rem}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:.45rem}
+.foot-col a{font-size:.8rem;color:oklch(97% 0.005 85 / 0.36);transition:color .18s}
+.foot-col a:hover{color:var(--sable)}
+.foot-bottom{border-top:1px solid oklch(97% 0.005 85 / 0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem}
+.foot-copy{font-size:.74rem;color:oklch(97% 0.005 85 / 0.22)}
+.foot-eco{display:flex;align-items:center;gap:5px;font-size:.7rem;color:oklch(62% 0.1 155)}
+.foot-eco svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .concept-grid{grid-template-columns:1fr;gap:2.5rem}
+  .srv-grid{grid-template-columns:repeat(2,1fr)}
+  .dest-grid{grid-template-columns:repeat(2,1fr)}
+  .dest-intro{grid-template-columns:1fr;gap:1.5rem}
+  .eco-travel-grid{grid-template-columns:1fr;gap:2.5rem}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  section{padding:3.5rem 0}
+  .nav-links{display:none}
+  .nav-right .btn{display:none}
+  .ham{display:flex}
+  .srv-grid{grid-template-columns:1fr}
+  .dest-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .cf-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:2rem}
+  .foot-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){
+  h1{font-size:2.2rem}
+  h2{font-size:1.75rem}
+  .dest-grid{grid-template-columns:1fr}
+  .hero-pillars{flex-direction:column;gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Alchimia Corporate — Accueil">
+        <span class="nav-logo-a">Alchimia</span>
+        <span class="nav-logo-b">Corporate</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#concept" data-i18n="n_concept">Notre approche</a></li>
+        <li><a href="#services" data-i18n="n_serv">Services</a></li>
+        <li><a href="#destinations" data-i18n="n_dest">Destinations</a></li>
+        <li><a href="#eco" data-i18n="n_eco">Voyage responsable</a></li>
+        <li><a href="teambuilding.html" data-i18n="n_tb">Teambuilding</a></li>
+        <li><a href="#contact" data-i18n="n_contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-pill">
+          <button class="lang-btn active" id="btn-fr">FR</button>
+          <button class="lang-btn" id="btn-en">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-sable" data-i18n="n_cta">Prendre contact</a>
+        <button class="ham" id="ham" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mob-menu" id="mob">
+  <ul>
+    <li><a href="#concept" data-i18n="n_concept">Notre approche</a></li>
+    <li><a href="#services" data-i18n="n_serv">Services</a></li>
+    <li><a href="#destinations" data-i18n="n_dest">Destinations</a></li>
+    <li><a href="#eco" data-i18n="n_eco">Voyage responsable</a></li>
+    <li><a href="teambuilding.html" data-i18n="n_tb">Teambuilding</a></li>
+    <li><a href="#contact" data-i18n="n_contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div><div class="hero-bg2"></div><div class="hero-lines"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        <span data-i18n="h_badge">Conciergerie Corporate · Belgique &amp; International</span>
+      </div>
+      <h1 data-i18n="h_h1">Votre chargé de voyage<br>professionnel <span>dédié.</span></h1>
+      <p class="hero-sub" data-i18n="h_sub">Un interlocuteur unique dédié à vos voyages d'affaires — vols, hôtels, transferts, restaurants, visas. Il connaît vos habitudes et gère toute la logistique à votre place.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-sable" data-i18n="h_cta1">Prendre contact</a>
+        <a href="#services" class="btn btn-ghost" data-i18n="h_cta2">Voir les services</a>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-pillars">
+        <div class="hero-pillar"><div class="hero-pillar-dot"></div><span data-i18n="hp1">Un interlocuteur unique dédié</span></div>
+        <div class="hero-pillar"><div class="hero-pillar-dot"></div><span data-i18n="hp2">Disponible 7j/7</span></div>
+        <div class="hero-pillar"><div class="hero-pillar-dot"></div><span data-i18n="hp3">Réseau de partenaires voyage sélectionnés</span></div>
+        <div class="hero-pillar"><div class="hero-pillar-dot"></div><span data-i18n="hp4">Voyage responsable</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept">
+  <div class="container">
+    <span class="eyebrow" data-i18n="c_label">Le concept</span>
+    <div class="concept-grid">
+      <div>
+        <h2 class="fade" data-i18n="c_h2">Pas une agence.<br>Un chargé de voyage qui connaît vos habitudes.</h2>
+        <p class="fade" style="transition-delay:.08s;margin-bottom:2.5rem;max-width:52ch" data-i18n="c_p">Avec Alchimia Corporate, vous n'appelez pas un centre d'appel. Vous avez un contact attitré — une personne qui connaît vos préférences, votre budget, vos habitudes de voyage. Qui anticipe avant que vous n'ayez besoin de demander.</p>
+        <div class="concept-steps">
+          <div class="cstep fade" style="transition-delay:.12s"><div class="cstep-num">1</div><div><h4 data-i18n="cs1">Briefing voyage initial</h4><p data-i18n="cs1p">Nous cartographions vos habitudes : compagnies, classes, hôtels, régimes alimentaires, horaires, destinations récurrentes.</p></div></div>
+          <div class="cstep fade" style="transition-delay:.18s"><div class="cstep-num">2</div><div><h4 data-i18n="cs2">Demande simplifiée</h4><p data-i18n="cs2p">Par email ou téléphone, en quelques mots. Votre chargé de voyage gère le reste — options, réservations, confirmations.</p></div></div>
+          <div class="cstep fade" style="transition-delay:.24s"><div class="cstep-num">3</div><div><h4 data-i18n="cs3">Gestion complète</h4><p data-i18n="cs3p">Tout est géré dans les délais, avec les meilleures conditions tarifaires de notre réseau partenaire.</p></div></div>
+          <div class="cstep fade" style="transition-delay:.3s"><div class="cstep-num">4</div><div><h4 data-i18n="cs4">Reporting & suivi</h4><p data-i18n="cs4p">Récapitulatif mensuel des dépenses, bilan carbone, rapport pour votre service comptabilité.</p></div></div>
+        </div>
+      </div>
+      <div class="concept-card fade-right" style="transition-delay:.2s">
+        <h3 data-i18n="cc_h">Ce que nous gérons pour vous</h3>
+        <p data-i18n="cc_sub">Aucune limite de périmètre. Une seule règle : votre tranquillité d'esprit.</p>
+        <div class="concept-feature"><div class="cf-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 7.29 7.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4 data-i18n="cf1_h">Voyages en urgence</h4><p data-i18n="cf1_p">Vol de 7h demain matin ? Nous gérons en moins d'une heure, à toute heure.</p></div></div>
+        <div class="concept-feature"><div class="cf-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><h4 data-i18n="cf2_h">Hébergement premium</h4><p data-i18n="cf2_p">Sélection d'hôtels adaptés à vos standards, avec tarifs négociés en direct.</p></div></div>
+        <div class="concept-feature"><div class="cf-ico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><div><h4 data-i18n="cf3_h">Restaurants & tables rares</h4><p data-i18n="cf3_p">Réservations dans les meilleures adresses, y compris les tables à carnet d'attente.</p></div></div>
+        <div class="concept-feature"><div class="cf-ico"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><h4 data-i18n="cf4_h">Transferts & mobilité</h4><p data-i18n="cf4_p">Chauffeurs privés, location, navettes aéroport — coordination totale de vos déplacements.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="bg-lin" id="services">
+  <div class="container">
+    <span class="eyebrow" data-i18n="s_label">Services</span>
+    <h2 class="fade" data-i18n="s_h2">Tous vos besoins voyage d'affaires, gérés</h2>
+    <div class="srv-grid">
+      <div class="srv fade">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div>
+        <h3 data-i18n="srv1">Vols &amp; Trains</h3>
+        <p data-i18n="srv1p">Vols courts et longs courriers, trains Eurostar/Thalys, jets privés sur demande. Meilleure combinaison prix / temps / empreinte carbone.</p>
+        <div class="srv-tags"><span class="srv-tag" data-i18n="srv1t1">Business &amp; Eco</span><span class="srv-tag" data-i18n="srv1t2">Multi-escales</span><span class="srv-tag" data-i18n="srv1t3">Urgence 24h</span></div>
+      </div>
+      <div class="srv fade" style="transition-delay:.07s">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 data-i18n="srv2">Hôtels &amp; Résidences</h3>
+        <p data-i18n="srv2p">Sélection hôtelière adaptée à vos standards. Résidences de longue durée, hôtels boutique, palaces — toujours au meilleur tarif négocié.</p>
+        <div class="srv-tags"><span class="srv-tag" data-i18n="srv2t1">Tarifs négociés</span><span class="srv-tag" data-i18n="srv2t2">Early check-in</span><span class="srv-tag" data-i18n="srv2t3">Longue durée</span></div>
+      </div>
+      <div class="srv fade" style="transition-delay:.14s">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <h3 data-i18n="srv3">Restaurants</h3>
+        <p data-i18n="srv3p">Des adresses de confiance dans chaque ville — gastronomiques, business lunch, repas d'équipe. Réservations prioritaires dans les tables les plus demandées.</p>
+        <div class="srv-tags"><span class="srv-tag" data-i18n="srv3t1">Tables rares</span><span class="srv-tag" data-i18n="srv3t2">Régimes alimentaires</span><span class="srv-tag" data-i18n="srv3t3">Groupes</span></div>
+      </div>
+      <div class="srv fade" style="transition-delay:.21s">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3 data-i18n="srv4">Transferts &amp; Chauffeurs</h3>
+        <p data-i18n="srv4p">Navettes aéroport, chauffeurs privés, location de véhicules premium. Coordination complète pour les déplacements multi-sites.</p>
+        <div class="srv-tags"><span class="srv-tag" data-i18n="srv4t1">Aéroport</span><span class="srv-tag" data-i18n="srv4t2">Multi-sites</span><span class="srv-tag" data-i18n="srv4t3">VIP</span></div>
+      </div>
+      <div class="srv fade" style="transition-delay:.28s">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <h3 data-i18n="srv5">Visas &amp; Formalités</h3>
+        <p data-i18n="srv5p">Visas d'affaires, passeports diplomatiques, assurances voyage. Gestion des formalités administratives pour voyager sans friction.</p>
+        <div class="srv-tags"><span class="srv-tag" data-i18n="srv5t1">Visas express</span><span class="srv-tag" data-i18n="srv5t2">Assurances</span><span class="srv-tag" data-i18n="srv5t3">Toutes zones</span></div>
+      </div>
+      <div class="srv fade" style="transition-delay:.35s">
+        <div class="srv-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 data-i18n="srv6">Incentives &amp; Événements</h3>
+        <p data-i18n="srv6p">Voyages incentive, séminaires résidentiels, team events à l'étranger. Coordination complète de A à Z pour les groupes.</p>
+        <div class="srv-tags"><span class="srv-tag" data-i18n="srv6t1">Groupes 10–200</span><span class="srv-tag" data-i18n="srv6t2">Incentive</span><span class="srv-tag" data-i18n="srv6t3">Séminaires</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="dest-section" id="destinations">
+  <div class="container">
+    <div class="dest-intro fade">
+      <div>
+        <span class="eyebrow" data-i18n="d_label">Destinations</span>
+        <h2 data-i18n="d_h2">Vos destinations d'affaires, couvertes</h2>
+      </div>
+      <p data-i18n="d_p">Hôtels négociés, restaurants réservés, transferts coordonnés. Nos partenaires locaux sur chaque marché gèrent vos déplacements comme si vous étiez chez vous.</p>
+    </div>
+    <div class="dest-grid">
+      <div class="dest"><div class="dest-bg" style="--c:oklch(28% 0.06 220)"></div><div class="dest-body"><span class="dest-flag">🇬🇧</span><span class="dest-city">Londres</span><span class="dest-desc" data-i18n="dd1">City & Canary Wharf, hub financier mondial</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(32% 0.07 30)"></div><div class="dest-body"><span class="dest-flag">🇫🇷</span><span class="dest-city">Paris</span><span class="dest-desc" data-i18n="dd2">La Défense, luxe corporate, hub CDG</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(26% 0.04 200)"></div><div class="dest-body"><span class="dest-flag">🇩🇪</span><span class="dest-city">Amsterdam</span><span class="dest-desc" data-i18n="dd3">Tech & media européens, hub Schiphol</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(30% 0.06 160)"></div><div class="dest-body"><span class="dest-flag">🇪🇸</span><span class="dest-city">Barcelone</span><span class="dest-desc" data-i18n="dd4">MWC, pharma & biotech, hub Méditerranée</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(24% 0.05 250)"></div><div class="dest-body"><span class="dest-flag">🇨🇭</span><span class="dest-city">Zurich</span><span class="dest-desc" data-i18n="dd5">Banque privée, pharma, horlogerie de précision</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(28% 0.04 185)"></div><div class="dest-body"><span class="dest-flag">🇦🇪</span><span class="dest-city">Dubaï</span><span class="dest-desc" data-i18n="dd6">Hub MICE Moyen-Orient, gateway Asie-Afrique</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(26% 0.05 60)"></div><div class="dest-body"><span class="dest-flag">🇯🇵</span><span class="dest-city">Tokyo</span><span class="dest-desc" data-i18n="dd7">Automotive, électronique, hub Asie-Pacifique</span></div></div>
+      <div class="dest"><div class="dest-bg" style="--c:oklch(25% 0.07 350)"></div><div class="dest-body"><span class="dest-flag">🌍</span><span class="dest-city" data-i18n="dd8_c">Sur mesure</span><span class="dest-desc" data-i18n="dd8">Partout où vous en avez besoin</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉCO TRAVEL -->
+<section id="eco">
+  <div class="container">
+    <div class="eco-travel-grid">
+      <div class="fade">
+        <span class="eyebrow" data-i18n="et_label">Voyage responsable</span>
+        <h2 style="margin-bottom:.8rem" data-i18n="et_h2">Voyager mieux,<br>pas seulement plus loin.</h2>
+        <p style="margin-bottom:.5rem" data-i18n="et_p">Chez Alchimia Corporate, chaque réservation voyage intègre un critère environnemental. Efficacité et responsabilité ne s'opposent pas.</p>
+        <div class="eco-list">
+          <div class="eco-row"><div class="eco-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><h4 data-i18n="et1">Train systématiquement proposé ≤ 3h</h4><p data-i18n="et1p">Pour chaque déplacement européen, le train est présenté en première option.</p></div></div>
+          <div class="eco-row"><div class="eco-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4 data-i18n="et2">Hôtels labellisés éco sélectionnés</h4><p data-i18n="et2p">Green Globe, EU Ecolabel, Travelife — nous prioritisons les établissements certifiés.</p></div></div>
+          <div class="eco-row"><div class="eco-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><h4 data-i18n="et3">Bilan carbone par déplacement</h4><p data-i18n="et3p">Chaque voyage est tracé. Rapport CO₂ mensuel remis avec votre récapitulatif de dépenses.</p></div></div>
+          <div class="eco-row"><div class="eco-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h4 data-i18n="et4">Compensation certifiée Gold Standard</h4><p data-i18n="et4p">Les émissions résiduelles inévitables sont compensées via des projets rigoureusement vérifiés.</p></div></div>
+        </div>
+      </div>
+      <div class="eco-right-panel fade" style="transition-delay:.15s">
+        <h3 data-i18n="etp_h">Notre engagement de transparence</h3>
+        <p data-i18n="etp_p">Nous ne prétendons pas que le voyage d'affaires est neutre. Nous nous engageons à le rendre aussi responsable que possible, et à vous donner les outils pour mesurer et améliorer.</p>
+        <div class="eco-promise-list">
+          <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep1">Rapport CO₂ mensuel inclus dans votre abonnement</span></div>
+          <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep2">Propositions alternatives systématiques (train, visio)</span></div>
+          <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep3">Prestataires locaux privilégiés sur chaque destination</span></div>
+          <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep4">Objectifs de réduction CO₂ co-définis avec vous</span></div>
+          <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep5">Compensation carbone optionnelle intégrée à la facturation</span></div>
+        </div>
+        <br>
+        <a href="#contact" class="btn btn-sable" style="margin-top:.5rem" data-i18n="etp_cta">Demander un bilan voyage</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="eyebrow" data-i18n="ct_label">Discutons de vos voyages</span>
+    <div class="contact-grid">
+      <div class="ci fade">
+        <h2 data-i18n="ct_h2">Commençons<br>par cartographier vos déplacements.</h2>
+        <p data-i18n="ct_p">Décrivez-nous vos destinations récurrentes, vos standards et vos contraintes. Votre chargé de voyage sera opérationnel sous 48h.</p>
+        <div class="ci-row" style="margin-top:2rem"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>hello@alchimia-corporate.be</span></div>
+        <div class="ci-row"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 7.29 7.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span>+32 (0)4 XX XX XX XX</span></div>
+        <div class="ci-row"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>Bruxelles, Belgique</span></div>
+        <div class="ci-note" data-i18n="ct_note">💡 Premier échange offert : 30 min pour cartographier vos besoins voyage et assigner votre chargé de voyage dédié.</div>
+      </div>
+      <div class="cf fade" style="transition-delay:.15s">
+        <div class="cf-row">
+          <div class="fg"><label data-i18n="cf1">Prénom</label><input type="text" placeholder="Julie"></div>
+          <div class="fg"><label data-i18n="cf2">Nom</label><input type="text" placeholder="Dupont"></div>
+        </div>
+        <div class="cf-row">
+          <div class="fg"><label data-i18n="cf3">Entreprise</label><input type="text" placeholder="Nom de l'entreprise"></div>
+          <div class="fg"><label data-i18n="cf4">Fonction</label><input type="text" placeholder="Office Manager"></div>
+        </div>
+        <div class="fg"><label data-i18n="cf5">Email professionnel</label><input type="email" placeholder="julie@entreprise.be"></div>
+        <div class="fg">
+          <label data-i18n="cf6">Besoin principal</label>
+          <select>
+            <option data-i18n="cf6_0">Choisir...</option>
+            <option data-i18n="cf6_1">Voyages d'affaires réguliers</option>
+            <option data-i18n="cf6_2">Événement / séminaire groupe</option>
+            <option data-i18n="cf6_3">Voyage incentive</option>
+            <option data-i18n="cf6_4">Conciergerie ponctuelle</option>
+          </select>
+        </div>
+        <div class="fg"><label data-i18n="cf8">Contexte &amp; attentes</label><textarea placeholder="Fréquence de voyages, destinations habituelles, standards souhaités..."></textarea></div>
+        <button type="button" class="btn btn-sable" style="width:100%;justify-content:center" data-i18n="cf_send">
+          Envoyer ma demande
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-brand-a">Alchimia</span>
+        <span class="foot-brand-b">Corporate</span>
+        <p class="foot-desc" data-i18n="ft_desc">Votre partenaire de confiance pour les voyages d'affaires et l'événementiel corporate.</p>
+      </div>
+      <div class="foot-col"><h4 data-i18n="ft_cv_head">Conciergerie</h4><ul>
+        <li><a href="#services" data-i18n="ft_srv">Services</a></li>
+        <li><a href="#destinations" data-i18n="ft_dest">Destinations</a></li>
+        <li><a href="#concept" data-i18n="ft_concept">Notre approche</a></li>
+        <li><a href="#eco" data-i18n="ft_eco">Voyage responsable</a></li>
+      </ul></div>
+      <div class="foot-col"><h4 data-i18n="ft_other">Autres services</h4><ul>
+        <li><a href="teambuilding.html" data-i18n="ft_tb">Teambuilding</a></li>
+        <li><a href="#contact" data-i18n="ft_ct">Contact</a></li>
+        <li><a href="index.html" data-i18n="ft_home">Accueil</a></li>
+      </ul></div>
+      <div class="foot-col"><h4 data-i18n="ft_leg">Légal</h4><ul>
+        <li><a href="#" data-i18n="ft_priv">Confidentialité</a></li>
+        <li><a href="#" data-i18n="ft_ment">Mentions légales</a></li>
+        <li><a href="#" data-i18n="ft_cgv">CGV</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-copy" data-i18n="ft_copy">© 2026 Alchimia Corporate SRL — Belgique.</p>
+      <div class="foot-eco"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="ft_eco_lbl">Voyage responsable</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="conciergerie.js"></script>
+</body>
+</html>                                                         
