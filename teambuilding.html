@@ -179,19 +179,21 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .tb-f{font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;font-weight:600;padding:6px 16px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);color:var(--muted);cursor:pointer;transition:all .18s}
 .tb-f.on,.tb-f:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
 .tb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.tb-card{background:var(--white);border-radius:10px;border:1px solid var(--border);overflow:hidden;transition:transform .22s var(--ease-expo),box-shadow .22s}
-.tb-card:hover{transform:translateY(-4px) scale(1.015);box-shadow:var(--shadow-lg)}
-.tb-top{height:148px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.tb-top::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,oklch(0% 0 0 / 0.45))}
-.tb-emoji{font-size:3rem;position:relative;z-index:1}
-.tb-cat{position:absolute;top:10px;left:10px;z-index:2}
-.tb-loc{position:absolute;top:10px;right:10px;z-index:2}
-.tb-body{padding:1.35rem 1.4rem}
-.tb-card h3{font-size:.93rem;color:var(--navy);margin-bottom:.35rem}
-.tb-desc{font-size:.8rem;margin-bottom:.9rem;line-height:1.6}
-.tb-meta{display:grid;grid-template-columns:1fr 1fr;gap:7px;border-top:1px solid var(--border);padding-top:.9rem}
-.tb-meta-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:1px;display:block}
-.tb-meta-val{font-family:'Bricolage Grotesque',sans-serif;font-size:.78rem;font-weight:600;color:var(--navy)}
+.tb-card{display:block;text-decoration:none;color:inherit;background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden;transition:transform .22s var(--ease-expo),box-shadow .22s}
+.tb-card:hover{transform:translateY(-5px) scale(1.012);box-shadow:var(--shadow-lg)}
+.tb-img{height:210px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.tb-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,oklch(0% 0 0 / 0.5))}
+.tb-emoji-img{position:absolute;bottom:10px;right:12px;font-size:1.6rem;z-index:2}
+.tb-body{padding:1.25rem 1.35rem 1.45rem}
+.tb-type-chip{display:inline-block;margin-bottom:.7rem}
+.tb-card h3{font-size:1rem;color:var(--navy);margin-bottom:.9rem;font-weight:700;letter-spacing:-.01em}
+.tb-pb,.tb-sol{margin:.6rem 0}
+.tb-pb-lbl,.tb-sol-lbl{display:block;font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:3px}
+.tb-pb-lbl{color:var(--coral)}
+.tb-sol-lbl{color:var(--teal)}
+.tb-pb p,.tb-sol p{font-size:.78rem;line-height:1.55;margin:0;color:var(--body)}
+.tb-discover{display:inline-block;margin-top:.9rem;font-size:.78rem;font-weight:700;color:var(--teal);font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.01em}
+.tb-card:hover .tb-discover{text-decoration:underline}
 
 /* ─── FORMATION ─── */
 .form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
@@ -578,11 +580,4 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     </div>
     <div class="foot-bottom">
       <p class="foot-copy" data-i18n="ft_copy">© 2026 Alchimia Corporate SRL — Belgique.</p>
-      <div class="foot-eco"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="ft_eco_lbl">Engagement éco-responsable</span></div>
-    </div>
-  </div>
-</footer>
-
-<script src="teambuilding.js"></script>
-</body>
-</html>
+      <div class="foot-eco"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0
