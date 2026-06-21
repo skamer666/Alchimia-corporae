@@ -178,7 +178,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .tb-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2.5rem}
 .tb-f{font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;font-weight:600;padding:6px 16px;border-radius:20px;border:1.5px solid var(--border);background:var(--white);color:var(--muted);cursor:pointer;transition:all .18s}
 .tb-f.on,.tb-f:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
-.tb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.tb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .tb-card{background:var(--white);border-radius:10px;border:1px solid var(--border);overflow:hidden;transition:transform .22s var(--ease-expo),box-shadow .22s}
 .tb-card:hover{transform:translateY(-4px) scale(1.015);box-shadow:var(--shadow-lg)}
 .tb-top{height:148px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -451,14 +451,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         <span class="eyebrow" data-i18n="tb_label">Programmes</span>
         <h2 data-i18n="tb_h2">Teambuilding immersif</h2>
       </div>
-      <p style="max-width:360px" data-i18n="tb_sub">10 formats, tous personnalisables. En Belgique ou à l'international.</p>
+      <p style="max-width:360px" data-i18n="tb_sub">4 programmes d'exception, chacun conçu sur mesure pour votre équipe.</p>
     </div>
     <div class="tb-filters">
       <button class="tb-f on" data-cat="all" data-i18n="tbf_all">Tous</button>
-      <button class="tb-f" data-cat="outdoor" data-i18n="tbf_out">Outdoor</button>
-      <button class="tb-f" data-cat="indoor" data-i18n="tbf_in">Indoor</button>
-      <button class="tb-f" data-cat="international" data-i18n="tbf_int">International</button>
-      <button class="tb-f" data-cat="wellbeing" data-i18n="tbf_wb">Bien-être</button>
+      <button class="tb-f" data-cat="codir" data-i18n="tbf_codir">CODIR & Crise</button>
+      <button class="tb-f" data-cat="fusion" data-i18n="tbf_fusion">Post-fusion</button>
+      <button class="tb-f" data-cat="commercial" data-i18n="tbf_com">Commercial</button>
+      <button class="tb-f" data-cat="negociation" data-i18n="tbf_neg">Négociation</button>
     </div>
     <div class="tb-grid" id="tb-grid"></div>
   </div>
