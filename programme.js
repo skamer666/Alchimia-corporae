@@ -257,4 +257,4 @@ function initNav(){
   });
 }
 
-document.addEventListener('DOMContentLoaded
+document.addEventListener('DOMContentLoaded',init);
