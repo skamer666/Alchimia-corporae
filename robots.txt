@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://alchimia-corporae.vercel.app/sitemap.xml

@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alchimia Corporate — Teambuilding & Conciergerie B2B | Belgique</title>
 <meta name="description" content="Alchimia Corporate — Teambuilding immersif et conciergerie corporate en Belgique et à l'international.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://alchimia-corporae.vercel.app/">
+<link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/">
+<link rel="alternate" hreflang="x-default" href="https://alchimia-corporae.vercel.app/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -131,6 +136,31 @@ a{text-decoration:none;color:inherit}
   #gate.exiting{transition:opacity .2s;opacity:0;transform:none}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Alchimia Corporate",
+  "url": "https://alchimia-corporae.vercel.app",
+  "logo": "https://alchimia-corporae.vercel.app/favicon.svg",
+  "email": "contact@alchimia-corporate.be",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BE"
+  },
+  "areaServed": ["BE", "LU", "FR"],
+  "knowsLanguage": ["fr", "en"],
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Alchimia Corporate",
+  "url": "https://alchimia-corporae.vercel.app"
+}
+</script>
 </head>
 <body>
 
@@ -147,7 +177,7 @@ a{text-decoration:none;color:inherit}
     </div>
   </div>
 
-  <div class="gate-panel gate-left" id="panel-tb" role="button" tabindex="0" aria-label="Teambuilding et Formation">
+  <a class="gate-panel gate-left" id="panel-tb" href="teambuilding.html" aria-label="Teambuilding et Formation">
     <div class="gate-panel-inner">
       <span class="gate-tag" data-i="tb_tag">Teambuilding &amp; Formation</span>
       <h2 class="gate-h" data-i="tb_h">Transformer<br>votre équipe.</h2>
@@ -157,11 +187,11 @@ a{text-decoration:none;color:inherit}
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </div>
     </div>
-  </div>
+  </a>
 
   <div class="gate-divider" aria-hidden="true"></div>
 
-  <div class="gate-panel gate-right" id="panel-cv" role="button" tabindex="0" aria-label="Conciergerie Corporate">
+  <a class="gate-panel gate-right" id="panel-cv" href="conciergerie.html" aria-label="Conciergerie Corporate">
     <div class="gate-panel-inner">
       <span class="gate-tag" data-i="cv_tag">Conciergerie Corporate</span>
       <h2 class="gate-h" data-i="cv_h">Votre assistant<br>personnel.</h2>
@@ -171,7 +201,7 @@ a{text-decoration:none;color:inherit}
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
 <script src="gate.js"></script>
