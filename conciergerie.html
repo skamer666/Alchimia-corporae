@@ -245,23 +245,61 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  section{padding:3.5rem 0}
+  section{padding:2.5rem 0}
+  .container{padding:0 1.1rem}
+  /* Nav */
   .nav-links{display:none}
   .nav-right .btn{display:none}
   .ham{display:flex}
-  .srv-grid{grid-template-columns:1fr}
-  .dest-grid{grid-template-columns:1fr 1fr}
+  /* Hero */
+  .hero{min-height:auto;padding:calc(68px + 2.5rem) 0 2.5rem}
+  .hero-content{padding:0}
+  h1{font-size:clamp(1.9rem,7vw,2.6rem)}
+  .hero-sub{font-size:.9rem;max-width:100%}
+  .hero-ctas{flex-direction:column;gap:.6rem}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .hero-pillars{flex-wrap:wrap;gap:.55rem}
+  .hero-pillar{font-size:.72rem}
+  /* Moments */
   .moments-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .mc:nth-child(1),.mc:nth-child(2),.mc:nth-child(3){min-height:200px}
+  /* Services */
+  .srv-grid{grid-template-columns:1fr}
+  .srv-card{padding:1.25rem}
+  /* Destinations */
+  .dest-grid{grid-template-columns:1fr 1fr}
+  .dest-bg{height:160px}
+  .dest-body{padding:.85rem}
+  .dest-city{font-size:.8rem}
+  /* Concept */
+  .concept-card{padding:1.5rem}
+  /* Eco */
+  .eco-travel-grid{grid-template-columns:1fr;gap:2rem}
+  .eco-promise-list{grid-template-columns:1fr}
+  .eco-promise{padding:1.25rem}
+  /* Comparison */
+  .cstep{padding:1rem 1.25rem}
+  /* Contact */
+  .contact-grid{grid-template-columns:1fr;gap:2rem}
   .cf-row{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr;gap:2rem}
-  .foot-bottom{flex-direction:column;text-align:center}
+  .ci{padding:1.5rem}
+  /* Inputs touch */
+  input,select,textarea{font-size:16px;min-height:44px}
+  /* Footer */
+  .foot-grid{grid-template-columns:1fr;gap:1.5rem}
+  .foot-bottom{flex-direction:column;text-align:center;gap:.5rem}
 }
 @media(max-width:480px){
-  h1{font-size:2.2rem}
-  h2{font-size:1.75rem}
+  section{padding:2rem 0}
+  .container{padding:0 .9rem}
+  h1{font-size:1.85rem}
+  h2{font-size:1.5rem}
+  .hero-pillars{flex-direction:column;gap:.5rem}
   .dest-grid{grid-template-columns:1fr}
-  .hero-pillars{flex-direction:column;gap:1rem}
+  .dest-bg{height:170px}
+  .moments-grid{grid-template-columns:1fr}
+  .mc:nth-child(1),.mc:nth-child(2),.mc:nth-child(3){min-height:210px}
+  .srv-grid{grid-template-columns:1fr}
 }
 </style>
 <script type="application/ld+json">

@@ -229,24 +229,52 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  section{padding:3.5rem 0}
+  section{padding:2.5rem 0}
+  .container{padding:0 1.1rem}
+  /* Nav */
   .nav-links{display:none}
   .nav-right .btn{display:none}
   .ham{display:flex}
-  .steps{grid-template-columns:1fr 1fr}
+  /* Hero */
+  .hero{min-height:auto;padding:calc(68px + 2.5rem) 0 2.5rem}
+  .hero-content{padding:0}
+  h1{font-size:clamp(1.9rem,7vw,2.6rem)}
+  .hero-sub{font-size:.9rem;max-width:100%}
+  .hero-ctas{flex-direction:column;gap:.6rem}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .hero-neuro{flex-wrap:wrap;gap:.55rem}
+  .hero-neuro-item{font-size:.72rem}
+  /* Events */
   .ev-std,.ev-sig{grid-template-columns:1fr}
   .ev-std .pc:nth-child(1),.ev-std .pc:nth-child(4){grid-column:1}
-  .ev-std .pc,.ev-sig .pc{min-height:240px}
-  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .ev-std .pc,.ev-sig .pc{min-height:220px}
+  .ev-sig-head{gap:.75rem;margin:1.5rem 0 .5rem}
+  .ev-sig-sub{font-size:.78rem;text-align:center}
+  /* Steps */
+  .steps{grid-template-columns:1fr 1fr}
+  .step{padding:1.25rem}
+  /* Eco */
+  .eco-grid{grid-template-columns:1fr;gap:2rem}
+  .eco-callout{padding:1.5rem}
+  /* Contact */
+  .contact-grid{grid-template-columns:1fr;gap:2rem}
   .cf-row{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr;gap:2rem}
-  .foot-bottom{flex-direction:column;text-align:center}
+  .ci{padding:1.5rem}
+  /* Inputs */
+  input,select,textarea{font-size:16px;min-height:44px}
+  /* Footer */
+  .foot-grid{grid-template-columns:1fr;gap:1.5rem}
+  .foot-bottom{flex-direction:column;text-align:center;gap:.5rem}
 }
 @media(max-width:480px){
+  section{padding:2rem 0}
+  .container{padding:0 .9rem}
+  h1{font-size:1.85rem}
+  h2{font-size:1.5rem}
   .steps{grid-template-columns:1fr}
-  h1{font-size:2.2rem}
-  h2{font-size:1.75rem}
-  .hero-neuro{gap:1.5rem}
+  .hero-neuro{flex-direction:column;gap:.5rem}
+  .ev-std .pc,.ev-sig .pc{min-height:200px}
+  .pc-h{font-size:.9rem}
 }
 </style>
 <script type="application/ld+json">
