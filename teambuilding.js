@@ -1,7 +1,7 @@
 /* teambuilding.js — events hub */
 const T={
 fr:{
-n_ev:'Événements',n_meth:'Méthode',n_conc:'Conciergerie',n_contact:'Contact',n_prog:'Programmes',n_cta:'Demander un devis',
+n_ev:'Événements',n_meth:'Méthode',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Demander un devis',
 h_badge:'Événements Corporate · Belgique & International',
 h_h1:'Des événements qui<br><span>font la différence.</span>',
 h_sub:'Séminaires, teambuilding, galas, incentives ou formations — chaque projet est orchestré avec la même exigence et le même impact mesurable.',
@@ -71,7 +71,7 @@ ft_leg:'Légal',ft_priv:'Confidentialité',ft_ment:'Mentions légales',ft_cgv:'C
 ft_copy:'© 2026 Alchimia Corporate SRL — Belgique.',ft_eco_lbl:'Engagement éco-responsable'
 },
 en:{
-n_ev:'Events',n_meth:'Method',n_conc:'Concierge',n_contact:'Contact',n_prog:'Programmes',n_cta:'Request a quote',
+n_ev:'Events',n_meth:'Method',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Request a quote',
 h_badge:'Corporate Events · Belgium & International',
 h_h1:'Events that<br><span>make a difference.</span>',
 h_sub:'Seminars, team building, galas, incentives or training — every project is orchestrated with the same standards and measurable impact.',

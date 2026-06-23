@@ -4,10 +4,10 @@ const T = {
     tb_h:'Transformer<br>votre équipe.',
     tb_p:'Expériences immersives et formations ancrées dans les neurosciences.',
     tb_cta:'Explorer les programmes',
-    cv_tag:'Conciergerie Corporate',
+    cv_tag:'Travel Manager Corporate',
     cv_h:'Votre assistant<br>personnel.',
     cv_p:"Un contact dédié pour tous vos voyages d'affaires, incentives et événements.",
-    cv_cta:'Découvrir la conciergerie'
+    cv_cta:'Découvrir le service'
   },
   en: {
     tb_tag:'Team Building & Training',

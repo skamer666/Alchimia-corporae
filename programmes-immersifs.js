@@ -60,7 +60,7 @@ const TB=[
 
 const T={
 fr:{
-n_back:'← Événements',n_conc:'Conciergerie',n_contact:'Contact',n_cta:'Demander un devis',
+n_back:'← Événements',n_conc:'Travel Manager',n_contact:'Contact',n_cta:'Demander un devis',
 h_badge:'Teambuilding & Formations · Belgique & International',
 h_h1:'Teambuilding immersif<br><span>& formations.</span>',
 h_sub:'4 programmes OPÉRATION ancrés dans les neurosciences + 6 modules de formation certifiables. Conçus sur mesure pour votre équipe.',
@@ -108,7 +108,7 @@ ft_desc:'Transformer les équipes par l\'expérience. Ancré dans les neuroscien
 ft_copy:'© 2026 Alchimia Corporate SRL — Belgique.',ft_eco_lbl:'Engagement éco-responsable'
 },
 en:{
-n_back:'← Events',n_conc:'Concierge',n_contact:'Contact',n_cta:'Request a quote',
+n_back:'← Events',n_conc:'Travel Manager',n_contact:'Contact',n_cta:'Request a quote',
 h_badge:'Team Building & Training · Belgium & International',
 h_h1:'Immersive team building<br><span>& training.</span>',
 h_sub:'4 OPÉRATION programmes rooted in neuroscience + 6 certifiable training modules. Entirely built to order.',

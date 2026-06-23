@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conciergerie Corporate Bruxelles | Chargé de Voyage Dédié | Alchimia</title>
+<title>Travel Manager Corporate Bruxelles | Chargé de Voyage Dédié | Alchimia</title>
 <meta name="description" content="Votre travel manager externalisé à Bruxelles. Vols, hôtels, visas, transferts, incentives — un interlocuteur dédié qui connaît vos habitudes. PME et ETI belges.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://alchimia-corporae.vercel.app/conciergerie.html">
@@ -158,8 +158,21 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .dest-intro h2{color:var(--white)}
 .dest-intro > p{color:oklch(97% 0.005 85 / 0.52);font-size:.92rem}
 .dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
-.dest{border-radius:10px;overflow:hidden;position:relative;cursor:default;height:200px}
-.dest-bg{position:absolute;inset:0;background:var(--c,var(--navy-mid));transition:transform .35s var(--ease-expo)}
+.dest{border-radius:10px;overflow:hidden;position:relative;cursor:default;height:230px}
+.dest-bg{position:absolute;inset:0;background:var(--c,var(--navy-mid));background-size:cover;background-position:center;transition:transform .35s var(--ease-expo)}
+
+/* ─── PHOTO MOMENTS ─── */
+.moments-section{background:var(--white);padding:0}
+.moments-grid{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:8px}
+.mc{position:relative;overflow:hidden;display:flex;flex-direction:column;text-decoration:none}
+.mc:nth-child(1),.mc:nth-child(3){min-height:340px}
+.mc:nth-child(2){min-height:400px}
+.mc-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .65s cubic-bezier(0.16,1,0.3,1)}
+.mc:hover .mc-img{transform:scale(1.04)}
+.mc-overlay{position:absolute;inset:0;background:linear-gradient(to top,oklch(12% 0.03 195 / 0.82) 0%,oklch(12% 0.03 195 / 0.28) 55%,transparent 100%)}
+.mc-body{position:relative;z-index:2;margin-top:auto;padding:1.5rem 1.5rem 1.25rem}
+.mc-label{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.57rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sable);margin-bottom:.3rem}
+.mc-h{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;color:var(--white);line-height:1.25}
 .dest-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,oklch(97% 0.005 85 / 0.09) 0%,transparent 45%,oklch(0% 0 0 / 0.28) 100%)}
 .dest:hover .dest-bg{transform:scale(1.04)}
 .dest::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,oklch(0% 0 0 / 0.72) 0%,transparent 55%)}
@@ -226,6 +239,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .concept-grid{grid-template-columns:1fr;gap:2.5rem}
   .srv-grid{grid-template-columns:repeat(2,1fr)}
   .dest-grid{grid-template-columns:repeat(2,1fr)}
+  .moments-grid{grid-template-columns:1fr 1fr}
   .dest-intro{grid-template-columns:1fr;gap:1.5rem}
   .eco-travel-grid{grid-template-columns:1fr;gap:2.5rem}
   .foot-grid{grid-template-columns:1fr 1fr}
@@ -237,6 +251,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .ham{display:flex}
   .srv-grid{grid-template-columns:1fr}
   .dest-grid{grid-template-columns:1fr 1fr}
+  .moments-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .cf-row{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr;gap:2rem}
@@ -270,9 +285,9 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Corporate Concierge & Business Travel",
-  "name": "Conciergerie Corporate — Alchimia Corporate",
-  "description": "Chargé de voyage dédié pour déplacements professionnels, incentives et événements corporate. Belgique et international.",
+  "serviceType": "Corporate Travel Management",
+  "name": "Travel Management — Alchimia Corporate",
+  "description": "Travel manager externalisé pour déplacements professionnels, incentives et événements corporate. Belgique et international.",
   "provider": {
     "@type": "Organization",
     "name": "Alchimia Corporate",
@@ -286,7 +301,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Alchimia Corporate",
-  "description": "Conciergerie corporate et travel management externalisé pour PME et ETI en Belgique",
+  "description": "Travel management externalisé pour PME et ETI en Belgique",
   "url": "https://alchimia-corporae.vercel.app/conciergerie.html",
   "logo": "https://alchimia-corporae.vercel.app/favicon.svg",
   "email": "contact@alchimia-corporate.be",
@@ -313,12 +328,12 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     },
     {
       "@type": "Question",
-      "name": "Quelle différence entre une agence de voyage et une conciergerie corporate ?",
+      "name": "Quelle différence entre une agence de voyage et un travel manager dédié ?",
       "acceptedAnswer": {"@type": "Answer", "text": "Une agence traite chaque demande via un centre d'appel anonyme. Alchimia Corporate vous assigne un interlocuteur nommé disponible 7j/7, qui connaît vos habitudes dès le premier jour."}
     },
     {
       "@type": "Question",
-      "name": "Combien coûte une conciergerie d'entreprise en Belgique ?",
+      "name": "Combien coûte un travel manager externalisé en Belgique ?",
       "acceptedAnswer": {"@type": "Answer", "text": "Le service est facturé en abonnement mensuel, sans engagement annuel, systématiquement inférieur au coût d'un travel manager salarié (50 000–70 000 € brut/an + charges en Belgique)."}
     },
     {
@@ -386,7 +401,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
         <span data-i18n="h_badge">Conciergerie Corporate · Belgique &amp; International</span>
       </div>
-      <h1 data-i18n="h_h1">Votre <span>Travel Manager</span> dédié —<br>conciergerie corporate Belgique.</h1>
+      <h1 data-i18n="h_h1">Votre <span>Travel Manager</span> dédié —<br>travel management Belgium.</h1>
       <p class="hero-sub" data-i18n="h_sub">Un interlocuteur unique dédié à vos voyages d'affaires — vols, hôtels, transferts, restaurants, visas. Il connaît vos habitudes et gère toute la logistique à votre place.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-sable" data-i18n="h_cta1">Prendre contact</a>
@@ -401,6 +416,40 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         <div class="hero-pillar"><div class="hero-pillar-dot"></div><span data-i18n="hp5">Travel manager externalisé · Opérationnel sous 48h</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PHOTO MOMENTS -->
+<section class="moments-section" id="moments">
+  <div class="moments-grid">
+
+    <a href="#services" class="mc fade">
+      <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80');background-position:center 60%"></div>
+      <div class="mc-overlay"></div>
+      <div class="mc-body">
+        <span class="mc-label">Vols & Business class</span>
+        <p class="mc-h">Chaque trajet, géré sans friction</p>
+      </div>
+    </a>
+
+    <a href="#services" class="mc fade" style="transition-delay:.08s">
+      <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80');background-position:center 40%"></div>
+      <div class="mc-overlay"></div>
+      <div class="mc-body">
+        <span class="mc-label">Hôtels & Résidences</span>
+        <p class="mc-h">Les meilleures adresses, négociées</p>
+      </div>
+    </a>
+
+    <a href="#services" class="mc fade" style="transition-delay:.14s">
+      <div class="mc-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80');background-position:center 50%"></div>
+      <div class="mc-overlay"></div>
+      <div class="mc-body">
+        <span class="mc-label">Tables & Restaurants</span>
+        <p class="mc-h">Réservations prioritaires, partout</p>
+      </div>
+    </a>
+
   </div>
 </section>
 
@@ -543,14 +592,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       <p data-i18n="d_p">Hôtels négociés, restaurants réservés, transferts coordonnés. Nos partenaires locaux sur chaque marché gèrent vos déplacements comme si vous étiez chez vous.</p>
     </div>
     <div class="dest-grid">
-      <div class="dest"><div class="dest-bg" style="--c:oklch(28% 0.06 220)"></div><div class="dest-body"><span class="dest-flag">🇬🇧</span><span class="dest-city">Londres</span><span class="dest-desc" data-i18n="dd1">City & Canary Wharf, hub financier mondial</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(32% 0.07 30)"></div><div class="dest-body"><span class="dest-flag">🇫🇷</span><span class="dest-city">Paris</span><span class="dest-desc" data-i18n="dd2">La Défense, luxe corporate, hub CDG</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(26% 0.04 200)"></div><div class="dest-body"><span class="dest-flag">🇩🇪</span><span class="dest-city">Amsterdam</span><span class="dest-desc" data-i18n="dd3">Tech & media européens, hub Schiphol</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(30% 0.06 160)"></div><div class="dest-body"><span class="dest-flag">🇪🇸</span><span class="dest-city">Barcelone</span><span class="dest-desc" data-i18n="dd4">MWC, pharma & biotech, hub Méditerranée</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(24% 0.05 250)"></div><div class="dest-body"><span class="dest-flag">🇨🇭</span><span class="dest-city">Zurich</span><span class="dest-desc" data-i18n="dd5">Banque privée, pharma, horlogerie de précision</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(28% 0.04 185)"></div><div class="dest-body"><span class="dest-flag">🇦🇪</span><span class="dest-city">Dubaï</span><span class="dest-desc" data-i18n="dd6">Hub MICE Moyen-Orient, gateway Asie-Afrique</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(26% 0.05 60)"></div><div class="dest-body"><span class="dest-flag">🇯🇵</span><span class="dest-city">Tokyo</span><span class="dest-desc" data-i18n="dd7">Automotive, électronique, hub Asie-Pacifique</span></div></div>
-      <div class="dest"><div class="dest-bg" style="--c:oklch(25% 0.07 350)"></div><div class="dest-body"><span class="dest-flag">🌍</span><span class="dest-city" data-i18n="dd8_c">Sur mesure</span><span class="dest-desc" data-i18n="dd8">Partout où vous en avez besoin</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇬🇧</span><span class="dest-city">Londres</span><span class="dest-desc" data-i18n="dd1">City & Canary Wharf, hub financier mondial</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80');background-position:center 45%"></div><div class="dest-body"><span class="dest-flag">🇫🇷</span><span class="dest-city">Paris</span><span class="dest-desc" data-i18n="dd2">La Défense, luxe corporate, hub CDG</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=600&q=80');background-position:center 55%"></div><div class="dest-body"><span class="dest-flag">🇩🇪</span><span class="dest-city">Amsterdam</span><span class="dest-desc" data-i18n="dd3">Tech & media européens, hub Schiphol</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇪🇸</span><span class="dest-city">Barcelone</span><span class="dest-desc" data-i18n="dd4">MWC, pharma & biotech, hub Méditerranée</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1527535241524-6a3cb2e5e263?auto=format&fit=crop&w=600&q=80');background-position:center 45%"></div><div class="dest-body"><span class="dest-flag">🇨🇭</span><span class="dest-city">Zurich</span><span class="dest-desc" data-i18n="dd5">Banque privée, pharma, horlogerie de précision</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇦🇪</span><span class="dest-city">Dubaï</span><span class="dest-desc" data-i18n="dd6">Hub MICE Moyen-Orient, gateway Asie-Afrique</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇯🇵</span><span class="dest-city">Tokyo</span><span class="dest-desc" data-i18n="dd7">Automotive, électronique, hub Asie-Pacifique</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🌍</span><span class="dest-city" data-i18n="dd8_c">Sur mesure</span><span class="dest-desc" data-i18n="dd8">Partout où vous en avez besoin</span></div></div>
     </div>
   </div>
 </section>
@@ -592,7 +641,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 <section class="bg-lin" id="faq">
   <div class="container">
     <span class="eyebrow" data-i18n="faq_label">Questions fréquentes</span>
-    <h2 class="fade" data-i18n="faq_h2">Tout ce que vous voulez savoir sur la conciergerie corporate</h2>
+    <h2 class="fade" data-i18n="faq_h2">Tout ce que vous voulez savoir sur le travel management</h2>
     <div style="max-width:820px;margin:3rem auto 0">
       <div style="border-top:1px solid var(--border)">
         <div class="fade" style="border-bottom:1px solid var(--border);padding:1.5rem 0">
@@ -600,11 +649,11 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <p data-i18n="faq_a1">Un chargé de voyage dédié qui gère l'intégralité de vos déplacements professionnels — vols, hôtels, transferts, visas — sans être salarié de votre entreprise. Vous bénéficiez de l'expertise d'un expert voyage à temps plein, pour un coût 3 à 5 fois inférieur à un recrutement interne.</p>
         </div>
         <div class="fade" style="border-bottom:1px solid var(--border);padding:1.5rem 0;transition-delay:.06s">
-          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.6rem" data-i18n="faq_q2">Quelle différence entre une agence de voyage et une conciergerie corporate ?</h3>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.6rem" data-i18n="faq_q2">Quelle différence entre une agence de voyage et un travel manager dédié ?</h3>
           <p data-i18n="faq_a2">Une agence traite chaque demande à froid, via un centre d'appel anonyme. Chez Alchimia Corporate, vous avez un interlocuteur nommé qui connaît vos compagnies préférées, vos standards d'hébergement et vos contraintes horaires dès le premier jour. Zéro briefing répété, réponse en moins d'1h, disponible 7j/7.</p>
         </div>
         <div class="fade" style="border-bottom:1px solid var(--border);padding:1.5rem 0;transition-delay:.12s">
-          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.6rem" data-i18n="faq_q3">Combien coûte une conciergerie d'entreprise en Belgique ?</h3>
+          <h3 style="font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.6rem" data-i18n="faq_q3">Combien coûte un travel manager externalisé en Belgique ?</h3>
           <p data-i18n="faq_a3">Le service Alchimia Corporate est facturé en abonnement mensuel, sans engagement annuel. Le coût varie selon votre volume de voyages et vos besoins. Il est systématiquement inférieur au coût d'un travel manager salarié (50 000–70 000 € brut/an + charges en Belgique). Contactez-nous pour une estimation personnalisée gratuite.</p>
         </div>
         <div class="fade" style="border-bottom:1px solid var(--border);padding:1.5rem 0;transition-delay:.18s">
@@ -650,7 +699,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
             <option data-i18n="cf6_1">Voyages d'affaires réguliers</option>
             <option data-i18n="cf6_2">Événement / séminaire groupe</option>
             <option data-i18n="cf6_3">Voyage incentive</option>
-            <option data-i18n="cf6_4">Conciergerie ponctuelle</option>
+            <option data-i18n="cf6_4">Mission ponctuelle</option>
           </select>
         </div>
         <div class="fg"><label data-i18n="cf8">Contexte &amp; attentes</label><textarea placeholder="Fréquence de voyages, destinations habituelles, standards souhaités..."></textarea></div>
@@ -672,7 +721,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         <span class="foot-brand-b">Corporate</span>
         <p class="foot-desc" data-i18n="ft_desc">Votre partenaire de confiance pour les voyages d'affaires et l'événementiel corporate.</p>
       </div>
-      <div class="foot-col"><h4 data-i18n="ft_cv_head">Conciergerie</h4><ul>
+      <div class="foot-col"><h4 data-i18n="ft_cv_head">Travel Manager</h4><ul>
         <li><a href="#services" data-i18n="ft_srv">Services</a></li>
         <li><a href="#destinations" data-i18n="ft_dest">Destinations</a></li>
         <li><a href="#concept" data-i18n="ft_concept">Notre approche</a></li>
@@ -699,4 +748,4 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 
 <script src="conciergerie.js"></script>
 </body>
-</html>                                                         
+</html>
