@@ -66,9 +66,9 @@ cf6_3:'Incentive voyage',cf6_4:'Teambuilding immersif',cf6_5:'Formation',cf6_6:'
 cf8:'Votre projet',cf_send:'Envoyer ma demande',
 ft_desc:'Événements corporate qui transforment les équipes. Ancré dans les neurosciences.',
 ft_ev_head:'Événements',ft_prog:'Teambuilding immersif',ft_form:'Formations',ft_meth:'Notre méthode',
-ft_other:'Autres services',ft_conc:'Conciergerie',ft_eco:'Éco responsabilité',ft_ct:'Contact',ft_home:'Accueil',
+ft_other:'Autres services',ft_conc:'Conciergerie',ft_ct:'Contact',ft_home:'Accueil',
 ft_leg:'Légal',ft_priv:'Confidentialité',ft_ment:'Mentions légales',ft_cgv:'CGV',
-ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',ft_eco_lbl:'Options éco responsables'
+ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',
 },
 en:{
 n_ev:'Events',n_meth:'Method',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Request a quote',
@@ -136,9 +136,9 @@ cf6_3:'Travel incentive',cf6_4:'Immersive team building',cf6_5:'Training',cf6_6:
 cf8:'Your project',cf_send:'Send my enquiry',
 ft_desc:'Corporate events that transform teams. Rooted in neuroscience.',
 ft_ev_head:'Events',ft_prog:'Immersive team building',ft_form:'Training',ft_meth:'Our method',
-ft_other:'Other services',ft_conc:'Concierge',ft_eco:'Sustainability',ft_ct:'Contact',ft_home:'Home',
+ft_other:'Other services',ft_conc:'Concierge',ft_ct:'Contact',ft_home:'Home',
 ft_leg:'Legal',ft_priv:'Privacy',ft_ment:'Legal notice',ft_cgv:'T&Cs',
-ft_copy:'© 2026 Alchimia Corporate SRL, Belgium.',ft_eco_lbl:'Eco-responsible options'
+ft_copy:'© 2026 Alchimia Corporate SRL, Belgium.',
 }};
 
 let lang='fr';
