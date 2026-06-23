@@ -25,8 +25,8 @@ a{text-decoration:none;color:inherit}
   display:flex;overflow:hidden;
 }
 .gate-panel{
-  flex:1;display:flex;align-items:flex-end;
-  padding:clamp(2.5rem,5vw,5rem) clamp(2rem,5vw,5rem) clamp(3rem,6vh,5rem);
+  flex:1;display:flex;align-items:center;
+  padding:clamp(2.5rem,5vw,5rem) clamp(2rem,5vw,5rem);
   cursor:pointer;
   transition:flex .38s cubic-bezier(0.16,1,0.3,1);
   position:relative;overflow:hidden;
@@ -42,11 +42,11 @@ a{text-decoration:none;color:inherit}
 .gate-left::before{background:radial-gradient(ellipse 80% 60% at 70% 20%,oklch(46% 0.08 200 / 0.2) 0%,transparent 60%)}
 .gate-right::before{background:radial-gradient(ellipse 70% 50% at 30% 25%,oklch(72% 0.09 75 / 0.1) 0%,transparent 60%)}
 .gate-left::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.055;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E")}
-.gate-panel-inner{max-width:42ch;position:relative;z-index:1;min-height:min(38vh,320px);display:flex;flex-direction:column;justify-content:flex-end}
+.gate-panel-inner{max-width:42ch;position:relative;z-index:1}
 .gate-tag{
   display:block;font-family:'Bricolage Grotesque',sans-serif;
   font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  margin-bottom:1.5rem;
+  margin-bottom:1.2rem;
 }
 .gate-left .gate-tag{color:oklch(72% 0.09 75)}
 .gate-right .gate-tag{color:oklch(46% 0.08 200)}
@@ -120,7 +120,7 @@ a{text-decoration:none;color:inherit}
 @media(max-width:600px){
   #gate{flex-direction:column}
   .gate-divider{width:100%;height:1px}
-  .gate-panel{align-items:flex-start;padding:2.5rem 1.75rem 2.25rem;flex:1 !important;}
+  .gate-panel{align-items:flex-start;padding:3rem 1.75rem 2.5rem;flex:1 !important;}
   .gate-h{font-size:clamp(1.75rem,8vw,2.4rem)}
   .gate-center{
     position:static;transform:none;width:100%;
