@@ -132,30 +132,31 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .step:last-child h3{color:var(--white)}
 .step p{font-size:.78rem}
 .step:last-child p{color:oklch(97% 0.005 85 / 0.5)}
-/* EVENT HUB CARDS */
+/* PHOTO CARDS — bento grid */
 .ev-section{background:var(--lin)}
 .ev-header{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:3rem}
 .ev-sub{font-size:1rem;color:var(--muted);max-width:52ch;margin-top:.75rem}
-.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.ev-card{display:flex;flex-direction:column;background:var(--white);border-radius:14px;border:1px solid var(--border);padding:2rem 1.75rem 1.75rem;position:relative;overflow:hidden;transition:transform .22s var(--ease-expo),box-shadow .22s;text-decoration:none;color:inherit}
-.ev-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
-.ev-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
-.ev-card.c1::before{background:linear-gradient(90deg,var(--coral),var(--sable))}
-.ev-card.c2::before{background:linear-gradient(90deg,var(--sable),var(--coral))}
-.ev-card.c3::before{background:linear-gradient(90deg,var(--teal),var(--sable))}
-.ev-card.c4::before{background:linear-gradient(90deg,var(--teal),var(--coral))}
-.ev-card.featured{background:var(--navy);border-color:var(--navy)}
-.ev-card.featured::before{background:linear-gradient(90deg,var(--sable),var(--teal))}
-.ev-emoji{font-size:2rem;margin-bottom:1rem;display:block;line-height:1}
-.ev-chip{display:inline-flex;font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:var(--teal-pale);color:var(--teal);margin-bottom:.85rem}
-.ev-card.featured .ev-chip{background:oklch(97% 0.005 85 / 0.1);color:oklch(97% 0.005 85 / 0.65)}
-.ev-h{font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.65rem}
-.ev-card.featured .ev-h{color:var(--white)}
-.ev-p{font-size:.85rem;color:var(--muted);line-height:1.7;flex:1}
-.ev-card.featured .ev-p{color:oklch(97% 0.005 85 / 0.5)}
-.ev-link{display:inline-flex;align-items:center;gap:6px;font-family:'Bricolage Grotesque',sans-serif;font-size:.78rem;font-weight:700;color:var(--coral);margin-top:1.25rem;transition:gap .18s}
-.ev-card.featured .ev-link{color:var(--sable)}
-.ev-card:hover .ev-link{gap:10px}
+.ev-bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pc{position:relative;overflow:hidden;border-radius:12px;display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
+.pc-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .65s cubic-bezier(0.16,1,0.3,1)}
+.pc:hover .pc-img{transform:scale(1.05)}
+.pc-overlay{position:absolute;inset:0;background:linear-gradient(to top,oklch(12% 0.03 195 / 0.92) 0%,oklch(12% 0.03 195 / 0.52) 48%,oklch(12% 0.03 195 / 0.08) 100%)}
+.pc-body{position:relative;z-index:2;margin-top:auto;padding:1.75rem 1.75rem 1.5rem}
+.pc-cat{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sable);opacity:.82;margin-bottom:.42rem}
+.pc-h{font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:.55rem}
+.pc-p{font-size:.79rem;color:oklch(97% 0.005 85 / 0.58);line-height:1.65;margin-bottom:.9rem}
+.pc-lnk{display:inline-flex;align-items:center;gap:6px;font-family:'Bricolage Grotesque',sans-serif;font-size:.74rem;font-weight:700;color:oklch(97% 0.005 85 / 0.6);transition:color .2s,gap .18s}
+.pc:hover .pc-lnk{color:var(--sable);gap:9px}
+.pc.pc-feat .pc-overlay{background:linear-gradient(to top,oklch(12% 0.03 195 / 0.96) 0%,oklch(12% 0.03 195 / 0.65) 50%,oklch(12% 0.03 195 / 0.18) 100%)}
+.pc.pc-feat .pc-cat{color:var(--sable);opacity:1}
+.pc.pc-feat .pc-lnk{color:var(--sable)}
+.pc.pc-feat:hover .pc-lnk{color:var(--white)}
+.pc:nth-child(1){grid-column:1/3;min-height:370px}
+.pc:nth-child(2){min-height:370px}
+.pc:nth-child(3),.pc:nth-child(4),.pc:nth-child(5){min-height:285px}
+.pc:nth-child(6){grid-column:1/-1;min-height:205px}
+.pc:nth-child(6) .pc-body{max-width:54ch}
+.pc:nth-child(6) .pc-h{font-size:1.2rem}
 /* ÉCO */
 .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .eco-items{margin-top:2.5rem;display:flex;flex-direction:column}
@@ -206,7 +207,9 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 @media(max-width:1024px){
   .meth-intro{grid-template-columns:1fr;gap:2rem}
   .steps{grid-template-columns:repeat(3,1fr)}
-  .ev-grid{grid-template-columns:repeat(2,1fr)}
+  .ev-bento{grid-template-columns:repeat(2,1fr)}
+  .pc:nth-child(1){grid-column:1/-1}
+  .pc:nth-child(6){grid-column:1/-1}
   .eco-grid{grid-template-columns:1fr;gap:2.5rem}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
@@ -216,7 +219,11 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .nav-right .btn{display:none}
   .ham{display:flex}
   .steps{grid-template-columns:1fr 1fr}
-  .ev-grid{grid-template-columns:1fr}
+  .ev-bento{grid-template-columns:1fr}
+  .pc:nth-child(1),.pc:nth-child(6){grid-column:1}
+  .pc:nth-child(1){min-height:280px}
+  .pc:nth-child(2),.pc:nth-child(3),.pc:nth-child(4),.pc:nth-child(5){min-height:240px}
+  .pc:nth-child(6){min-height:180px}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .cf-row{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr;gap:2rem}
@@ -351,67 +358,92 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       <h2 class="fade" data-i18n="ev_h2">Quel événement pour quelle ambition ?</h2>
       <p class="ev-sub fade" style="transition-delay:.07s" data-i18n="ev_sub">De la soirée de gala au teambuilding immersif — nous concevons l'expérience qui correspond à votre objectif.</p>
     </div>
-    <div class="ev-grid">
-      <!-- Séminaires -->
-      <a href="#contact" class="ev-card c1 fade">
-        <span class="ev-emoji">🏔️</span>
-        <span class="ev-chip" data-i18n="ev1_chip">Séminaires &amp; offsite</span>
-        <h3 class="ev-h" data-i18n="ev1_h">Séminaires stratégiques &amp; offsites</h3>
-        <p class="ev-p" data-i18n="ev1_p">Kick-offs, retraites de direction, comités stratégiques. Sélection de lieux d'exception en Belgique et en Europe. Logistique entièrement prise en charge.</p>
-        <span class="ev-link" data-i18n="ev1_cta">Nous contacter
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+    <div class="ev-bento">
+
+      <!-- 1. Séminaires & offsite — large, spans 2 cols -->
+      <a href="#contact" class="pc fade" aria-label="Séminaires stratégiques &amp; offsites">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=80');background-position:center 40%"></div>
+        <div class="pc-overlay"></div>
+        <div class="pc-body">
+          <span class="pc-cat" data-i18n="ev1_chip">Séminaires &amp; offsite</span>
+          <h3 class="pc-h" data-i18n="ev1_h">Séminaires stratégiques &amp; offsites</h3>
+          <p class="pc-p" data-i18n="ev1_p">Kick-offs, retraites de direction, comités stratégiques. Sélection de lieux d'exception en Belgique et en Europe. Logistique entièrement prise en charge.</p>
+          <span class="pc-lnk" data-i18n="ev1_cta">Nous contacter
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
       </a>
-      <!-- Galas -->
-      <a href="#contact" class="ev-card c2 fade" style="transition-delay:.07s">
-        <span class="ev-emoji">🎭</span>
-        <span class="ev-chip" data-i18n="ev2_chip">Soirées &amp; galas</span>
-        <h3 class="ev-h" data-i18n="ev2_h">Soirées d'entreprise &amp; galas</h3>
-        <p class="ev-p" data-i18n="ev2_p">Anniversaires d'entreprise, cérémonies de remise de prix, dîners de gala. Des événements mémorables qui célèbrent vos équipes et renforcent votre culture.</p>
-        <span class="ev-link" data-i18n="ev2_cta">Nous contacter
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+
+      <!-- 2. Soirées & galas -->
+      <a href="#contact" class="pc fade" style="transition-delay:.06s" aria-label="Soirées d'entreprise &amp; galas">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1766164416026-1a823688d106?auto=format&fit=crop&w=900&q=80');background-position:center 55%"></div>
+        <div class="pc-overlay"></div>
+        <div class="pc-body">
+          <span class="pc-cat" data-i18n="ev2_chip">Soirées &amp; galas</span>
+          <h3 class="pc-h" data-i18n="ev2_h">Soirées d'entreprise &amp; galas</h3>
+          <p class="pc-p" data-i18n="ev2_p">Anniversaires d'entreprise, cérémonies de remise de prix, dîners de gala. Des événements mémorables qui célèbrent vos équipes et renforcent votre culture.</p>
+          <span class="pc-lnk" data-i18n="ev2_cta">Nous contacter
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
       </a>
-      <!-- Incentives -->
-      <a href="#contact" class="ev-card c3 fade" style="transition-delay:.14s">
-        <span class="ev-emoji">✈️</span>
-        <span class="ev-chip" data-i18n="ev3_chip">Incentives voyage</span>
-        <h3 class="ev-h" data-i18n="ev3_h">Incentives &amp; voyages de motivation</h3>
-        <p class="ev-p" data-i18n="ev3_p">Récompensez vos meilleurs éléments avec des expériences de voyage soigneusement orchestrées. Destinations sur mesure en Europe et à l'international.</p>
-        <span class="ev-link" data-i18n="ev3_cta">Nous contacter
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+
+      <!-- 3. Incentives voyage -->
+      <a href="#contact" class="pc fade" style="transition-delay:.1s" aria-label="Incentives &amp; voyages de motivation">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=900&q=80');background-position:center 60%"></div>
+        <div class="pc-overlay"></div>
+        <div class="pc-body">
+          <span class="pc-cat" data-i18n="ev3_chip">Incentives voyage</span>
+          <h3 class="pc-h" data-i18n="ev3_h">Incentives &amp; voyages de motivation</h3>
+          <p class="pc-p" data-i18n="ev3_p">Récompensez vos meilleurs éléments avec des expériences de voyage soigneusement orchestrées. Destinations sur mesure en Europe et à l'international.</p>
+          <span class="pc-lnk" data-i18n="ev3_cta">Nous contacter
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
       </a>
-      <!-- Conférences -->
-      <a href="#contact" class="ev-card c4 fade" style="transition-delay:.14s">
-        <span class="ev-emoji">🎤</span>
-        <span class="ev-chip" data-i18n="ev4_chip">Conférences &amp; lancements</span>
-        <h3 class="ev-h" data-i18n="ev4_h">Conférences clients &amp; lancements produit</h3>
-        <p class="ev-p" data-i18n="ev4_p">Lancements de produits, conférences annuelles, événements de marque. Concept clé en main, de la scénographie à l'animation.</p>
-        <span class="ev-link" data-i18n="ev4_cta">Nous contacter
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+
+      <!-- 4. Conférences & lancements -->
+      <a href="#contact" class="pc fade" style="transition-delay:.14s" aria-label="Conférences clients &amp; lancements produit">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80');background-position:center 35%"></div>
+        <div class="pc-overlay"></div>
+        <div class="pc-body">
+          <span class="pc-cat" data-i18n="ev4_chip">Conférences &amp; lancements</span>
+          <h3 class="pc-h" data-i18n="ev4_h">Conférences clients &amp; lancements produit</h3>
+          <p class="pc-p" data-i18n="ev4_p">Lancements de produits, conférences annuelles, événements de marque. Concept clé en main, de la scénographie à l'animation.</p>
+          <span class="pc-lnk" data-i18n="ev4_cta">Nous contacter
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
       </a>
-      <!-- Teambuilding immersif — FEATURED -->
-      <a href="programmes-immersifs.html" class="ev-card featured fade" style="transition-delay:.21s">
-        <span class="ev-emoji">⚡</span>
-        <span class="ev-chip" data-i18n="ev5_chip">Teambuilding immersif</span>
-        <h3 class="ev-h" data-i18n="ev5_h">Teambuilding immersif</h3>
-        <p class="ev-p" data-i18n="ev5_p">4 programmes OPÉRATION ancrés dans les neurosciences — conçus pour les CODIR, les équipes post-fusion, les forces commerciales et la négociation sous pression.</p>
-        <span class="ev-link" data-i18n="ev5_cta">Voir les programmes →
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+
+      <!-- 5. Teambuilding immersif — featured -->
+      <a href="programmes-immersifs.html" class="pc pc-feat fade" style="transition-delay:.18s" aria-label="Teambuilding immersif — Programmes OPÉRATION">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1774982516789-8fd54f81d630?auto=format&fit=crop&w=900&q=80');background-position:center 50%"></div>
+        <div class="pc-overlay"></div>
+        <div class="pc-body">
+          <span class="pc-cat" data-i18n="ev5_chip">Teambuilding immersif</span>
+          <h3 class="pc-h" data-i18n="ev5_h">Teambuilding immersif</h3>
+          <p class="pc-p" data-i18n="ev5_p">4 programmes OPÉRATION ancrés dans les neurosciences — conçus pour les CODIR, les équipes post-fusion, les forces commerciales et la négociation sous pression.</p>
+          <span class="pc-lnk" data-i18n="ev5_cta">Voir les programmes →
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
       </a>
-      <!-- Formations — FEATURED -->
-      <a href="programmes-immersifs.html#formation" class="ev-card featured fade" style="transition-delay:.21s">
-        <span class="ev-emoji">🎯</span>
-        <span class="ev-chip" data-i18n="ev6_chip">Formations &amp; cohésion</span>
-        <h3 class="ev-h" data-i18n="ev6_h">Formations &amp; développement</h3>
-        <p class="ev-p" data-i18n="ev6_p">6 modules certifiables en leadership, intelligence émotionnelle, communication et dynamique d'équipe. Finançables jusqu'à 50% via les fonds sectoriels belges.</p>
-        <span class="ev-link" data-i18n="ev6_cta">Voir les modules →
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+
+      <!-- 6. Formations & cohésion — featured, full-width panoramic -->
+      <a href="programmes-immersifs.html#formation" class="pc pc-feat fade" style="transition-delay:.22s" aria-label="Formations &amp; développement d'équipe">
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1770563181870-eca60076ffd8?auto=format&fit=crop&w=1800&q=80');background-position:center 45%"></div>
+        <div class="pc-overlay"></div>
+        <div class="pc-body">
+          <span class="pc-cat" data-i18n="ev6_chip">Formations &amp; cohésion</span>
+          <h3 class="pc-h" data-i18n="ev6_h">Formations &amp; développement</h3>
+          <p class="pc-p" data-i18n="ev6_p">6 modules certifiables en leadership, intelligence émotionnelle, communication et dynamique d'équipe. Finançables jusqu'à 50% via les fonds sectoriels belges.</p>
+          <span class="pc-lnk" data-i18n="ev6_cta">Voir les modules →
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
       </a>
+
     </div>
   </div>
 </section>
