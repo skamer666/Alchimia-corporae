@@ -12,7 +12,7 @@ const T = {
   en: {
     tb_tag:'Team Building & Training',
     tb_h:'Transform<br>your team.',
-    tb_p:'Neuroscience-based immersive experiences and training programmes.',
+    tb_p:'Neuroscience based immersive experiences and training programmes.',
     tb_cta:'Explore programmes',
     cv_tag:'Corporate Concierge',
     cv_h:'Your personal<br>assistant.',
