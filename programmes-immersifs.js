@@ -102,7 +102,7 @@ fcta_p:'Cefora (CP 200), Fonds 4S, Constructiv, chèques formation wallons. Jusq
 fcta_btn:'Vérifier mon éligibilité',
 ct_label:'Parlons de votre projet',ct_h2:'Prêt à transformer votre équipe ?',
 ct_p:'Décrivez-nous vos objectifs. Nous revenons sous 24h avec une proposition adaptée.',
-ct_note:'💡 Première consultation gratuite de 30 min. Estimation sans engagement.',
+ct_note:'',
 cf_send:'Envoyer ma demande',
 ft_desc:'Transformer les équipes par l\'expérience. Ancré dans les neurosciences.',
 ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',ft_eco_lbl:'Engagement éco responsable'
@@ -150,7 +150,7 @@ fcta_p:'Cefora (CP 200), Fonds 4S, Constructiv, Walloon training vouchers. Up to
 fcta_btn:'Check my eligibility',
 ct_label:'Discuss your project',ct_h2:'Ready to transform your team?',
 ct_p:'Tell us your objectives. We respond within 24h with a tailored proposal.',
-ct_note:'💡 Free 30-min consultation. Budget estimate with no commitment.',
+ct_note:'',
 cf_send:'Send my enquiry',
 ft_desc:'Transforming teams through experience. Rooted in neuroscience.',
 ft_copy:'© 2026 Alchimia Corporate SRL, Belgium.',ft_eco_lbl:'Eco responsible commitment'
