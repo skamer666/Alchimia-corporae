@@ -275,8 +275,11 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .concept-card{padding:1.5rem}
   /* Eco */
   .eco-travel-grid{grid-template-columns:1fr;gap:2rem}
-  .eco-promise-list{grid-template-columns:1fr}
-  .eco-promise{padding:1.25rem}
+  .eco-row p{display:none}
+  .eco-promise-list{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .75rem}
+  .eco-promise{padding:0;align-items:center}
+  .eco-promise span:last-child{font-size:.75rem;line-height:1.4}
+  .eco-right-panel>p{display:none}
   /* Comparison */
   .cstep{padding:1rem 1.25rem}
   #comparatif table{min-width:480px}
@@ -315,9 +318,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   #comparatif td,#comparatif th{padding:.55rem .75rem;font-size:.72rem}
   /* Eco section */
   .eco-travel-grid{gap:1.25rem}
-  .eco-promise{gap:.45rem}
-  .eco-promise span{font-size:.78rem;line-height:1.45}
-  .eco-card{padding:1.5rem 1.25rem}
+  .eco-promise-list{grid-template-columns:1fr 1fr}
+  .eco-promise span:last-child{font-size:.72rem}
 }
 </style>
 <script type="application/ld+json">
@@ -647,7 +649,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     <div class="dest-grid">
       <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇬🇧</span><span class="dest-city">Londres</span><span class="dest-desc" data-i18n="dd1">City & Canary Wharf, hub financier mondial</span></div></div>
       <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80');background-position:center 45%"></div><div class="dest-body"><span class="dest-flag">🇫🇷</span><span class="dest-city">Paris</span><span class="dest-desc" data-i18n="dd2">La Défense, luxe corporate, hub CDG</span></div></div>
-      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=600&q=80');background-position:center 55%"></div><div class="dest-body"><span class="dest-flag">🇩🇪</span><span class="dest-city">Amsterdam</span><span class="dest-desc" data-i18n="dd3">Tech & media européens, hub Schiphol</span></div></div>
+      <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=600&q=80');background-position:center 55%"></div><div class="dest-body"><span class="dest-flag">🇳🇱</span><span class="dest-city">Amsterdam</span><span class="dest-desc" data-i18n="dd3">Tech & media européens, hub Schiphol</span></div></div>
       <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇪🇸</span><span class="dest-city">Barcelone</span><span class="dest-desc" data-i18n="dd4">MWC, pharma & biotech, hub Méditerranée</span></div></div>
       <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1617181129985-3dee7252966b?auto=format&fit=crop&w=600&q=80');background-position:center 45%"></div><div class="dest-body"><span class="dest-flag">🇨🇭</span><span class="dest-city">Zurich</span><span class="dest-desc" data-i18n="dd5">Banque privée, pharma, horlogerie de précision</span></div></div>
       <div class="dest"><div class="dest-bg" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80');background-position:center 50%"></div><div class="dest-body"><span class="dest-flag">🇦🇪</span><span class="dest-city">Dubaï</span><span class="dest-desc" data-i18n="dd6">Hub MICE Moyen-Orient, gateway Asie-Afrique</span></div></div>
