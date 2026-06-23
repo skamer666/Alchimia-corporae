@@ -48,12 +48,12 @@ s2_t:'Design',s2_h:'Coconstruction',s2_p:'Concept sur mesure aligné sur vos amb
 s3_t:'Action',s3_h:'Exécution',s3_p:'Expérience orchestrée avec soin, émotions authentiques, impact maximum.',
 s4_t:'Analyse',s4_h:'Décodage',s4_p:'Retour d\'expérience collectif, ancrage, transfert vers le quotidien.',
 s5_t:'Suivi',s5_h:'Impact',s5_p:'Mesure à 30/60/90 jours. Rapport remis à votre direction.',
-ec_label:'Notre engagement',ec_h2:'Éco responsabilité au cœur de chaque projet',
+ec_label:'Sur demande',ec_h2:'Éco responsabilité : des options à votre demande',
 ec_p:'La performance ne se fait pas au détriment de la planète. Chaque événement intègre un volet environnemental concret.',
-ec1:'Bilan carbone fourni',ec1p:'Chaque événement : calcul de l\'empreinte carbone remis avec le compte rendu.',
+ec1:'Bilan carbone',ec1p:'Sur demande : estimation de l\'empreinte carbone de l\'événement, remise avec le bilan.',
 ec2:'Prestataires locaux privilégiés',ec2p:'Priorité aux acteurs locaux et régionaux pour chaque événement.',
-ec3:'Train recommandé ≤ 3h',ec3p:'Pour les déplacements européens, le train est systématiquement proposé en premier.',
-ec4:'Compensation carbone',ec4p:'Émissions résiduelles compensées via projets certifiés Gold Standard.',
+ec3:'Alternatives bas carbone',ec3p:'Sur demande : train, covoiturage ou options locales pour réduire les déplacements.',
+ec4:'Compensation carbone',ec4p:'Sur demande : mise en relation avec des projets de compensation certifiés.',
 ec_grade:'Engagement éco responsabilité Alchimia Corporate',
 ec_box_p:'Module d\'audit éco intégré : vos équipes repartent avec des actions concrètes pour réduire l\'empreinte de leur département.',
 ec_cta:'Demander un audit éco',
@@ -68,7 +68,7 @@ ft_desc:'Événements corporate qui transforment les équipes. Ancré dans les n
 ft_ev_head:'Événements',ft_prog:'Teambuilding immersif',ft_form:'Formations',ft_meth:'Notre méthode',
 ft_other:'Autres services',ft_conc:'Conciergerie',ft_eco:'Éco responsabilité',ft_ct:'Contact',ft_home:'Accueil',
 ft_leg:'Légal',ft_priv:'Confidentialité',ft_ment:'Mentions légales',ft_cgv:'CGV',
-ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',ft_eco_lbl:'Engagement éco responsable'
+ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',ft_eco_lbl:'Options éco responsables'
 },
 en:{
 n_ev:'Events',n_meth:'Method',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Request a quote',
@@ -118,12 +118,12 @@ s2_t:'Design',s2_h:'Co creation',s2_p:'Tailor made concept aligned with your str
 s3_t:'Action',s3_h:'Execution',s3_p:'Carefully orchestrated experience, authentic emotions, maximum impact.',
 s4_t:'Analysis',s4_h:'Decoding',s4_p:'Collective debrief, cognitive anchoring, transfer to daily work.',
 s5_t:'Follow up',s5_h:'Impact',s5_p:'Measured at 30/60/90 days. Report delivered to management.',
-ec_label:'Our commitment',ec_h2:'Sustainability at the heart of every project',
+ec_label:'On request',ec_h2:'Sustainability: options available on request',
 ec_p:'Performance should not come at the expense of the planet.',
-ec1:'Carbon footprint provided',ec1p:'Every event: carbon footprint calculation delivered with the summary.',
+ec1:'Carbon footprint provided',ec1p:'On request: carbon footprint estimate for the event, delivered with the event summary.',
 ec2:'Local suppliers first',ec2p:'Priority to local and regional providers for every event.',
-ec3:'Train recommended ≤ 3h',ec3p:'For European travel, the train is systematically proposed first.',
-ec4:'Carbon offsetting',ec4p:'Residual emissions offset through Gold Standard certified projects.',
+ec3:'Low-carbon alternatives',ec3p:'On request: train, carpooling or local options to reduce travel.',
+ec4:'Carbon offsetting',ec4p:'On request: connection to certified offsetting projects.',
 ec_grade:'Alchimia Corporate sustainability commitment',
 ec_box_p:'Eco audit module intégré : les équipes leave with concrete actions to reduce their department footprint.',
 ec_cta:'Request an eco audit',
@@ -138,7 +138,7 @@ ft_desc:'Corporate events that transform teams. Rooted in neuroscience.',
 ft_ev_head:'Events',ft_prog:'Immersive team building',ft_form:'Training',ft_meth:'Our method',
 ft_other:'Other services',ft_conc:'Concierge',ft_eco:'Sustainability',ft_ct:'Contact',ft_home:'Home',
 ft_leg:'Legal',ft_priv:'Privacy',ft_ment:'Legal notice',ft_cgv:'T&Cs',
-ft_copy:'© 2026 Alchimia Corporate SRL, Belgium.',ft_eco_lbl:'Eco responsible commitment'
+ft_copy:'© 2026 Alchimia Corporate SRL, Belgium.',ft_eco_lbl:'Eco-responsible options'
 }};
 
 let lang='fr';
