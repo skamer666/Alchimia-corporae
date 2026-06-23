@@ -243,6 +243,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .hero-ctas{flex-direction:column;gap:.6rem}
   .hero-ctas .btn{width:100%;justify-content:center}
   .hero-neuro{flex-wrap:wrap;gap:.55rem}
+  .hero-divider{margin-bottom:1.75rem}
   .hero-neuro-item{font-size:.72rem}
   /* Events */
   .ev-std,.ev-sig{grid-template-columns:1fr}
@@ -272,7 +273,11 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   h1{font-size:1.85rem}
   h2{font-size:1.5rem}
   .steps{grid-template-columns:1fr}
-  .hero-neuro{flex-direction:column;gap:.5rem}
+  /* Hero neuro stats: reste en ligne, plus compact */
+  .hero-divider{margin-bottom:1.25rem}
+  .hero-neuro{flex-direction:row;flex-wrap:wrap;gap:1rem 1.5rem}
+  .hero-neuro-item .n{font-size:1.3rem}
+  .hero-neuro-item .l{font-size:.58rem;max-width:12ch}
   .ev-std .pc,.ev-sig .pc{min-height:200px}
   .pc-h{font-size:.9rem}
 }

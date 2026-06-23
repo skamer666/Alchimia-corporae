@@ -279,6 +279,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .eco-promise{padding:1.25rem}
   /* Comparison */
   .cstep{padding:1rem 1.25rem}
+  #comparatif table{min-width:480px}
+  #comparatif td,#comparatif th{padding:.65rem .9rem;font-size:.75rem}
   /* Contact */
   .contact-grid{grid-template-columns:1fr;gap:2rem}
   .cf-row{grid-template-columns:1fr}
@@ -299,7 +301,23 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .dest-bg{height:170px}
   .moments-grid{grid-template-columns:1fr}
   .mc:nth-child(1),.mc:nth-child(2),.mc:nth-child(3){min-height:210px}
-  .srv-grid{grid-template-columns:1fr}
+  /* Services — 2 colonnes compactes, descriptions masquées */
+  .srv-grid{grid-template-columns:1fr 1fr;gap:.6rem}
+  .srv-grid .srv:last-child:nth-child(odd){grid-column:1/-1}
+  .srv{padding:.85rem .85rem .75rem}
+  .srv-ico{display:none}
+  .srv h3{font-size:.82rem;margin-bottom:.35rem}
+  .srv p{display:none}
+  .srv-tags{gap:3px}
+  .srv-tag{font-size:.56rem;padding:2px 7px}
+  /* Comparison table */
+  #comparatif table{min-width:460px}
+  #comparatif td,#comparatif th{padding:.55rem .75rem;font-size:.72rem}
+  /* Eco section */
+  .eco-travel-grid{gap:1.25rem}
+  .eco-promise{gap:.45rem}
+  .eco-promise span{font-size:.78rem;line-height:1.45}
+  .eco-card{padding:1.5rem 1.25rem}
 }
 </style>
 <script type="application/ld+json">

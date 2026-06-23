@@ -122,29 +122,30 @@ a{text-decoration:none;color:inherit}
   .gate-divider{width:100%;height:1px}
   .gate-panel{
     align-items:flex-start;
-    padding:2.75rem 1.5rem 2.25rem;
+    padding:1.4rem 1.5rem 1.25rem;
     flex:1 !important;
-    min-height:45vh;
   }
-  .gate-h{font-size:clamp(2.2rem,10vw,3rem);line-height:.95}
-  .gate-tag{font-size:.6rem;margin-bottom:1rem}
-  .gate-p{font-size:.85rem;margin-bottom:1.75rem;max-width:100%}
-  .gate-cta{font-size:.82rem;padding:.65rem 1.25rem}
+  .gate-h{font-size:clamp(1.9rem,9vw,2.5rem);line-height:.95;margin-bottom:.65rem}
+  .gate-tag{font-size:.58rem;margin-bottom:.6rem;letter-spacing:.15em}
+  .gate-p{font-size:.8rem;line-height:1.55;margin-bottom:1rem;max-width:100%}
+  .gate-cta{font-size:.8rem;padding:.58rem 1.1rem}
   .gate-center{
     position:static;transform:none;width:100%;
     background:oklch(22% 0.035 195);
-    padding:1rem 1.5rem;
+    padding:.85rem 1.5rem;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
+    flex-shrink:0;
   }
   .gate-logo{background:none;border:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;flex-direction:row;align-items:baseline;gap:5px}
-  .gate-logo-a{font-size:.95rem}
-  .gate-logo-b{font-size:.42rem}
+  .gate-logo-a{font-size:.92rem}
+  .gate-logo-b{font-size:.4rem}
 }
-@media(max-width:360px){
-  .gate-panel{padding:2rem 1.1rem 2rem}
-  .gate-h{font-size:2rem}
+@media(max-width:390px){
+  .gate-panel{padding:1.1rem 1.25rem 1rem}
+  .gate-h{font-size:1.75rem}
+  .gate-p{font-size:.76rem}
 }
 @media(prefers-reduced-motion:reduce){
   .gate-panel,.gate-divider{animation:none;transition:none}
