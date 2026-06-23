@@ -6,12 +6,12 @@ const TB=[
     type:{fr:'Crise CODIR',en:'CODIR Crisis'},
     kpi:{fr:'−40% décision · +35% exécution · NPS 72–89',en:'−40% decision time · +35% execution · NPS 72–89'},
     pb:{
-      fr:'Votre CODIR croit bien fonctionner — jusqu\'à ce que la pression révèle les silences, les positions camouflées et les décisions jamais vraiment prises.',
-      en:'Your CODIR believes it functions well — until real pressure exposes the silences, hidden positions and decisions never truly made.'
+      fr:'Votre CODIR croit bien fonctionner : jusqu\'à ce que la pression révèle les silences, les positions camouflées et les décisions jamais vraiment prises.',
+      en:'Your CODIR believes it functions well : until real pressure exposes the silences, hidden positions and decisions never truly made.'
     },
     sol:{
-      fr:'Une simulation de crise authentique, filmée et débriefée, qui rend visibles les dynamiques qui freinent l\'exécution — et crée le déclic collectif.',
-      en:'An authentic, filmed crisis simulation that makes visible the dynamics holding back execution — and creates the collective turning point.'
+      fr:'Une simulation de crise authentique, filmée et débriefée, qui rend visibles les dynamiques qui freinent l\'exécution et crée le déclic collectif.',
+      en:'An authentic, filmed crisis simulation that makes visible the dynamics holding back execution : and creates the collective turning point.'
     }
   },
   {
@@ -34,8 +34,8 @@ const TB=[
     type:{fr:'Performance commerciale',en:'Sales Performance'},
     kpi:{fr:'+23–31% conversion · 87% rétention · NPS 81–94',en:'+23–31% conversion · 87% retention · NPS 81–94'},
     pb:{
-      fr:'Vos commerciaux répètent les mêmes erreurs face aux clients difficiles — sans jamais les voir. Les formations classiques n\'y changent rien.',
-      en:'Your salespeople repeat the same mistakes with difficult clients — without ever seeing them. Classical training changes nothing.'
+      fr:'Vos commerciaux répètent les mêmes erreurs face aux clients difficiles, sans jamais les voir. Les formations classiques n\'y changent rien.',
+      en:'Your salespeople repeat the same mistakes with difficult clients : without ever seeing them. Classical training changes nothing.'
     },
     sol:{
       fr:'Des acteurs professionnels jouent vos clients pendant une journée entière. Tout est filmé. Le lendemain, chacun regarde qui il est vraiment en rendez-vous.',
@@ -68,25 +68,25 @@ h_cta1:'Voir les programmes',h_cta2:'Voir les formations',
 h_s1:'Ancrage comportemental 2–3× supérieur à la formation classique*',
 h_s2:'Mémorisation par l\'expérience vécue*',
 h_s3:'Protocole neurosciences DOSE activé',
-h_src:'*Sources : Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter — neurosciences de l\'apprentissage',
+h_src:'*Sources : Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter, neurosciences de l\'apprentissage',
 nr_label:'La science derrière l\'expérience',
 nr_h2:'Pourquoi l\'expérience<br>crée un apprentissage durable',
-nr_p:'Nos programmes activent les 4 hormones clés de la performance collective — le protocole DOSE.',
+nr_p:'Nos programmes activent les 4 hormones clés de la performance collective : le protocole DOSE.',
 d_n:'Dopamine',d_d:'Motivation et récompense. Activée par les défis progressifs et les succès collectifs.',
 o_n:'Ocytocine',o_d:'Lien social et confiance. Générée par les expériences partagées intenses.',
 s_n:'Sérotonine',s_d:'Reconnaissance et statut positif. Renforcée par la valorisation des contributions.',
 e_n:'Endorphines',e_d:'Dépassement et résilience. Libérées lors de l\'effort collectif.',
 nr_stat_lbl:'meilleure rétention en apprentissage expérientiel actif vs. passif, selon les recherches en mémoire épisodique',
-nr_source:'Bjork & Bjork (2011) · Roediger & Karpicke (2006) · Schacter — mémoire épisodique',
+nr_source:'Bjork & Bjork (2011) · Roediger & Karpicke (2006) · Schacter, mémoire épisodique',
 nf1:'La mémoire épisodique (souvenirs d\'expériences) est la plus résistante à l\'oubli sur le long terme.',
-nf2:'L\'émotion renforce la consolidation mémorielle via l\'amygdale — plus l\'expérience est intense, plus l\'ancrage est fort.',
+nf2:'L\'émotion renforce la consolidation mémorielle via l\'amygdale : plus l\'expérience est intense, plus l\'ancrage est fort.',
 nf3:'Le débrief post expérience double l\'effet de transfert vers les comportements professionnels réels.',
 tb_label:'Programmes immersifs',
 tb_h2:'4 programmes OPÉRATION',
 tb_sub:'Chacun conçu autour d\'un problème précis. Chacun déployé sur mesure pour votre équipe.',
 tbf_all:'Tous',tbf_codir:'CODIR & Crise',tbf_fusion:'Post fusion',tbf_com:'Commercial',tbf_neg:'Négociation',
 tb_pb_lbl:'Le problème',tb_kpi_lbl:'ROI documenté',
-tb_example:'Exemple — personnalisé pour chaque organisation',
+tb_example:'Exemple : personnalisé pour chaque organisation',
 tb_discover:'Voir le programme complet →',
 fo_label:'Formation & Développement',
 fo_h2:'Des formations qui transforment durablement',
@@ -105,7 +105,7 @@ ct_p:'Décrivez-nous vos objectifs. Nous revenons sous 24h avec une proposition 
 ct_note:'💡 Première consultation gratuite de 30 min. Estimation sans engagement.',
 cf_send:'Envoyer ma demande',
 ft_desc:'Transformer les équipes par l\'expérience. Ancré dans les neurosciences.',
-ft_copy:'© 2026 Alchimia Corporate SRL — Belgique.',ft_eco_lbl:'Engagement éco responsable'
+ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',ft_eco_lbl:'Engagement éco responsable'
 },
 en:{
 n_back:'← Events',n_conc:'Travel Manager',n_contact:'Contact',n_cta:'Request a quote',
@@ -116,25 +116,25 @@ h_cta1:'See programmes',h_cta2:'See training',
 h_s1:'Behavioural anchoring 2–3× greater than classical training*',
 h_s2:'Retention through active experience*',
 h_s3:'Neuroscience DOSE protocol',
-h_src:'*Sources: Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter — learning neuroscience',
+h_src:'*Sources: Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter, learning neuroscience',
 nr_label:'The science behind the experience',
 nr_h2:'Why experience creates<br>lasting learning',
-nr_p:'Our programmes activate the 4 key hormones of collective performance — the DOSE protocol.',
+nr_p:'Our programmes activate the 4 key hormones of collective performance : the DOSE protocol.',
 d_n:'Dopamine',d_d:'Motivation and reward. Activated by progressive challenges and collective successes.',
 o_n:'Oxytocin',o_d:'Social bonding and trust. Generated by shared intense experiences.',
 s_n:'Serotonin',s_d:'Recognition and positive status. Reinforced by valuing contributions.',
 e_n:'Endorphins',e_d:'Self surpassing and resilience. Released through collective effort.',
 nr_stat_lbl:'better retention in active experiential learning vs. passive formats, based on episodic memory research',
-nr_source:'Bjork & Bjork (2011) · Roediger & Karpicke (2006) · Schacter — episodic memory',
+nr_source:'Bjork & Bjork (2011) · Roediger & Karpicke (2006) · Schacter, episodic memory',
 nf1:'Episodic memory (memories of experiences) is the most resilient to forgetting over time.',
-nf2:'Emotion reinforces memory consolidation via the amygdala — the more intense the experience, the stronger the anchoring.',
+nf2:'Emotion reinforces memory consolidation via the amygdala : the more intense the experience, the stronger the anchoring.',
 nf3:'Post experience debrief doubles the transfer effect to real professional behaviours.',
 tb_label:'Immersive programmes',
 tb_h2:'4 OPÉRATION programmes',
 tb_sub:'Each built around a specific problem. Each deployed entirely to order for your team.',
 tbf_all:'All',tbf_codir:'CODIR & Crisis',tbf_fusion:'Post merger',tbf_com:'Commercial',tbf_neg:'Negotiation',
 tb_pb_lbl:'The challenge',tb_kpi_lbl:'Documented ROI',
-tb_example:'Example — tailored for each organisation',
+tb_example:'Example: tailored for each organisation',
 tb_discover:'See full programme →',
 fo_label:'Training & Development',
 fo_h2:'Training that transforms durably',
@@ -153,7 +153,7 @@ ct_p:'Tell us your objectives. We respond within 24h with a tailored proposal.',
 ct_note:'💡 Free 30-min consultation. Budget estimate with no commitment.',
 cf_send:'Send my enquiry',
 ft_desc:'Transforming teams through experience. Rooted in neuroscience.',
-ft_copy:'© 2026 Alchimia Corporate SRL — Belgium.',ft_eco_lbl:'Eco responsible commitment'
+ft_copy:'© 2026 Alchimia Corporate SRL, Belgium.',ft_eco_lbl:'Eco responsible commitment'
 }};
 
 let lang='fr',filter='all';
