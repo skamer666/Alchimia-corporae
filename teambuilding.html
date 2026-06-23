@@ -94,7 +94,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .hero-bg2{position:absolute;inset:0;background:radial-gradient(ellipse 45% 45% at 5% 85%,oklch(72% 0.09 75 / 0.1) 0%,transparent 55%)}
 .hero-dots{position:absolute;inset:0;opacity:.035;background-image:radial-gradient(circle,var(--white) 1px,transparent 1px);background-size:40px 40px}
 .hero-content{position:relative;z-index:2;max-width:760px;padding:5rem 0}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:oklch(72% 0.09 75 / 0.12);border:1px solid oklch(72% 0.09 75 / 0.28);padding:5px 14px;border-radius:20px;font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:600;color:var(--sable);letter-spacing:.05em;margin-bottom:1.6rem}
+.hero-badge{display:none}
 .hero h1{color:var(--white);margin-bottom:1.4rem}
 .hero h1 span{color:var(--sable)}
 .hero-sub{font-size:1.05rem;color:oklch(97% 0.005 85 / 0.6);max-width:55ch;margin-bottom:2.5rem;line-height:1.75}
@@ -105,7 +105,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .hero-neuro-item .n em{color:var(--sable);font-style:normal;font-size:.7em}
 .hero-neuro-item .l{font-size:.68rem;color:oklch(97% 0.005 85 / 0.45);text-transform:uppercase;letter-spacing:.1em;margin-top:4px;display:block;max-width:18ch}
 @keyframes hero-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-.hero-badge{animation:hero-in .55s cubic-bezier(0.16,1,0.3,1) .1s both}
+
 .hero h1{animation:hero-in .6s cubic-bezier(0.16,1,0.3,1) .22s both}
 .hero-sub{animation:hero-in .6s cubic-bezier(0.16,1,0.3,1) .34s both}
 .hero-ctas{animation:hero-in .6s cubic-bezier(0.16,1,0.3,1) .46s both}
