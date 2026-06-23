@@ -132,11 +132,11 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .step:last-child h3{color:var(--white)}
 .step p{font-size:.78rem}
 .step:last-child p{color:oklch(97% 0.005 85 / 0.5)}
-/* PHOTO CARDS — bento grid */
+/* PHOTO CARDS — signature layout */
 .ev-section{background:var(--lin)}
 .ev-header{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:3rem}
 .ev-sub{font-size:1rem;color:var(--muted);max-width:52ch;margin-top:.75rem}
-.ev-bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+/* card base */
 .pc{position:relative;overflow:hidden;border-radius:12px;display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
 .pc-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .65s cubic-bezier(0.16,1,0.3,1)}
 .pc:hover .pc-img{transform:scale(1.05)}
@@ -147,16 +147,31 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .pc-p{font-size:.79rem;color:oklch(97% 0.005 85 / 0.58);line-height:1.65;margin-bottom:.9rem}
 .pc-lnk{display:inline-flex;align-items:center;gap:6px;font-family:'Bricolage Grotesque',sans-serif;font-size:.74rem;font-weight:700;color:oklch(97% 0.005 85 / 0.6);transition:color .2s,gap .18s}
 .pc:hover .pc-lnk{color:var(--sable);gap:9px}
+/* featured badge top-right */
+.pc-badge{position:absolute;top:1.1rem;right:1.1rem;z-index:3;font-family:'Bricolage Grotesque',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);background:var(--sable);padding:4px 12px;border-radius:3px;line-height:1.4}
+/* featured cards */
+.pc.pc-feat{outline:1.5px solid oklch(72% 0.09 75 / 0.4)}
 .pc.pc-feat .pc-overlay{background:linear-gradient(to top,oklch(12% 0.03 195 / 0.96) 0%,oklch(12% 0.03 195 / 0.65) 50%,oklch(12% 0.03 195 / 0.18) 100%)}
 .pc.pc-feat .pc-cat{color:var(--sable);opacity:1}
+.pc.pc-feat .pc-h{font-size:1.12rem}
 .pc.pc-feat .pc-lnk{color:var(--sable)}
 .pc.pc-feat:hover .pc-lnk{color:var(--white)}
-.pc:nth-child(1){grid-column:1/3;min-height:370px}
-.pc:nth-child(2){min-height:370px}
-.pc:nth-child(3),.pc:nth-child(4),.pc:nth-child(5){min-height:285px}
-.pc:nth-child(6){grid-column:1/-1;min-height:205px}
-.pc:nth-child(6) .pc-body{max-width:54ch}
-.pc:nth-child(6) .pc-h{font-size:1.2rem}
+/* standard events grid — 3-col bento */
+.ev-std{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}
+.ev-std .pc:nth-child(1){grid-column:1/3;min-height:340px}
+.ev-std .pc:nth-child(2){min-height:340px}
+.ev-std .pc:nth-child(3){min-height:265px}
+.ev-std .pc:nth-child(4){grid-column:2/4;min-height:265px}
+/* separator */
+.ev-sig-head{display:flex;align-items:center;gap:1.25rem;margin:2.75rem 0 .6rem}
+.ev-sig-rule{flex:1;height:1px;background:oklch(46% 0.08 200 / 0.2)}
+.ev-sig-sub{font-size:.82rem;color:var(--muted);text-align:center;margin-bottom:1.5rem}
+/* signature programmes grid */
+.ev-sig{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ev-sig .pc{min-height:360px}
+/* highlighted nav link for Programmes */
+.nav-links .nav-prog{color:var(--teal);font-weight:600}
+.nav-links .nav-prog:hover{color:var(--teal-dark)}
 /* ÉCO */
 .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .eco-items{margin-top:2.5rem;display:flex;flex-direction:column}
@@ -207,9 +222,9 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 @media(max-width:1024px){
   .meth-intro{grid-template-columns:1fr;gap:2rem}
   .steps{grid-template-columns:repeat(3,1fr)}
-  .ev-bento{grid-template-columns:repeat(2,1fr)}
-  .pc:nth-child(1){grid-column:1/-1}
-  .pc:nth-child(6){grid-column:1/-1}
+  .ev-std{grid-template-columns:1fr 1fr}
+  .ev-std .pc:nth-child(1){grid-column:1/-1}
+  .ev-std .pc:nth-child(4){grid-column:1/-1}
   .eco-grid{grid-template-columns:1fr;gap:2.5rem}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
@@ -219,11 +234,9 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .nav-right .btn{display:none}
   .ham{display:flex}
   .steps{grid-template-columns:1fr 1fr}
-  .ev-bento{grid-template-columns:1fr}
-  .pc:nth-child(1),.pc:nth-child(6){grid-column:1}
-  .pc:nth-child(1){min-height:280px}
-  .pc:nth-child(2),.pc:nth-child(3),.pc:nth-child(4),.pc:nth-child(5){min-height:240px}
-  .pc:nth-child(6){min-height:180px}
+  .ev-std,.ev-sig{grid-template-columns:1fr}
+  .ev-std .pc:nth-child(1),.ev-std .pc:nth-child(4){grid-column:1}
+  .ev-std .pc,.ev-sig .pc{min-height:240px}
   .contact-grid{grid-template-columns:1fr;gap:2.5rem}
   .cf-row{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr;gap:2rem}
@@ -289,6 +302,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </a>
       <ul class="nav-links">
         <li><a href="#evenements" data-i18n="n_ev">Événements</a></li>
+        <li><a href="programmes-immersifs.html" class="nav-prog" data-i18n="n_prog">Programmes</a></li>
         <li><a href="#methode" data-i18n="n_meth">Méthode</a></li>
         <li><a href="conciergerie.html" data-i18n="n_conc">Conciergerie</a></li>
         <li><a href="#contact" data-i18n="n_contact">Contact</a></li>
@@ -309,6 +323,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 <div class="mob-menu" id="mob">
   <ul>
     <li><a href="#evenements" data-i18n="n_ev">Événements</a></li>
+    <li><a href="programmes-immersifs.html" data-i18n="n_prog">Programmes</a></li>
     <li><a href="#methode" data-i18n="n_meth">Méthode</a></li>
     <li><a href="conciergerie.html" data-i18n="n_conc">Conciergerie</a></li>
     <li><a href="#contact" data-i18n="n_contact">Contact</a></li>
@@ -358,9 +373,10 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       <h2 class="fade" data-i18n="ev_h2">Quel événement pour quelle ambition ?</h2>
       <p class="ev-sub fade" style="transition-delay:.07s" data-i18n="ev_sub">De la soirée de gala au teambuilding immersif — nous concevons l'expérience qui correspond à votre objectif.</p>
     </div>
-    <div class="ev-bento">
+    <!-- Standard events (4 categories) -->
+    <div class="ev-std">
 
-      <!-- 1. Séminaires & offsite — large, spans 2 cols -->
+      <!-- 1. Séminaires — wide (spans col 1-2) -->
       <a href="#contact" class="pc fade" aria-label="Séminaires stratégiques &amp; offsites">
         <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=80');background-position:center 40%"></div>
         <div class="pc-overlay"></div>
@@ -374,7 +390,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </div>
       </a>
 
-      <!-- 2. Soirées & galas -->
+      <!-- 2. Galas -->
       <a href="#contact" class="pc fade" style="transition-delay:.06s" aria-label="Soirées d'entreprise &amp; galas">
         <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1766164416026-1a823688d106?auto=format&fit=crop&w=900&q=80');background-position:center 55%"></div>
         <div class="pc-overlay"></div>
@@ -388,7 +404,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </div>
       </a>
 
-      <!-- 3. Incentives voyage -->
+      <!-- 3. Incentives — narrow (col 1 only) -->
       <a href="#contact" class="pc fade" style="transition-delay:.1s" aria-label="Incentives &amp; voyages de motivation">
         <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=900&q=80');background-position:center 60%"></div>
         <div class="pc-overlay"></div>
@@ -402,7 +418,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </div>
       </a>
 
-      <!-- 4. Conférences & lancements -->
+      <!-- 4. Conférences — wide (spans col 2-3) -->
       <a href="#contact" class="pc fade" style="transition-delay:.14s" aria-label="Conférences clients &amp; lancements produit">
         <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80');background-position:center 35%"></div>
         <div class="pc-overlay"></div>
@@ -416,29 +432,44 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </div>
       </a>
 
+    </div>
+
+    <!-- Signature programmes separator -->
+    <div class="ev-sig-head fade" style="transition-delay:.18s">
+      <div class="ev-sig-rule"></div>
+      <span class="eyebrow" style="margin:0;color:var(--sable)" data-i18n="ev_sig_label">Programmes signature</span>
+      <div class="ev-sig-rule"></div>
+    </div>
+    <p class="ev-sig-sub fade" style="transition-delay:.22s" data-i18n="ev_sig_sub">Impact mesuré · ROI documenté à 30, 60 et 90 jours</p>
+
+    <!-- Signature programmes: Teambuilding & Formations (their own page) -->
+    <div class="ev-sig">
+
       <!-- 5. Teambuilding immersif — featured -->
-      <a href="programmes-immersifs.html" class="pc pc-feat fade" style="transition-delay:.18s" aria-label="Teambuilding immersif — Programmes OPÉRATION">
-        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1774982516789-8fd54f81d630?auto=format&fit=crop&w=900&q=80');background-position:center 50%"></div>
+      <a href="programmes-immersifs.html" class="pc pc-feat fade" style="transition-delay:.26s" aria-label="Teambuilding immersif — Programmes OPÉRATION">
+        <div class="pc-badge">Page dédiée</div>
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1774982516789-8fd54f81d630?auto=format&fit=crop&w=1100&q=80');background-position:center 50%"></div>
         <div class="pc-overlay"></div>
         <div class="pc-body">
           <span class="pc-cat" data-i18n="ev5_chip">Teambuilding immersif</span>
           <h3 class="pc-h" data-i18n="ev5_h">Teambuilding immersif</h3>
-          <p class="pc-p" data-i18n="ev5_p">4 programmes OPÉRATION ancrés dans les neurosciences — conçus pour les CODIR, les équipes post-fusion, les forces commerciales et la négociation sous pression.</p>
-          <span class="pc-lnk" data-i18n="ev5_cta">Voir les programmes →
+          <p class="pc-p" data-i18n="ev5_p">Expériences immersives ancrées dans les neurosciences — alignement stratégique, cohésion post-fusion, performance commerciale, négociation sous pression, et bien d'autres formats. Chaque programme est conçu sur mesure et produit un impact mesuré.</p>
+          <span class="pc-lnk" data-i18n="ev5_cta">Voir des exemples →
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
         </div>
       </a>
 
-      <!-- 6. Formations & cohésion — featured, full-width panoramic -->
-      <a href="programmes-immersifs.html#formation" class="pc pc-feat fade" style="transition-delay:.22s" aria-label="Formations &amp; développement d'équipe">
-        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1770563181870-eca60076ffd8?auto=format&fit=crop&w=1800&q=80');background-position:center 45%"></div>
+      <!-- 6. Formations & cohésion — featured -->
+      <a href="programmes-immersifs.html#formation" class="pc pc-feat fade" style="transition-delay:.3s" aria-label="Formations &amp; développement d'équipe">
+        <div class="pc-badge">Page dédiée</div>
+        <div class="pc-img" style="background-image:url('https://images.unsplash.com/photo-1770563181870-eca60076ffd8?auto=format&fit=crop&w=1100&q=80');background-position:center 45%"></div>
         <div class="pc-overlay"></div>
         <div class="pc-body">
           <span class="pc-cat" data-i18n="ev6_chip">Formations &amp; cohésion</span>
           <h3 class="pc-h" data-i18n="ev6_h">Formations &amp; développement</h3>
-          <p class="pc-p" data-i18n="ev6_p">6 modules certifiables en leadership, intelligence émotionnelle, communication et dynamique d'équipe. Finançables jusqu'à 50% via les fonds sectoriels belges.</p>
-          <span class="pc-lnk" data-i18n="ev6_cta">Voir les modules →
+          <p class="pc-p" data-i18n="ev6_p">Modules certifiables en leadership, intelligence émotionnelle, communication et dynamique d'équipe. Les formats présentés sont des exemples — le catalogue est plus large. Finançables jusqu'à 50 % via les fonds sectoriels belges.</p>
+          <span class="pc-lnk" data-i18n="ev6_cta">Voir des exemples →
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
         </div>
