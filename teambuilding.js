@@ -1,98 +1,155 @@
-/* ── DATA ── */
-const TB=[
-  {
-    id:'centrale',
-    cat:'codir',
-    emoji:'⚡',
-    bg:'#080e1a',
-    img:'img_centrale_1.png',
-    name:{fr:'OPÉRATION CENTRALE',en:'OPERATION CENTRALE'},
-    type:{fr:'Crise CODIR',en:'CODIR Crisis'},
-    kpi:{fr:'−40% décision · +35% exécution · NPS 72–89',en:'−40% decision time · +35% execution · NPS 72–89'},
-    pb:{
-      fr:'Votre CODIR croit bien fonctionner — jusqu\'à ce que la pression révèle les silences, les positions camouflées et les décisions jamais vraiment prises.',
-      en:'Your CODIR believes it functions well — until real pressure exposes the silences, hidden positions and decisions never truly made.'
-    },
-    sol:{
-      fr:'Une simulation de crise authentique, filmée et débriefée, qui rend visibles les dynamiques qui freinent l\'exécution — et crée le déclic collectif.',
-      en:'An authentic, filmed crisis simulation that makes visible the dynamics holding back execution — and creates the collective turning point.'
-    }
-  },
-  {
-    id:'frontiere',
-    cat:'fusion',
-    emoji:'🌙',
-    bg:'#12091e',
-    img:'img_frontiere_0.png',
-    name:{fr:'OPÉRATION FRONTIÈRE',en:'OPERATION FRONTIÈRE'},
-    type:{fr:'Intégration d\'équipes',en:'Team Integration'},
-    kpi:{fr:'−52% méfiance · +340% interactions · NPS 78–92',en:'−52% mistrust · +340% interactions · NPS 78–92'},
-    pb:{
-      fr:'Deux équipes coexistent sans se faire confiance. Les séminaires de fusion n\'ont rien changé. Les silos résistent.',
-      en:'Two teams coexist without trust. Post-merger seminars changed nothing. Silos persist.'
-    },
-    sol:{
-      fr:'Une nuit de défi commun dans un environnement inédit, conçue pour créer le lien de tranchée là où tous les autres formats ont échoué.',
-      en:'A night of shared challenge in an unfamiliar environment, designed to create the foxhole bond where every other format has failed.'
-    }
-  },
-  {
-    id:'miroir',
-    cat:'commercial',
-    emoji:'🎭',
-    bg:'#0a1a16',
-    img:'img_miroir_0.png',
-    name:{fr:'OPÉRATION MIROIR',en:'OPERATION MIROIR'},
-    type:{fr:'Performance commerciale',en:'Sales Performance'},
-    kpi:{fr:'+23–31% conversion · 87% rétention · NPS 81–94',en:'+23–31% conversion · 87% retention · NPS 81–94'},
-    pb:{
-      fr:'Vos commerciaux répètent les mêmes erreurs face aux clients difficiles — sans jamais les voir. Les formations classiques n\'y changent rien.',
-      en:'Your salespeople repeat the same mistakes with difficult clients — without ever seeing them. Classical training changes nothing.'
-    },
-    sol:{
-      fr:'Des acteurs professionnels jouent vos clients pendant une journée entière. Tout est filmé. Le lendemain, chacun regarde qui il est vraiment en rendez-vous.',
-      en:'Professional actors play your clients for an entire day. Everything filmed. The next morning, each person watches who they really are in a meeting.'
-    }
-  },
-  {
-    id:'silence',
-    cat:'negociation',
-    emoji:'🎯',
-    bg:'#0d0d1a',
-    img:'img_silence_0.png',
-    name:{fr:'OPÉRATION SILENCE',en:'OPERATION SILENCE'},
-    type:{fr:'Négociation GIGN',en:'GIGN Negotiation'},
-    kpi:{fr:'+19% valeur accords · −43% conflits · NPS 85–94',en:'+19% deal value · −43% conflicts · NPS 85–94'},
-    pb:{
-      fr:'Sous pression, vos équipes argumentent, cèdent trop vite ou se bloquent. Aucun cadre de négociation ne résiste quand l\'amygdale prend le contrôle.',
-      en:'Under pressure, your teams argue, concede too fast or freeze. No negotiation framework survives when the amygdala takes over.'
-    },
-    sol:{
-      fr:'Les techniques exactes des négociateurs du GIGN, transmises par les maîtres, apprises sous stress réel avec des acteurs jouant des profils impossibles.',
-      en:'The exact techniques of GIGN negotiators, taught by the masters, learned under real stress with actors playing impossible profiles.'
-    }
-  }
-];
+/* teambuilding.js — events hub */
+const T={
+fr:{
+n_ev:'Événements',n_meth:'Méthode',n_conc:'Conciergerie',n_contact:'Contact',n_cta:'Demander un devis',
+h_badge:'Événements Corporate · Belgique & International',
+h_h1:'Des événements qui<br><span>font la différence.</span>',
+h_sub:'Séminaires, teambuilding, galas, incentives ou formations — chaque projet est orchestré avec la même exigence et le même impact mesurable.',
+h_cta1:'Voir les formats',h_cta2:'Prendre contact',
+h_s1:'Ancrage comportemental supérieur à la formation classique*',
+h_s2:'Mémorisation par l\'expérience vécue*',
+h_s3:'Protocole neurosciences activé',
+h_src:'*Sources : Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter — neurosciences de l\'apprentissage',
+ev_label:'Formats événementiels',
+ev_h2:'Quel événement pour quelle ambition ?',
+ev_sub:'De la soirée de gala au teambuilding immersif — nous concevons l\'expérience qui correspond à votre objectif.',
+ev1_chip:'Séminaires & offsite',
+ev1_h:'Séminaires stratégiques & offsites',
+ev1_p:'Kick-offs, retraites de direction, comités stratégiques. Sélection de lieux d\'exception en Belgique et en Europe. Logistique entièrement prise en charge.',
+ev1_cta:'Nous contacter',
+ev2_chip:'Soirées & galas',
+ev2_h:'Soirées d\'entreprise & galas',
+ev2_p:'Anniversaires d\'entreprise, cérémonies de remise de prix, dîners de gala. Des événements mémorables qui célèbrent vos équipes et renforcent votre culture.',
+ev2_cta:'Nous contacter',
+ev3_chip:'Incentives voyage',
+ev3_h:'Incentives & voyages de motivation',
+ev3_p:'Récompensez vos meilleurs éléments avec des expériences de voyage soigneusement orchestrées. Destinations sur mesure en Europe et à l\'international.',
+ev3_cta:'Nous contacter',
+ev4_chip:'Conférences & lancements',
+ev4_h:'Conférences clients & lancements produit',
+ev4_p:'Lancements de produits, conférences annuelles, événements de marque. Concept clé en main, de la scénographie à l\'animation.',
+ev4_cta:'Nous contacter',
+ev5_chip:'Teambuilding immersif',
+ev5_h:'Teambuilding immersif',
+ev5_p:'4 programmes OPÉRATION ancrés dans les neurosciences — conçus pour les CODIR, les équipes post-fusion, les forces commerciales et la négociation sous pression.',
+ev5_cta:'Voir les programmes →',
+ev6_chip:'Formations & cohésion',
+ev6_h:'Formations & développement',
+ev6_p:'6 modules certifiables en leadership, intelligence émotionnelle, communication et dynamique d\'équipe. Finançables jusqu\'à 50% via les fonds sectoriels belges.',
+ev6_cta:'Voir les modules →',
+m_label:'Notre approche',
+m_h2:'Le même process rigoureux pour chaque projet',
+m_p:'Quel que soit le format — gala, séminaire ou teambuilding — chaque projet suit un protocole en 5 étapes pour garantir l\'impact.',
+m_why_label:'Pourquoi ça fonctionne',
+m_why:'Le cerveau retient <strong style="color:var(--navy)">ce qu\'il vit intensément</strong>. Nos expériences activent la mémoire épisodique — la plus résistante à l\'oubli — pour un ancrage qui dure.',
+s1_t:'Diagnostic',s1_h:'Révélation',s1_p:'Analyse des besoins, entretiens, cartographie des objectifs et contraintes.',
+s2_t:'Design',s2_h:'Co-construction',s2_p:'Concept sur mesure aligné sur vos ambitions stratégiques et votre culture.',
+s3_t:'Action',s3_h:'Exécution',s3_p:'Expérience orchestrée avec soin, émotions authentiques, impact maximum.',
+s4_t:'Analyse',s4_h:'Décodage',s4_p:'Retour d\'expérience collectif, ancrage, transfert vers le quotidien.',
+s5_t:'Suivi',s5_h:'Impact',s5_p:'Mesure à 30/60/90 jours. Rapport remis à votre direction.',
+ec_label:'Notre engagement',ec_h2:'Éco-responsabilité au cœur de chaque projet',
+ec_p:'La performance ne se fait pas au détriment de la planète. Chaque événement intègre un volet environnemental concret.',
+ec1:'Bilan carbone fourni',ec1p:'Chaque événement : calcul de l\'empreinte carbone remis avec le compte-rendu.',
+ec2:'Prestataires locaux privilégiés',ec2p:'Priorité aux acteurs locaux et régionaux pour chaque événement.',
+ec3:'Train recommandé ≤ 3h',ec3p:'Pour les déplacements européens, le train est systématiquement proposé en premier.',
+ec4:'Compensation carbone',ec4p:'Émissions résiduelles compensées via projets certifiés Gold Standard.',
+ec_grade:'Engagement éco-responsabilité Alchimia Corporate',
+ec_box_p:'Module d\'audit éco intégré — vos équipes repartent avec des actions concrètes pour réduire l\'empreinte de leur département.',
+ec_cta:'Demander un audit éco',
+ct_label:'Parlons de votre projet',ct_h2:'Prêt à lancer votre prochain événement ?',
+ct_p:'Décrivez-nous votre projet. Nous revenons vers vous sous 24h avec une proposition adaptée.',
+ct_note:'💡 Première consultation gratuite de 30 min pour cadrer votre projet et obtenir une estimation sans engagement.',
+cf1:'Prénom',cf2:'Nom',cf3:'Entreprise',cf4:'Fonction',cf5:'Email professionnel',
+cf6:'Type d\'événement',cf6_0:'Choisir...',cf6_1:'Séminaire / offsite',cf6_2:'Soirée / gala',
+cf6_3:'Incentive voyage',cf6_4:'Teambuilding immersif',cf6_5:'Formation',cf6_6:'Autre',
+cf8:'Votre projet',cf_send:'Envoyer ma demande',
+ft_desc:'Événements corporate qui transforment les équipes. Ancré dans les neurosciences.',
+ft_ev_head:'Événements',ft_prog:'Teambuilding immersif',ft_form:'Formations',ft_meth:'Notre méthode',
+ft_other:'Autres services',ft_conc:'Conciergerie',ft_eco:'Éco-responsabilité',ft_ct:'Contact',ft_home:'Accueil',
+ft_leg:'Légal',ft_priv:'Confidentialité',ft_ment:'Mentions légales',ft_cgv:'CGV',
+ft_copy:'© 2026 Alchimia Corporate SRL — Belgique.',ft_eco_lbl:'Engagement éco-responsable'
+},
+en:{
+n_ev:'Events',n_meth:'Method',n_conc:'Concierge',n_contact:'Contact',n_cta:'Request a quote',
+h_badge:'Corporate Events · Belgium & International',
+h_h1:'Events that<br><span>make a difference.</span>',
+h_sub:'Seminars, team building, galas, incentives or training — every project is orchestrated with the same standards and measurable impact.',
+h_cta1:'See formats',h_cta2:'Get in touch',
+h_s1:'Greater behavioural anchoring than classical training*',
+h_s2:'Retention through active experience*',
+h_s3:'Neuroscience DOSE protocol',
+h_src:'*Sources: Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter — learning neuroscience',
+ev_label:'Event formats',
+ev_h2:'Which event for which ambition?',
+ev_sub:'From gala evenings to immersive team building — we design the experience that matches your objective.',
+ev1_chip:'Seminars & offsites',
+ev1_h:'Strategic seminars & offsites',
+ev1_p:'Kick-offs, management retreats, strategic committees. Selection of exceptional venues in Belgium and Europe. Full logistics handled.',
+ev1_cta:'Contact us',
+ev2_chip:'Evenings & galas',
+ev2_h:'Corporate evenings & galas',
+ev2_p:'Company anniversaries, award ceremonies, gala dinners. Memorable events that celebrate your teams and strengthen your culture.',
+ev2_cta:'Contact us',
+ev3_chip:'Travel incentives',
+ev3_h:'Incentives & motivational trips',
+ev3_p:'Reward your best performers with carefully orchestrated travel experiences. Tailor-made destinations across Europe and worldwide.',
+ev3_cta:'Contact us',
+ev4_chip:'Conferences & launches',
+ev4_h:'Client conferences & product launches',
+ev4_p:'Product launches, annual conferences, brand events. Turnkey concept, from scenography to facilitation.',
+ev4_cta:'Contact us',
+ev5_chip:'Immersive team building',
+ev5_h:'Immersive team building',
+ev5_p:'4 OPÉRATION programmes rooted in neuroscience — designed for CODIR, post-merger teams, sales forces and high-pressure negotiation.',
+ev5_cta:'See programmes →',
+ev6_chip:'Training & cohesion',
+ev6_h:'Training & development',
+ev6_p:'6 certifiable modules in leadership, emotional intelligence, communication and team dynamics. Up to 50% funding via Belgian sectoral funds.',
+ev6_cta:'See modules →',
+m_label:'Our approach',
+m_h2:'The same rigorous process for every project',
+m_p:'Whatever the format — gala, seminar or team building — every project follows a 5-step protocol to guarantee impact.',
+m_why_label:'Why it works',
+m_why:'The brain retains <strong style="color:var(--navy)">what it lives intensely</strong>. Our experiences activate episodic memory — the most resilient to forgetting — for lasting change.',
+s1_t:'Diagnosis',s1_h:'Revelation',s1_p:'Needs analysis, interviews, mapping objectives and constraints.',
+s2_t:'Design',s2_h:'Co-creation',s2_p:'Tailor-made concept aligned with your strategic ambitions and culture.',
+s3_t:'Action',s3_h:'Execution',s3_p:'Carefully orchestrated experience, authentic emotions, maximum impact.',
+s4_t:'Analysis',s4_h:'Decoding',s4_p:'Collective debrief, cognitive anchoring, transfer to daily work.',
+s5_t:'Follow-up',s5_h:'Impact',s5_p:'Measured at 30/60/90 days. Report delivered to management.',
+ec_label:'Our commitment',ec_h2:'Sustainability at the heart of every project',
+ec_p:'Performance should not come at the expense of the planet.',
+ec1:'Carbon footprint provided',ec1p:'Every event: carbon footprint calculation delivered with the summary.',
+ec2:'Local suppliers first',ec2p:'Priority to local and regional providers for every event.',
+ec3:'Train recommended ≤ 3h',ec3p:'For European travel, the train is systematically proposed first.',
+ec4:'Carbon offsetting',ec4p:'Residual emissions offset through Gold Standard certified projects.',
+ec_grade:'Alchimia Corporate sustainability commitment',
+ec_box_p:'Eco audit module integrated — teams leave with concrete actions to reduce their department footprint.',
+ec_cta:'Request an eco audit',
+ct_label:'Discuss your project',ct_h2:'Ready to launch your next event?',
+ct_p:'Tell us about your project. We respond within 24h with a tailored proposal.',
+ct_note:'💡 Free 30-min consultation to scope your project and get a no-commitment estimate.',
+cf1:'First name',cf2:'Last name',cf3:'Company',cf4:'Job title',cf5:'Business email',
+cf6:'Event type',cf6_0:'Choose...',cf6_1:'Seminar / offsite',cf6_2:'Evening / gala',
+cf6_3:'Travel incentive',cf6_4:'Immersive team building',cf6_5:'Training',cf6_6:'Other',
+cf8:'Your project',cf_send:'Send my enquiry',
+ft_desc:'Corporate events that transform teams. Rooted in neuroscience.',
+ft_ev_head:'Events',ft_prog:'Immersive team building',ft_form:'Training',ft_meth:'Our method',
+ft_other:'Other services',ft_conc:'Concierge',ft_eco:'Sustainability',ft_ct:'Contact',ft_home:'Home',
+ft_leg:'Legal',ft_priv:'Privacy',ft_ment:'Legal notice',ft_cgv:'T&Cs',
+ft_copy:'© 2026 Alchimia Corporate SRL — Belgium.',ft_eco_lbl:'Eco-responsible commitment'
+}};
 
-/* ── TRANSLATIONS ── */
-const T={fr:{n_meth:'Méthode',n_neuro:'Neurosciences',n_prog:'Programmes',n_form:'Formation',n_conc:'Conciergerie',n_contact:'Contact',n_cta:'Demander un devis',h_badge:'Teambuilding B2B · Belgique & International',h_h1:'Des expériences qui<br><span>transforment vraiment.</span>',h_sub:'Programmes de teambuilding immersif et formations ancrées dans les neurosciences. Conçus sur mesure pour votre équipe.',h_cta1:'Voir les programmes',h_cta2:'Prendre contact',h_s1:'Mémorisation par l\'expérience vécue*',h_s2:'Ancrage supérieur vs. formation classique*',h_s3:'Protocole neurosciences activé',h_src:'*Sources : Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter — neurosciences de l\'apprentissage',m_label:'Notre approche',m_h2:'Le Cycle de Transformation Alchimia',m_p:'Chaque programme suit un protocole rigoureux en 5 étapes, conçu pour que le changement s\'ancre dans la durée.',m_why_label:'Pourquoi ça fonctionne',m_why:'Le cerveau retient <strong style="color:var(--navy)">ce qu\'il vit intensément</strong>. Nos expériences activent la mémoire épisodique — la plus résistante à l\'oubli — pour un ancrage qui dure.',s1_t:'Diagnostic',s1_h:'Révélation',s1_p:'Analyse des besoins, entretiens, cartographie des dynamiques d\'équipe.',s2_t:'Design',s2_h:'Co-construction',s2_p:'Programme sur mesure aligné sur vos objectifs stratégiques.',s3_t:'Action',s3_h:'Immersion',s3_p:'Vécu intense, émotions authentiques, mécanismes neurologiques activés.',s4_t:'Analyse',s4_h:'Décodage',s4_p:'Retour d\'expérience collectif, ancrage cognitif, transfert vers le quotidien.',s5_t:'Suivi',s5_h:'Impact',s5_p:'Mesure à 30/60/90 jours. Rapport remis à votre direction.',nr_label:'La science derrière l\'expérience',nr_h2:'Pourquoi l\'expérience<br>crée un apprentissage durable',nr_p:'Nos programmes activent les 4 hormones clés de la performance collective — le protocole DOSE.',d_n:'Dopamine',d_d:'Motivation et récompense. Activée par les défis progressifs et les succès collectifs.',o_n:'Ocytocine',o_d:'Lien social et confiance. Générée par les expériences partagées intenses.',s_n:'Sérotonine',s_d:'Reconnaissance et statut positif. Renforcée par la valorisation des contributions.',e_n:'Endorphines',e_d:'Dépassement et résilience. Libérées lors de l\'effort collectif.',nr_stat_lbl:'meilleure rétention en apprentissage expérientiel actif vs. passif, selon les recherches en mémoire épisodique',nr_source:'Bjork & Bjork (2011) · Roediger & Karpicke (2006) · Schacter — mémoire épisodique',nf1:'La mémoire épisodique (souvenirs d\'expériences) est la plus résistante à l\'oubli sur le long terme.',nf2:'L\'émotion renforce la consolidation mémorielle via l\'amygdale — plus l\'expérience est intense, plus l\'ancrage est fort.',nf3:'Le débrief post-expérience double l\'effet de transfert vers les comportements professionnels réels.',tb_label:'Programmes',tb_h2:'Teambuilding immersif',tb_sub:'4 programmes d\'exception, chacun conçu sur mesure pour votre équipe.',tbf_all:'Tous',tbf_codir:'CODIR & Crise',tbf_fusion:'Post-fusion',tbf_com:'Commercial',tbf_neg:'Négociation',tb_pb_lbl:'Le problème',tb_kpi_lbl:'ROI documenté',tb_example:'Exemple — personnalisé pour chaque organisation',tb_discover:'Voir le programme complet →',tb_price:'Prix groupe',tb_group:'Groupe',tb_dur:'Durée',tb_target:'Profil',fo_label:'Formation & Développement',fo_h2:'Des formations qui transforment durablement',fo1:'Leadership & Management',fo1p:'Posture, gestion d\'équipe multiculturelle, décision sous pression.',fo2:'Intelligence Émotionnelle',fo2p:'Empathie, régulation, communication assertive.',fo3:'Gestion du Stress & Résilience',fo3p:'Techniques neuroscientifiques pour performer sous pression.',fo4:'Communication & Influence',fo4p:'Prise de parole, négociation, communication interculturelle.',fo5:'Dynamique d\'Équipe',fo5p:'Cohésion, rôles, résolution de conflits.',fo6:'Créativité & Innovation',fo6p:'Design thinking, brainstorming avancé, pilotage de l\'innovation.',fcta_h:'Éligible aux fonds sectoriels belges',fcta_p:'Cefora (CP 200), Fonds 4S, Constructiv, chèques-formation wallons. Jusqu\'à 50% de financement.',fcta_btn:'Vérifier mon éligibilité',ec_label:'Notre engagement',ec_h2:'Éco-responsabilité',ec_p:'La performance ne se fait pas au détriment de la planète.',ec1:'Bilan carbone fourni',ec1p:'Chaque événement : calcul de l\'empreinte carbone remis avec le compte-rendu.',ec2:'Prestataires locaux privilégiés',ec2p:'Priorité aux acteurs locaux et régionaux.',ec3:'Train recommandé ≤ 3h',ec3p:'Le train est systématiquement proposé pour les déplacements européens.',ec4:'Compensation carbone',ec4p:'Émissions résiduelles compensées via projets certifiés Gold Standard.',ec_grade:'Engagement éco-responsabilité Alchimia Corporate',ec_box_p:'Module d\'audit éco intégré dans nos programmes — vos équipes repartent avec des actions concrètes.',ec_cta:'Demander un audit éco',ct_label:'Parlons de votre projet',ct_h2:'Prêt à transformer votre équipe ?',ct_p:'Décrivez-nous vos objectifs. Nous revenons sous 24h avec une proposition adaptée.',ct_note:'💡 Première consultation gratuite de 30 min. Estimation sans engagement.',cf1:'Prénom',cf2:'Nom',cf3:'Entreprise',cf4:'Fonction',cf5:'Email professionnel',cf6:'Intérêt principal',cf6_0:'Choisir...',cf6_1:'Teambuilding immersif',cf6_2:'Formation & développement',cf6_3:'Audit éco-responsabilité',cf8:'Votre projet',cf_send:'Envoyer ma demande',ft_desc:'Transformer les équipes par l\'expérience. Ancré dans les neurosciences.',ft_tb_head:'Teambuilding',ft_prog:'Programmes',ft_meth:'La méthode',ft_form:'Formation',ft_nr:'Neurosciences',ft_other:'Autres services',ft_conc:'Conciergerie',ft_eco:'Éco-responsabilité',ft_ct:'Contact',ft_home:'Accueil',ft_leg:'Légal',ft_priv:'Confidentialité',ft_ment:'Mentions légales',ft_cgv:'CGV',ft_copy:'© 2026 Alchimia Corporate SRL — Belgique.',ft_eco_lbl:'Engagement éco-responsable'},
-en:{n_meth:'Method',n_neuro:'Neuroscience',n_prog:'Programmes',n_form:'Training',n_conc:'Concierge',n_contact:'Contact',n_cta:'Request a quote',h_badge:'B2B Team Building · Belgium & International',h_h1:'Experiences that<br><span>truly transform.</span>',h_sub:'Immersive team building programmes and training rooted in neuroscience. Tailored to your team.',h_cta1:'See programmes',h_cta2:'Get in touch',h_s1:'Retention through active experience*',h_s2:'Greater anchoring vs. classic training*',h_s3:'Neuroscience DOSE protocol',h_src:'*Sources: Bjork & Bjork (2011), Roediger & Karpicke (2006), Schacter — learning neuroscience',m_label:'Our approach',m_h2:'The Alchimia Transformation Cycle',m_p:'Every programme follows a rigorous 5-step protocol, designed so change lasts — not just on the day.',m_why_label:'Why it works',m_why:'The brain retains <strong style="color:var(--navy)">what it lives intensely</strong>. Our experiences activate episodic memory — the most resilient to forgetting — for lasting change.',s1_t:'Diagnosis',s1_h:'Revelation',s1_p:'Needs analysis, interviews, mapping team dynamics.',s2_t:'Design',s2_h:'Co-creation',s2_p:'Tailor-made programme aligned with your strategic objectives.',s3_t:'Action',s3_h:'Immersion',s3_p:'Intense experience, authentic emotions, neurological mechanisms activated.',s4_t:'Analysis',s4_h:'Decoding',s4_p:'Collective debrief, cognitive anchoring, transfer to daily work.',s5_t:'Follow-up',s5_h:'Impact',s5_p:'Measured at 30/60/90 days. Report delivered to management.',nr_label:'The science behind the experience',nr_h2:'Why experience creates<br>lasting learning',nr_p:'Our programmes activate the 4 key hormones of collective performance — the DOSE protocol.',d_n:'Dopamine',d_d:'Motivation and reward. Activated by progressive challenges and collective successes.',o_n:'Oxytocin',o_d:'Social bonding and trust. Generated by shared intense experiences.',s_n:'Serotonin',s_d:'Recognition and positive status. Reinforced by valuing contributions.',e_n:'Endorphins',e_d:'Self-surpassing and resilience. Released through collective effort.',nr_stat_lbl:'better retention in active experiential learning vs. passive formats, based on episodic memory research',nr_source:'Bjork & Bjork (2011) · Roediger & Karpicke (2006) · Schacter — episodic memory',nf1:'Episodic memory (memories of experiences) is the most resilient to forgetting over time.',nf2:'Emotion reinforces memory consolidation via the amygdala — the more intense the experience, the stronger the anchoring.',nf3:'Post-experience debrief doubles the transfer effect to real professional behaviours.',tb_label:'Programmes',tb_h2:'Immersive team building',tb_sub:'4 exceptional programmes, each built entirely to order.',tbf_all:'All',tbf_codir:'CODIR & Crisis',tbf_fusion:'Post-merger',tbf_com:'Commercial',tbf_neg:'Negotiation',tb_pb_lbl:'The challenge',tb_kpi_lbl:'Documented ROI',tb_example:'Example — tailored for each organisation',tb_discover:'See full programme →',tb_price:'Group price',tb_group:'Group',tb_dur:'Duration',tb_target:'Profile',fo_label:'Training & Development',fo_h2:'Training that transforms durably',fo1:'Leadership & Management',fo1p:'Posture, multicultural team management, decision-making under pressure.',fo2:'Emotional Intelligence',fo2p:'Empathy, regulation, assertive communication.',fo3:'Stress Management & Resilience',fo3p:'Neuroscience techniques to perform under pressure.',fo4:'Communication & Influence',fo4p:'Public speaking, negotiation, intercultural communication.',fo5:'Team Dynamics',fo5p:'Cohesion, roles, conflict resolution.',fo6:'Creativity & Innovation',fo6p:'Design thinking, advanced brainstorming, innovation management.',fcta_h:'Eligible for Belgian sectoral funds',fcta_p:'Cefora (CP 200), Fonds 4S, Constructiv, Walloon training vouchers. Up to 50% funding.',fcta_btn:'Check my eligibility',ec_label:'Our commitment',ec_h2:'Sustainability',ec_p:'Performance should not come at the expense of the planet.',ec1:'Carbon footprint provided',ec1p:'Every event: carbon footprint calculation delivered with the summary.',ec2:'Local suppliers first',ec2p:'Priority to local and regional providers for every event.',ec3:'Train recommended ≤ 3h',ec3p:'For European travel, the train is systematically proposed first.',ec4:'Carbon offsetting',ec4p:'Residual emissions offset through Gold Standard certified projects.',ec_grade:'Alchimia Corporate sustainability commitment',ec_box_p:'Eco audit module integrated in our programmes — teams leave with concrete actions.',ec_cta:'Request an eco audit',ct_label:'Discuss your project',ct_h2:'Ready to transform your team?',ct_p:'Tell us your objectives. We respond within 24h with a tailored proposal.',ct_note:'💡 Free 30-min consultation. Budget estimate with no commitment.',cf1:'First name',cf2:'Last name',cf3:'Company',cf4:'Job title',cf5:'Business email',cf6:'Main interest',cf6_0:'Choose...',cf6_1:'Immersive team building',cf6_2:'Training & development',cf6_3:'Eco-responsibility audit',cf8:'Your project',cf_send:'Send my enquiry',ft_desc:'Transforming teams through experience. Rooted in neuroscience.',ft_tb_head:'Team Building',ft_prog:'Programmes',ft_meth:'Our method',ft_form:'Training',ft_nr:'Neuroscience',ft_other:'Other services',ft_conc:'Concierge',ft_eco:'Sustainability',ft_ct:'Contact',ft_home:'Home',ft_leg:'Legal',ft_priv:'Privacy',ft_ment:'Legal notice',ft_cgv:'T&Cs',ft_copy:'© 2026 Alchimia Corporate SRL — Belgium.',ft_eco_lbl:'Eco-responsible commitment'}};
-
-let lang='fr',filter='all';
+let lang='fr';
 
 function init(){
   const saved=sessionStorage.getItem('alchimia-lang');
   if(saved&&(saved==='fr'||saved==='en'))setLang(saved);
-  renderTB();applyLang();initScrollAnim();initNav();
-  setTimeout(initCountUp, 720);
-
+  applyLang();initScrollAnim();initNav();
+  setTimeout(initCountUp,720);
   document.getElementById('btn-fr').addEventListener('click',function(){setLang('fr');});
   document.getElementById('btn-en').addEventListener('click',function(){setLang('en');});
   document.getElementById('ham').addEventListener('click',toggleMob);
   document.querySelectorAll('#mob a').forEach(function(a){a.addEventListener('click',toggleMob);});
-  document.querySelectorAll('.tb-f').forEach(function(btn){
-    btn.addEventListener('click',function(){filterTB(btn,btn.getAttribute('data-cat'));});
-  });
 }
 
 function initCountUp(){
@@ -120,7 +177,7 @@ function setLang(l){
   lang=l;
   document.getElementById('btn-fr').classList.toggle('active',l==='fr');
   document.getElementById('btn-en').classList.toggle('active',l==='en');
-  applyLang();renderTB();
+  applyLang();
   sessionStorage.setItem('alchimia-lang',l);
 }
 
@@ -128,44 +185,11 @@ function applyLang(){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');
     if(T[lang][k]!==undefined){
-      const html_keys=['h_h1','nr_h2','m_why','m_h2'];
+      const html_keys=['h_h1','m_why','m_h2'];
       if(html_keys.includes(k))el.innerHTML=T[lang][k];
       else el.textContent=T[lang][k];
     }
   });
-}
-
-function renderTB(){
-  const items=filter==='all'?TB:TB.filter(d=>d.cat===filter);
-  document.getElementById('tb-grid').innerHTML=items.map(d=>`
-    <a href="programme.html?id=${d.id}" class="tb-card">
-      <div class="tb-img" style="background-image:url(${d.img})">
-        <span class="tb-type-over"><span class="chip chip-navy">${d.type[lang]}</span></span>
-        <span class="tb-emoji-img">${d.emoji}</span>
-      </div>
-      <div class="tb-body">
-        <h3 class="tb-name">${d.name[lang]}</h3>
-        <div class="tb-pb-block">
-          <span class="tb-pb-lbl">${T[lang].tb_pb_lbl}</span>
-          <p class="tb-pb-text">${d.pb[lang]}</p>
-        </div>
-        <div class="tb-kpi-block">
-          <span class="tb-kpi-lbl">${T[lang].tb_kpi_lbl}</span>
-          <p class="tb-kpi-text">${d.kpi[lang]}</p>
-        </div>
-        <div class="tb-card-footer">
-          <span class="tb-example">${T[lang].tb_example}</span>
-          <span class="tb-discover">${T[lang].tb_discover}</span>
-        </div>
-      </div>
-    </a>`).join('');
-}
-
-function filterTB(btn,cat){
-  filter=cat;
-  document.querySelectorAll('.tb-f').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  renderTB();
 }
 
 function initScrollAnim(){

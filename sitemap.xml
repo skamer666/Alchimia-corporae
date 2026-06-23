@@ -23,15 +23,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://alchimia-corporae.vercel.app/programmes-immersifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/programmes-immersifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/programmes-immersifs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://alchimia-corporae.vercel.app/programme.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://alchimia-corporae.vercel.app/travel-manager-externalise-belgique.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/travel-manager-externalise-belgique.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alchimia-corporae.vercel.app/travel-manager-externalise-belgique.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-</urlset>
+    <loc>https://alchimia-corporae.vercel.app/travel-m
