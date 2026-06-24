@@ -263,4 +263,3 @@ function initNav(){
 function toggleMob(){document.getElementById('mob').classList.toggle('open');}
 
 document.addEventListener('DOMContentLoaded',init);
-                
