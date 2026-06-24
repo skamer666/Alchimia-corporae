@@ -394,6 +394,17 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .plan-custom-right{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0}
 .plan-custom-price{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--sable)}
 
+
+/* ── TARIFS TOGGLE ── */
+.tarifs-toggle{display:flex;gap:0;background:oklch(97% 0.005 85 / 0.07);border-radius:8px;padding:3px}
+.ttog{font-family:'Bricolage Grotesque',sans-serif;font-size:.75rem;font-weight:700;padding:.5rem 1.1rem;border-radius:6px;border:none;background:transparent;color:oklch(97% 0.005 85 / 0.4);cursor:pointer;transition:background .18s,color .18s;display:flex;align-items:center;gap:6px}
+.ttog.ttog-active{background:var(--sable);color:var(--navy)}
+.ttog-save{font-size:.62rem;background:oklch(63% 0.14 40 / 0.18);color:var(--coral);padding:2px 6px;border-radius:4px;font-weight:800}
+.ttog.ttog-active .ttog-save{background:oklch(63% 0.14 40 / 0.15);color:oklch(54% 0.14 40)}
+.plan-annual-note{font-size:.68rem;color:oklch(97% 0.005 85 / 0.35);display:none;margin-top:2px}
+.plan-annual-note.show{display:block}
+.plan-extras-lbl{font-size:.68rem;color:oklch(97% 0.005 85 / 0.35);margin-bottom:.25rem;font-style:italic}
+
 </style>
 <script type="application/ld+json">
 {
@@ -789,41 +800,119 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 <section id="tarifs" class="bg-navy">
   <div class="container">
     <span class="eyebrow" style="color:var(--sable)">Tarifs</span>
-    <h2 class="fade" style="color:var(--white);margin-bottom:1.5rem">Transparent.<br>Sans surprise.</h2>
-    <div class="tarifs-note">
-      <p class="tarifs-def"><strong style="color:var(--white);font-weight:600">1 voyage = 1 destination.</strong> Bruxelles → Paris = 1 voyage · Bruxelles → Paris + Londres = 2 voyages.<br><strong style="color:var(--white);font-weight:600">Europe</strong> = zone Schengen + UK &nbsp;·&nbsp; <strong style="color:var(--white);font-weight:600">Hors Europe</strong> = visa, décalage horaire, logistique complexe.</p>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.25rem;margin-bottom:1.5rem">
+      <h2 class="fade" style="color:var(--white);margin-bottom:0">Transparent.<br>Sans surprise.</h2>
+      <div class="tarifs-toggle fade" style="transition-delay:.05s">
+        <button class="ttog ttog-active" id="ttog-mo">Mensuel</button>
+        <button class="ttog" id="ttog-an">Annuel <span class="ttog-save">−16,7 %</span></button>
+      </div>
     </div>
-    <div class="tarifs-annual fade" style="transition-delay:.05s">✦ &nbsp;Option annuelle sur tous les paliers : payer 10 mois, profiter 12 — soit −16,7 %</div>
+    <div class="tarifs-note" style="margin-bottom:2rem">
+      <p class="tarifs-def"><strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">1 voyage = 1 destination.</strong> Bruxelles → Paris = 1 voyage · Bruxelles → Paris + Londres = 2 voyages.<br><strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">Europe</strong> = zone Schengen + UK &nbsp;·&nbsp; <strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">Hors Europe</strong> = visa, décalage horaire, logistique complexe.</p>
+    </div>
     <div class="pricing-grid">
+
+      <!-- Micro -->
       <div class="plan fade" style="transition-delay:.06s">
-        <div class="plan-top"><span class="plan-name">Micro</span><div class="plan-price-row"><span class="plan-amt">290</span><span class="plan-unit">€ / mois</span></div></div>
+        <div class="plan-top">
+          <span class="plan-name">Micro</span>
+          <div class="plan-price-row">
+            <span class="plan-amt" data-mo="290" data-an="241">290</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+          <span class="plan-annual-note">2 900 € facturés annuellement</span>
+        </div>
         <div class="plan-hr"></div>
-        <ul class="plan-feats"><li>3 voyages Europe inclus</li><li class="plan-warn">Hors Europe non inclus</li><li>Vols, trains, hôtels, transferts</li><li>Manager partagé · réponse &lt; 4h, jours ouvrés</li></ul>
-        <div class="plan-extras-box"><div class="plan-extra"><span class="plus">+</span>Europe supp. : <strong>90 €</strong></div><div class="plan-extra"><span class="plus">+</span>Hors Europe (add-on) : <strong>200 €</strong></div></div>
+        <ul class="plan-feats">
+          <li>3 voyages Europe inclus</li>
+          <li class="plan-warn">Hors Europe non inclus</li>
+          <li>Vols, trains, hôtels, transferts</li>
+          <li>Manager senior dédié · 7j/7</li>
+        </ul>
+        <div class="plan-extras-box">
+          <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>90 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe à la carte : <strong>200 €</strong></div>
+        </div>
         <a href="#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
       </div>
+
+      <!-- Starter -->
       <div class="plan fade" style="transition-delay:.1s">
-        <div class="plan-top"><span class="plan-name">Starter</span><div class="plan-price-row"><span class="plan-amt">590</span><span class="plan-unit">€ / mois</span></div></div>
+        <div class="plan-top">
+          <span class="plan-name">Starter</span>
+          <div class="plan-price-row">
+            <span class="plan-amt" data-mo="590" data-an="491">590</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+          <span class="plan-annual-note">5 900 € facturés annuellement</span>
+        </div>
         <div class="plan-hr"></div>
-        <ul class="plan-feats"><li>8 voyages Europe inclus</li><li class="plan-warn">Hors Europe non inclus</li><li>Vols, trains, hôtels, transferts</li><li>Manager partagé prioritaire · réponse &lt; 2h, jours ouvrés</li></ul>
-        <div class="plan-extras-box"><div class="plan-extra"><span class="plus">+</span>Europe supp. : <strong>85 €</strong></div><div class="plan-extra"><span class="plus">+</span>Hors Europe (add-on) : <strong>200 €</strong></div></div>
+        <ul class="plan-feats">
+          <li>8 voyages Europe inclus</li>
+          <li class="plan-warn">Hors Europe non inclus</li>
+          <li>Vols, trains, hôtels, transferts</li>
+          <li>Manager senior dédié · 7j/7</li>
+        </ul>
+        <div class="plan-extras-box">
+          <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>85 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe à la carte : <strong>200 €</strong></div>
+        </div>
         <a href="#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
       </div>
+
+      <!-- Business -->
       <div class="plan plan-featured fade" style="transition-delay:.14s">
         <span class="plan-badge">Le plus choisi</span>
-        <div class="plan-top"><span class="plan-name">Business</span><div class="plan-price-row"><span class="plan-amt">1 890</span><span class="plan-unit">€ / mois</span></div></div>
+        <div class="plan-top">
+          <span class="plan-name">Business</span>
+          <div class="plan-price-row">
+            <span class="plan-amt" data-mo="1 890" data-an="1 575">1 890</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+          <span class="plan-annual-note">18 900 € facturés annuellement</span>
+        </div>
         <div class="plan-hr"></div>
-        <ul class="plan-feats"><li>18 voyages Europe + 3 hors Europe inclus</li><li>Vols, hôtels, transferts, visas &amp; formalités, restaurants</li><li>Rapport CO₂ mensuel inclus</li><li>Manager dédié nommé · réponse &lt; 1h, 7j/7</li></ul>
-        <div class="plan-extras-box"><div class="plan-extra"><span class="plus">+</span>Europe supp. : <strong>75 €</strong></div><div class="plan-extra"><span class="plus">+</span>Hors Europe supp. : <strong>160 €</strong></div></div>
+        <ul class="plan-feats">
+          <li>18 voyages Europe + 3 hors Europe inclus</li>
+          <li>Vols, hôtels, transferts, visas &amp; formalités, restaurants</li>
+          <li>Rapport CO₂ mensuel inclus</li>
+          <li>Manager senior dédié · 7j/7 · 24h/24</li>
+        </ul>
+        <div class="plan-extras-box">
+          <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>75 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe additionnel : <strong>160 €</strong></div>
+        </div>
         <a href="#contact" class="btn plan-cta plan-cta-sable">Prendre contact</a>
       </div>
+
+      <!-- Premium -->
       <div class="plan fade" style="transition-delay:.18s">
-        <div class="plan-top"><span class="plan-name">Premium</span><div class="plan-price-row"><span class="plan-amt">3 290</span><span class="plan-unit">€ / mois</span></div></div>
+        <div class="plan-top">
+          <span class="plan-name">Premium</span>
+          <div class="plan-price-row">
+            <span class="plan-amt" data-mo="3 290" data-an="2 741">3 290</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+          <span class="plan-annual-note">32 900 € facturés annuellement</span>
+        </div>
         <div class="plan-hr"></div>
-        <ul class="plan-feats"><li>38 voyages Europe + 10 hors Europe inclus</li><li>Service complet + incentives &amp; groupes</li><li>Revue trimestrielle + politique voyage formalisée</li><li>Manager senior dédié · &lt; 30 min, 7j/7, urgences nuit incluses</li></ul>
-        <div class="plan-extras-box"><div class="plan-extra"><span class="plus">+</span>Europe supp. : <strong>60 €</strong></div><div class="plan-extra"><span class="plus">+</span>Hors Europe supp. : <strong>130 €</strong></div></div>
+        <ul class="plan-feats">
+          <li>38 voyages Europe + 10 hors Europe inclus</li>
+          <li>Service complet + incentives &amp; groupes</li>
+          <li>Revue trimestrielle + politique voyage formalisée</li>
+          <li>Manager senior dédié · 7j/7 · 24h/24 · urgences nuit incluses</li>
+        </ul>
+        <div class="plan-extras-box">
+          <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>60 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe additionnel : <strong>130 €</strong></div>
+        </div>
         <a href="#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
       </div>
+
     </div>
     <div class="plan-custom-row fade" style="transition-delay:.22s">
       <div><h3>Sur mesure</h3><p>Volume illimité, multi-TM, SLA contractualisé, intégration outils internes.</p></div>

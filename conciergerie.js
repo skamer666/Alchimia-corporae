@@ -50,3 +50,24 @@ function initNav(){
 function toggleMob(){document.getElementById('mob').classList.toggle('open');}
 
 document.addEventListener('DOMContentLoaded',init);
+
+// ── Pricing toggle (mensuel / annuel) ──────────────────────
+function initPricingToggle() {
+  var moBtn = document.getElementById('ttog-mo');
+  var anBtn = document.getElementById('ttog-an');
+  if (!moBtn || !anBtn) return;
+
+  function setMode(mode) {
+    moBtn.classList.toggle('ttog-active', mode === 'mo');
+    anBtn.classList.toggle('ttog-active', mode === 'an');
+    document.querySelectorAll('.plan-amt').forEach(function(el) {
+      el.textContent = el.getAttribute('data-' + mode);
+    });
+    document.querySelectorAll('.plan-annual-note').forEach(function(el) {
+      el.classList.toggle('show', mode === 'an');
+    });
+  }
+
+  moBtn.addEventListener('click', function() { setMode('mo'); });
+  anBtn.addEventListener('click', function() { setMode('an'); });
+}
