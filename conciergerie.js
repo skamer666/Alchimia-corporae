@@ -69,4 +69,5 @@ function initPricingToggle() {
   }
 
   moBtn.addEventListener('click', function() { setMode('mo'); });
-  anBtn.addEventListener('click', function() { s
+  anBtn.addEventListener('click', function() { setMode('an'); });
+}
