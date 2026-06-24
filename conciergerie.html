@@ -379,10 +379,12 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .plan-feats li::before{content:'✓';color:var(--sable);font-weight:700;flex-shrink:0;font-size:.75rem;margin-top:.05rem}
 .plan-feats li.plan-warn::before{content:'–';color:oklch(97% 0.005 85 / 0.3)}
 .plan-feats li.plan-warn{color:oklch(97% 0.005 85 / 0.3)}
-.plan-extras-box{background:oklch(19% 0.022 195);border-radius:8px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.3rem}
-.plan-extra{font-size:.72rem;color:oklch(97% 0.005 85 / 0.42);display:flex;gap:.35rem;align-items:baseline;flex-wrap:wrap}
-.plan-extra strong{color:oklch(97% 0.005 85 / 0.7);font-weight:600}
-.plan-extra .plus{color:var(--coral);font-weight:700;flex-shrink:0}
+.plan-extras-box{margin-top:auto;padding-top:.75rem;border-top:1px solid oklch(97% 0.005 85 / 0.07)}
+.plan-extras-lbl{font-size:.63rem;color:oklch(97% 0.005 85 / 0.28);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:.5rem;font-style:normal}
+.plan-extras-pills{display:flex;flex-direction:column;gap:.3rem}
+.plan-extra{font-size:.7rem;color:oklch(97% 0.005 85 / 0.45);display:flex;align-items:center;gap:.4rem;line-height:1.35}
+.plan-extra strong{color:oklch(97% 0.005 85 / 0.65);font-weight:600;margin-left:auto;white-space:nowrap}
+.plan-extra .plus{color:var(--coral);font-weight:800;flex-shrink:0;font-size:.65rem}
 .plan-cta{width:100%;justify-content:center;font-size:.8rem;padding:.65rem 1rem}
 .plan-cta-white{background:transparent;color:var(--white);border:1.5px solid oklch(97% 0.005 85 / 0.22)}
 .plan-cta-white:hover{background:oklch(97% 0.005 85 / 0.07);border-color:oklch(97% 0.005 85 / 0.4)}
@@ -831,8 +833,10 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </ul>
         <div class="plan-extras-box">
           <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extras-pills">
           <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>90 €</strong></div>
           <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe à la carte : <strong>200 €</strong></div>
+          </div>
         </div>
         <a href="#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
       </div>
@@ -856,8 +860,10 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </ul>
         <div class="plan-extras-box">
           <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extras-pills">
           <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>85 €</strong></div>
           <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe à la carte : <strong>200 €</strong></div>
+          </div>
         </div>
         <a href="#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
       </div>
@@ -882,8 +888,10 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         </ul>
         <div class="plan-extras-box">
           <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extras-pills">
           <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>75 €</strong></div>
           <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe additionnel : <strong>160 €</strong></div>
+          </div>
         </div>
         <a href="#contact" class="btn plan-cta plan-cta-sable">Prendre contact</a>
       </div>
@@ -903,12 +911,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <li>38 voyages Europe + 10 hors Europe inclus</li>
           <li>Service complet + incentives &amp; groupes</li>
           <li>Revue trimestrielle + politique voyage formalisée</li>
-          <li>Manager senior dédié · 7j/7 · 24h/24 · urgences nuit incluses</li>
+          <li>Manager senior dédié · 7j/7 · 24h/24</li>
         </ul>
         <div class="plan-extras-box">
           <p class="plan-extras-lbl">Au-delà du quota inclus :</p>
+          <div class="plan-extras-pills">
           <div class="plan-extra"><span class="plus">+</span>Voyage Europe additionnel : <strong>60 €</strong></div>
           <div class="plan-extra"><span class="plus">+</span>Voyage Hors Europe additionnel : <strong>130 €</strong></div>
+          </div>
         </div>
         <a href="#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
       </div>
@@ -916,7 +926,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     </div>
     <div class="plan-custom-row fade" style="transition-delay:.22s">
       <div><h3>Sur mesure</h3><p>Volume illimité, multi-TM, SLA contractualisé, intégration outils internes.</p></div>
-      <div class="plan-custom-right"><span class="plan-custom-price">À partir de 5 000 € / mois</span><a href="#contact" class="btn btn-sable">Discutons de votre projet</a></div>
+      <div class="plan-custom-right"><a href="#contact" class="btn btn-sable">Discutons de votre projet</a></div>
     </div>
   </div>
 </section>
