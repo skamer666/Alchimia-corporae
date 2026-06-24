@@ -255,7 +255,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .hero-ctas{flex-direction:column;gap:.6rem}
   .hero-ctas .btn{width:100%;justify-content:center}
   .hero-neuro{flex-wrap:wrap;gap:.55rem}
-  .hero-divider{margin-bottom:1.5rem}
+  .hero-divider{margin-bottom:1.75rem}
   .hero-neuro-item{font-size:.72rem}
   /* Events */
   .ev-std,.ev-sig{grid-template-columns:1fr}
@@ -285,15 +285,15 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   h1{font-size:1.75rem}
   h2{font-size:1.45rem}
   .h1-loc{font-size:.9rem}
-  .steps{grid-template-columns:1fr}
-  .hero-divider{margin-bottom:1rem}
-  .hero-neuro{flex-direction:row;flex-wrap:wrap;gap:.8rem 1.25rem}
-  .hero-neuro-item .n{font-size:1.25rem}
-  .hero-neuro-item .l{font-size:.58rem;max-width:12ch}
-  .ev-std .pc,.ev-sig .pc{min-height:185px}
-  .pc-h{font-size:.88rem}
-  .ev-sig-head{flex-direction:column;align-items:flex-start}
   .mob-svc{font-size:.72rem;padding:.4rem .7rem}
+  .steps{grid-template-columns:1fr}
+  /* Hero neuro stats: reste en ligne, plus compact */
+  .hero-divider{margin-bottom:1.25rem}
+  .hero-neuro{flex-direction:row;flex-wrap:wrap;gap:1rem 1.5rem}
+  .hero-neuro-item .n{font-size:1.3rem}
+  .hero-neuro-item .l{font-size:.58rem;max-width:12ch}
+  .ev-std .pc,.ev-sig .pc{min-height:200px}
+  .pc-h{font-size:.9rem}
 }
 </style>
 <script type="application/ld+json">
@@ -692,4 +692,11 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     </div>
     <div class="foot-bottom">
       <p class="foot-copy" data-i18n="ft_copy">© 2026 Alchimia Corporate SRL, Belgique.</p>
-      <div class="foot-eco"><svg viewBox="0 0 24 24
+      <div class="foot-eco"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="ft_eco_lbl">Engagement éco responsable</span></div>
+    </div>
+  </div>
+</footer>
+
+<script src="teambuilding.js"></script>
+</body>
+</html>
