@@ -71,3 +71,15 @@ function initPricingToggle() {
   moBtn.addEventListener('click', function() { setMode('mo'); });
   anBtn.addEventListener('click', function() { setMode('an'); });
 }
+
+// ── Plan accordion (mobile) ──────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.plan-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var plan = btn.closest('.plan');
+      var open = plan.classList.toggle('plan-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.querySelector('span').textContent = open ? 'Masquer' : 'Voir les détails';
+    });
+  });
+});

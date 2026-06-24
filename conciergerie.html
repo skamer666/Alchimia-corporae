@@ -282,10 +282,19 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   /* Tarifs */
   .plan-custom-row{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .plan-custom-right{align-items:flex-start}
-  .pricing-grid{grid-template-columns:1fr 1fr;gap:.75rem}
-  .plan{padding:1.25rem;max-width:100%;overflow:hidden}
-  .plan-amt{font-size:1.7rem}
-  .plan-extras-box{display:none}
+  /* Pricing: horizontal swipe carousel */
+  .pricing-grid{display:flex;flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;gap:.75rem;padding:0 1.1rem .75rem;margin:0 -1.1rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .pricing-grid::-webkit-scrollbar{display:none}
+  .plan{flex-shrink:0;width:78vw;max-width:290px;scroll-snap-align:start;padding:1.25rem;overflow:hidden}
+  .plan-amt{font-size:1.8rem}
+  /* Accordion: hide details by default on mobile */
+  .plan-feats,.plan-extras-box{display:none}
+  .plan.plan-open .plan-feats,.plan.plan-open .plan-extras-box{display:flex}
+  .plan.plan-open .plan-extras-box{flex-direction:column}
+  .plan-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;border-top:1px solid oklch(97% 0.005 85 / 0.1);padding:.65rem 0 0;cursor:pointer;color:oklch(97% 0.005 85 / 0.55);font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.04em;margin-top:.25rem}
+  .plan-toggle svg{transition:transform .25s;flex-shrink:0}
+  .plan.plan-open .plan-toggle svg{transform:rotate(180deg)}
+  .plan.plan-open .plan-toggle{color:var(--sable)}
   /* Comparatif mobile: stacked cards */
   .cmp-table-wrap{display:none}
   .cmp-mobile{display:flex;flex-direction:column;gap:.65rem;margin-top:1.5rem}
@@ -422,6 +431,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .plan-custom-right{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0}
 .plan-custom-price{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--sable)}
 .cmp-mobile{display:none}
+.plan-toggle{display:none}
 
 
 /* ── TARIFS TOGGLE ── */
@@ -859,6 +869,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <span class="plan-discount plan-annual-note">soit −16,7 %</span>
         </div>
         <div class="plan-hr"></div>
+        <button class="plan-toggle" aria-expanded="false"><span>Voir les détails</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
         <ul class="plan-feats">
           <li>3 voyages Europe inclus</li>
           <li class="plan-warn">Hors Europe non inclus</li>
@@ -887,6 +898,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <span class="plan-discount plan-annual-note">soit −16,7 %</span>
         </div>
         <div class="plan-hr"></div>
+        <button class="plan-toggle" aria-expanded="false"><span>Voir les détails</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
         <ul class="plan-feats">
           <li>8 voyages Europe inclus</li>
           <li class="plan-warn">Hors Europe non inclus</li>
@@ -915,6 +927,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <span class="plan-discount plan-annual-note">soit −16,7 %</span>
         </div>
         <div class="plan-hr"></div>
+        <button class="plan-toggle" aria-expanded="false"><span>Voir les détails</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
         <ul class="plan-feats">
           <li>18 voyages Europe + 3 hors Europe inclus</li>
           <li>Vols, hôtels, transferts, visas &amp; formalités, restaurants</li>
@@ -943,6 +956,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <span class="plan-discount plan-annual-note">soit −16,7 %</span>
         </div>
         <div class="plan-hr"></div>
+        <button class="plan-toggle" aria-expanded="false"><span>Voir les détails</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
         <ul class="plan-feats">
           <li>38 voyages Europe + 10 hors Europe inclus</li>
           <li>Service complet + incentives &amp; groupes</li>
