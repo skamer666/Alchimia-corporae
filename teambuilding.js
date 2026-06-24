@@ -3,7 +3,7 @@ const T={
 fr:{
 n_ev:'Événements',n_meth:'Méthode',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Demander un devis',
 h_badge:'Événements Corporate · Local & International',
-h_h1:'Des événements qui<br><span>font la différence.</span>',
+h_h1:'Des événements qui<br><span>font la différence.</span><span class="h1-loc">Local ou international</span>',
 h_sub:'Séminaires, teambuilding, galas, incentives ou formations : chaque projet est orchestré avec la même exigence et le même impact mesurable.',
 h_cta1:'Voir les formats',h_cta2:'Prendre contact',
 h_s1:'Ancrage comportemental supérieur à la formation classique*',
@@ -73,7 +73,7 @@ ft_copy:'© 2026 Alchimia Corporate SRL, Belgique.',
 en:{
 n_ev:'Events',n_meth:'Method',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Request a quote',
 h_badge:'Corporate Events · Local & International',
-h_h1:'Events that<br><span>make a difference.</span>',
+h_h1:'Events that<br><span>make a difference.</span><span class="h1-loc">Local or international</span>',
 h_sub:'Seminars, team building, galas, incentives or training : every project is orchestrated with the same standards and measurable impact.',
 h_cta1:'See formats',h_cta2:'Get in touch',
 h_s1:'Greater behavioural anchoring than classical training*',
@@ -207,6 +207,4 @@ function initNav(){
   });
 }
 
-function toggleMob(){document.getElementById('mob').classList.toggle('open');}
-
-document.addEventListener('DOMContentLoaded',init);
+function toggleMob(){document.ge
