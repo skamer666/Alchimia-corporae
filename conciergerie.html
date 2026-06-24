@@ -277,6 +277,17 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   /* Pourquoi / Pour qui */
   .why-card{padding:1.5rem}
   .why-grid{gap:2rem}
+  /* Pourquoi externaliser: wpt carousel */
+  .why-points{display:flex;flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;gap:.65rem;padding-bottom:.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -1.1rem;padding-left:1.1rem;padding-right:1.1rem}
+  .why-points::-webkit-scrollbar{display:none}
+  .wpt{flex-shrink:0;width:72vw;max-width:260px;scroll-snap-align:start;border:1px solid var(--border);border-bottom:1px solid var(--border);border-radius:10px;padding:.9rem 1rem;background:var(--white)}
+  /* why-card accordion */
+  .why-item-extra{display:none}
+  .why-card.why-open .why-item-extra{display:flex}
+  .why-card-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;border-top:1px solid oklch(97% 0.005 85 / 0.1);padding:.65rem 0 0;cursor:pointer;color:oklch(97% 0.005 85 / 0.55);font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.04em;margin-top:.35rem}
+  .why-card-toggle svg{transition:transform .25s;flex-shrink:0}
+  .why-card.why-open .why-card-toggle svg{transform:rotate(180deg)}
+  .why-card.why-open .why-card-toggle{color:var(--sable)}
   .profil-card{padding:1.25rem 0}
   .profil-num{font-size:2.2rem}
   /* Tarifs */
@@ -432,6 +443,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .plan-custom-price{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--sable)}
 .cmp-mobile{display:none}
 .plan-toggle{display:none}
+.why-card-toggle{display:none}
 
 
 /* ── TARIFS TOGGLE ── */
@@ -699,10 +711,11 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
         <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div><div><h4>Vols &amp; Trains</h4><p>Business, éco, multi escales, jets privés. Urgence &lt; 1h.</p></div></div>
         <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><h4>Hôtels &amp; Résidences</h4><p>Tarifs négociés, early check in, longue durée.</p></div></div>
         <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><h4>Transferts &amp; Chauffeurs</h4><p>Navettes aéroport, VTC, coordination multi sites.</p></div></div>
-        <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Visas &amp; Formalités</h4><p>Visas d'affaires express, assurances voyage, passeports.</p></div></div>
-        <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div><h4>Restaurants &amp; Tables rares</h4><p>Réservations prioritaires dans toutes les villes.</p></div></div>
-        <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><h4>Incentives &amp; Groupes</h4><p>Voyages incentive, séminaires à l'étranger, coordination A→Z.</p></div></div>
-        <div class="why-item"><div class="why-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><h4>Reporting &amp; CO₂</h4><p>Rapport mensuel dépenses + bilan carbone sur demande.</p></div></div>
+        <div class="why-item why-item-extra"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Visas &amp; Formalités</h4><p>Visas d'affaires express, assurances voyage, passeports.</p></div></div>
+        <div class="why-item why-item-extra"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div><h4>Restaurants &amp; Tables rares</h4><p>Réservations prioritaires dans toutes les villes.</p></div></div>
+        <div class="why-item why-item-extra"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><h4>Incentives &amp; Groupes</h4><p>Voyages incentive, séminaires à l'étranger, coordination A→Z.</p></div></div>
+        <div class="why-item why-item-extra"><div class="why-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><h4>Reporting &amp; CO₂</h4><p>Rapport mensuel dépenses + bilan carbone sur demande.</p></div></div>
+        <button class="why-card-toggle" aria-expanded="false"><span>Voir les 4 autres services</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
       </div>
     </div>
   </div>
