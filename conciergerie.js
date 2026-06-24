@@ -7,7 +7,7 @@ function init(){
   const saved=sessionStorage.getItem('alchimia-lang');
   if(saved&&(saved==='fr'||saved==='en'))setLang(saved);
   else applyLang();
-  initScrollAnim();initNav();
+  initScrollAnim();initNav();initPricingToggle();
 
   document.getElementById('btn-fr').addEventListener('click',function(){setLang('fr');});
   document.getElementById('btn-en').addEventListener('click',function(){setLang('en');});
@@ -69,5 +69,4 @@ function initPricingToggle() {
   }
 
   moBtn.addEventListener('click', function() { setMode('mo'); });
-  anBtn.addEventListener('click', function() { setMode('an'); });
-}
+  anBtn.addEventListener('click', function() { s
