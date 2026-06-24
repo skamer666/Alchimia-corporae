@@ -58,6 +58,13 @@ a{text-decoration:none;color:inherit}
 }
 .gate-left .gate-h{color:oklch(97% 0.005 85)}
 .gate-right .gate-h{color:oklch(22% 0.035 195)}
+.gate-sub{
+  display:block;
+  font-size:clamp(.85rem,2.2vw,1.2rem);
+  font-weight:600;letter-spacing:.01em;line-height:1.2;
+  color:oklch(63% 0.14 40);
+  margin-top:.3rem;
+}
 .gate-p{
   font-family:'Epilogue',sans-serif;
   font-size:.93rem;line-height:1.72;max-width:38ch;margin-bottom:2.5rem;
@@ -196,7 +203,7 @@ a{text-decoration:none;color:inherit}
   <a class="gate-panel gate-left" id="panel-tb" href="teambuilding.html" aria-label="Événements et Formation">
     <div class="gate-panel-inner">
       <span class="gate-tag" data-i="tb_tag">Événements · Local &amp; International</span>
-      <h2 class="gate-h" data-i="tb_h">Événements</h2>
+      <h2 class="gate-h" data-i="tb_h">Événements<span class="gate-sub">Local ou international</span></h2>
       <p class="gate-p" data-i="tb_p">Séminaires, teambuilding et galas — en local ou à l'international.</p>
       <div class="gate-cta">
         <span data-i="tb_cta">Explorer les programmes</span>
@@ -214,12 +221,4 @@ a{text-decoration:none;color:inherit}
       <p class="gate-p" data-i="cv_p">Travel manager externalisé et travel management d'entreprise Bruxelles : un interlocuteur dédié 7j/7 pour tous vos voyages d'affaires.</p>
       <div class="gate-cta">
         <span data-i="cv_cta">Découvrir le service</span>
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
-    </div>
-  </a>
-</div>
-
-<script src="gate.js"></script>
-</body>
-</html>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-li

@@ -1,7 +1,7 @@
 const T = {
   fr: {
     tb_tag:'Événements · Local & International',
-    tb_h:'Événements',
+    tb_h:'Événements<span class="gate-sub">Local ou international</span>',
     tb_p:'Séminaires, teambuilding et galas — en local ou à l\'international.',
     tb_cta:'Explorer les événements',
     cv_tag:'Votre assistant personnel',
@@ -11,7 +11,7 @@ const T = {
   },
   en: {
     tb_tag:'Events · Local & International',
-    tb_h:'Events',
+    tb_h:'Events<span class="gate-sub">Local or international</span>',
     tb_p:'Seminars, team building and galas — local or international.',
     tb_cta:'Explore events',
     cv_tag:'Your personal assistant',
@@ -53,8 +53,4 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('glang-en').addEventListener('click', function() { setLang('en'); });
 
   document.querySelectorAll('.gate-panel').forEach(function(p) {
-    p.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); p.click(); }
-    });
-  });
-});
+    p.addEventListener('keydown', function(
