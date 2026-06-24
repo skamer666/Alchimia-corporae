@@ -38,7 +38,7 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Epilogue',sans-serif;color:var(--txt);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
+body{font-family:'Epilogue',sans-serif;color:var(--txt);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;font-weight:700}
 h1{font-size:clamp(2.6rem,5.5vw,4.4rem);letter-spacing:-.025em}
@@ -308,8 +308,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .eco-right-panel>p{display:none}
   /* Comparison */
   .cstep{padding:1rem 1.25rem}
-  #comparatif table{min-width:480px}
-  #comparatif td,#comparatif th{padding:.65rem .9rem;font-size:.75rem}
+  #comparatif td,#comparatif th{padding:.65rem .75rem;font-size:.73rem}
   /* Contact */
   .contact-grid{grid-template-columns:1fr;gap:2rem}
   .cf-row{grid-template-columns:1fr}
@@ -341,8 +340,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .srv-tags{gap:3px}
   .srv-tag{font-size:.56rem;padding:2px 7px}
   /* Comparison table */
-  #comparatif table{min-width:460px}
-  #comparatif td,#comparatif th{padding:.55rem .75rem;font-size:.72rem}
+  #comparatif td,#comparatif th{padding:.5rem .6rem;font-size:.7rem}
   /* Eco section */
   .eco-travel-grid{gap:1.25rem}
   .eco-promise-list{grid-template-columns:1fr 1fr}
@@ -744,7 +742,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     <span class="eyebrow" data-i18n="cmp_label">Pourquoi pas une agence</span>
     <h2 class="fade" data-i18n="cmp_h2">Pas une agence.<br>Un chargé de voyage qui vous connaît.</h2>
     <p class="fade" style="transition-delay:.08s;max-width:56ch;margin-bottom:3rem" data-i18n="cmp_sub">La différence entre appeler un centre d'appel et parler à quelqu'un qui connaît votre nom, vos habitudes et vos préférences.</p>
-    <div class="fade" style="transition-delay:.12s;overflow-x:auto">
+    <div class="fade" style="transition-delay:.12s;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch">
       <table style="width:100%;border-collapse:collapse">
         <thead>
           <tr>
@@ -813,7 +811,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 <section id="tarifs" class="bg-navy">
   <div class="container">
     <span class="eyebrow" style="color:var(--sable)">Tarifs</span>
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.25rem;margin-bottom:1.5rem">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem">
       <h2 class="fade" style="color:var(--white);margin-bottom:0">Transparent.<br>Sans surprise.</h2>
       <div class="tarifs-toggle fade" style="transition-delay:.05s">
         <button class="ttog ttog-active" id="ttog-mo">Mensuel</button>
@@ -821,7 +819,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </div>
     </div>
     <div class="tarifs-note" style="margin-bottom:2rem">
-      <p class="tarifs-def"><strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">1 voyage = 1 destination.</strong> Bruxelles → Paris = 1 voyage · Bruxelles → Paris + Londres = 2 voyages.<br><strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">Europe</strong> = zone Schengen + UK &nbsp;·&nbsp; <strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">Hors Europe</strong> = visa, décalage horaire, logistique complexe.</p>
+      <p class="tarifs-def" style="overflow-wrap:break-word;word-break:break-word"><strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">1 voyage = 1 destination.</strong> Bruxelles → Paris = 1 voyage · Bruxelles → Paris + Londres = 2 voyages.<br><strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">Europe</strong> = zone Schengen + UK &nbsp;·&nbsp; <strong style="color:oklch(97% 0.005 85 / 0.75);font-weight:600">Hors Europe</strong> = visa, décalage horaire, logistique complexe.</p>
     </div>
     <div class="pricing-grid">
 
