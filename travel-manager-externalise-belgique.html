@@ -176,6 +176,10 @@ footer{background:oklch(14% 0.025 195);padding:2.5rem 0 2rem;border-top:1px soli
   /* Nav — simpler, no hamburger */
   .nav-inner{gap:.75rem}
   .nav-back span{display:none}
+  /* Pricing */
+  .pricing-grid{grid-template-columns:1fr 1fr}
+  .plan-custom-row{flex-direction:column;align-items:flex-start;gap:1.25rem}
+  .plan-custom-right{align-items:flex-start}
   /* Hero */
   .hero{min-height:auto;padding:calc(68px + 2.5rem) 0 2.5rem}
   .hero-content{padding:0}
@@ -218,10 +222,50 @@ footer{background:oklch(14% 0.025 195);padding:2.5rem 0 2rem;border-top:1px soli
   h2{font-size:1.5rem}
   .hero-pillars{flex-direction:column;gap:.5rem}
   .profil-grid{grid-template-columns:1fr}
+  /* Pricing — single col */
+  .pricing-grid{grid-template-columns:1fr}
+  .plan-amt{font-size:1.9rem}
+  .tarifs-annual{font-size:.68rem}
   .why-item h4{font-size:.82rem}
   .cmp-table{min-width:480px}
   .cta-box{padding:1.5rem 1rem}
 }
+
+/* ── TARIFS ─────────────────────────────────── */
+.tarifs-note{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-bottom:1rem}
+.tarifs-def{font-size:.8rem;color:var(--muted);line-height:1.55}
+.tarifs-annual{display:inline-flex;align-items:center;gap:8px;background:oklch(72% 0.09 75 / 0.08);border:1px solid oklch(72% 0.09 75 / 0.22);border-radius:6px;padding:.55rem 1rem;font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;font-weight:700;color:var(--sable);margin-bottom:2.75rem;letter-spacing:.04em}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:1.1rem}
+.plan{background:oklch(27% 0.028 195);border:1px solid oklch(97% 0.005 85 / 0.07);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;gap:1.1rem;position:relative;color:var(--white)}
+.plan-featured{border:1.5px solid var(--sable);background:oklch(23% 0.033 195)}
+.plan-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--sable);color:var(--navy);font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:3px 13px;border-radius:20px;white-space:nowrap}
+.plan-top{display:flex;flex-direction:column;gap:.4rem}
+.plan-name{font-family:'Bricolage Grotesque',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sable)}
+.plan-price-row{display:flex;align-items:baseline;gap:4px}
+.plan-amt{font-family:'Bricolage Grotesque',sans-serif;font-size:2.2rem;font-weight:800;color:var(--white);line-height:1;letter-spacing:-.03em}
+.plan-unit{font-family:'Epilogue',sans-serif;font-size:.78rem;color:oklch(97% 0.005 85 / 0.38);font-weight:400}
+.plan-hr{height:1px;background:oklch(97% 0.005 85 / 0.08)}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.plan-feats li{font-size:.79rem;color:oklch(97% 0.005 85 / 0.62);line-height:1.5;display:flex;gap:.55rem;align-items:flex-start}
+.plan-feats li::before{content:'✓';color:var(--sable);font-weight:700;flex-shrink:0;font-size:.75rem;margin-top:.05rem}
+.plan-feats li.plan-warn::before{content:'–';color:oklch(97% 0.005 85 / 0.3)}
+.plan-feats li.plan-warn{color:oklch(97% 0.005 85 / 0.3)}
+.plan-extras-box{background:oklch(19% 0.022 195);border-radius:8px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.3rem}
+.plan-extra{font-size:.72rem;color:oklch(97% 0.005 85 / 0.42);display:flex;gap:.35rem;align-items:baseline;flex-wrap:wrap}
+.plan-extra-lbl{color:oklch(97% 0.005 85 / 0.42)}
+.plan-extra strong{color:oklch(97% 0.005 85 / 0.7);font-weight:600}
+.plan-extra .plus{color:var(--coral);font-weight:700;flex-shrink:0}
+.plan-cta{width:100%;justify-content:center;font-size:.8rem;padding:.65rem 1rem}
+.plan-cta-white{background:transparent;color:var(--white);border:1.5px solid oklch(97% 0.005 85 / 0.22)}
+.plan-cta-white:hover{background:oklch(97% 0.005 85 / 0.07);border-color:oklch(97% 0.005 85 / 0.4)}
+.plan-cta-sable{background:var(--sable);color:var(--navy)}
+.plan-cta-sable:hover{background:var(--sable-dk)}
+.plan-custom-row{background:oklch(27% 0.028 195);border:1px solid oklch(72% 0.09 75 / 0.18);border-radius:14px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.plan-custom-row h3{font-size:1.15rem;color:var(--white);margin-bottom:.35rem}
+.plan-custom-row p{font-size:.82rem;color:oklch(97% 0.005 85 / 0.48);max-width:54ch;line-height:1.55}
+.plan-custom-right{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0}
+.plan-custom-price{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--sable)}
+
 </style>
 <script type="application/ld+json">
 {
@@ -510,6 +554,133 @@ footer{background:oklch(14% 0.025 195);padding:2.5rem 0 2rem;border-top:1px soli
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+
+<!-- TARIFS -->
+<section id="tarifs" class="bg-navy">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--sable)">Tarifs</span>
+    <h2 class="fade" style="color:var(--white);margin-bottom:1.5rem">Transparent.<br>Sans surprise.</h2>
+
+    <div class="tarifs-note">
+      <p class="tarifs-def"><strong style="color:var(--white);font-weight:600">1 voyage = 1 destination.</strong> Bruxelles → Paris = 1 voyage · Bruxelles → Paris + Londres = 2 voyages.<br>
+      <strong style="color:var(--white);font-weight:600">Europe</strong> = zone Schengen + UK &nbsp;·&nbsp; <strong style="color:var(--white);font-weight:600">Hors Europe</strong> = visa, décalage horaire, logistique complexe.</p>
+    </div>
+    <div class="tarifs-annual fade" style="transition-delay:.05s">
+      ✦ &nbsp;Option annuelle sur tous les paliers : payer 10 mois, profiter 12 — soit −16,7 %
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Micro -->
+      <div class="plan fade" style="transition-delay:.06s">
+        <div class="plan-top">
+          <span class="plan-name">Micro</span>
+          <div class="plan-price-row">
+            <span class="plan-amt">290</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+        </div>
+        <div class="plan-hr"></div>
+        <ul class="plan-feats">
+          <li>3 voyages Europe inclus</li>
+          <li class="plan-warn">Hors Europe non inclus</li>
+          <li>Vols, trains, hôtels, transferts</li>
+          <li>Manager partagé · réponse &lt; 4h, jours ouvrés</li>
+        </ul>
+        <div class="plan-extras-box">
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Europe supp. :</span><strong>90 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Hors Europe (add-on) :</span><strong>200 €</strong></div>
+        </div>
+        <a href="conciergerie.html#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
+      </div>
+
+      <!-- Starter -->
+      <div class="plan fade" style="transition-delay:.1s">
+        <div class="plan-top">
+          <span class="plan-name">Starter</span>
+          <div class="plan-price-row">
+            <span class="plan-amt">590</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+        </div>
+        <div class="plan-hr"></div>
+        <ul class="plan-feats">
+          <li>8 voyages Europe inclus</li>
+          <li class="plan-warn">Hors Europe non inclus</li>
+          <li>Vols, trains, hôtels, transferts</li>
+          <li>Manager partagé prioritaire · réponse &lt; 2h, jours ouvrés</li>
+        </ul>
+        <div class="plan-extras-box">
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Europe supp. :</span><strong>85 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Hors Europe (add-on) :</span><strong>200 €</strong></div>
+        </div>
+        <a href="conciergerie.html#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
+      </div>
+
+      <!-- Business — featured -->
+      <div class="plan plan-featured fade" style="transition-delay:.14s">
+        <span class="plan-badge">Le plus choisi</span>
+        <div class="plan-top">
+          <span class="plan-name">Business</span>
+          <div class="plan-price-row">
+            <span class="plan-amt">1 890</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+        </div>
+        <div class="plan-hr"></div>
+        <ul class="plan-feats">
+          <li>18 voyages Europe + 3 hors Europe inclus</li>
+          <li>Vols, hôtels, transferts, visas &amp; formalités, restaurants</li>
+          <li>Rapport CO₂ mensuel inclus</li>
+          <li>Manager dédié nommé · réponse &lt; 1h, 7j/7</li>
+        </ul>
+        <div class="plan-extras-box">
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Europe supp. :</span><strong>75 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Hors Europe supp. :</span><strong>160 €</strong></div>
+        </div>
+        <a href="conciergerie.html#contact" class="btn plan-cta plan-cta-sable">Prendre contact</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="plan fade" style="transition-delay:.18s">
+        <div class="plan-top">
+          <span class="plan-name">Premium</span>
+          <div class="plan-price-row">
+            <span class="plan-amt">3 290</span>
+            <span class="plan-unit">€ / mois</span>
+          </div>
+        </div>
+        <div class="plan-hr"></div>
+        <ul class="plan-feats">
+          <li>38 voyages Europe + 10 hors Europe inclus</li>
+          <li>Service complet + incentives &amp; groupes</li>
+          <li>Revue trimestrielle + politique voyage formalisée</li>
+          <li>Manager senior dédié · &lt; 30 min, 7j/7, urgences nuit incluses</li>
+        </ul>
+        <div class="plan-extras-box">
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Europe supp. :</span><strong>60 €</strong></div>
+          <div class="plan-extra"><span class="plus">+</span><span class="plan-extra-lbl">Hors Europe supp. :</span><strong>130 €</strong></div>
+        </div>
+        <a href="conciergerie.html#contact" class="btn plan-cta plan-cta-white">Prendre contact</a>
+      </div>
+
+    </div><!-- /pricing-grid -->
+
+    <!-- Sur mesure -->
+    <div class="plan-custom-row fade" style="transition-delay:.22s">
+      <div>
+        <h3>Sur mesure</h3>
+        <p>Volume illimité, multi-TM, SLA contractualisé, intégration outils internes.</p>
+      </div>
+      <div class="plan-custom-right">
+        <span class="plan-custom-price">À partir de 5 000 € / mois</span>
+        <a href="conciergerie.html#contact" class="btn btn-sable">Discutons de votre projet</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
