@@ -199,14 +199,18 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   section{padding:2.5rem 0}
   .container{padding:0 1.1rem}
   /* Nav */
+  .nav-services{display:none}
+  .nav-sep{display:none}
   .nav-links{display:none}
   .nav-right .btn{display:none}
   .ham{display:flex}
+  /* Breadcrumb */
+  .breadcrumb-inner{font-size:.68rem}
   /* Hero */
-  .hero{min-height:auto;padding:calc(68px + 2.5rem) 0 2.5rem}
+  .hero{min-height:auto;padding:calc(68px + 2rem) 0 2rem}
   .hero-content{padding:0}
-  h1{font-size:clamp(1.9rem,7vw,2.6rem)}
-  .hero-sub{font-size:.9rem;max-width:100%}
+  h1{font-size:clamp(1.8rem,7vw,2.6rem)}
+  .hero-sub{font-size:.88rem;max-width:100%;margin-bottom:1.5rem}
   .hero-ctas{flex-direction:column;gap:.6rem}
   .hero-ctas .btn{width:100%;justify-content:center}
   .hero-neuro{flex-wrap:wrap;gap:.55rem}
@@ -217,9 +221,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   /* Neuro / dose */
   .dose-grid{grid-template-columns:repeat(2,1fr)}
   .dose{padding:1.25rem}
-  /* Form */
+  /* Form grid */
   .form-grid{grid-template-columns:1fr}
-  .form-funding{flex-direction:column;gap:.75rem}
   /* Inputs */
   input,select,textarea{font-size:16px;min-height:44px}
   /* Footer */
@@ -229,12 +232,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 @media(max-width:480px){
   section{padding:2rem 0}
   .container{padding:0 .9rem}
-  h1{font-size:1.9rem}
-  h2{font-size:1.5rem}
-  .hero-neuro{flex-direction:column;gap:.5rem}
+  h1{font-size:1.75rem}
+  h2{font-size:1.45rem}
+  .hero-neuro{flex-direction:row;flex-wrap:wrap;gap:.8rem 1.25rem}
   .dose-grid{grid-template-columns:1fr}
   .dose-letter{font-size:2.5rem}
   .fc{padding:1.25rem}
+  .fc-num{font-size:2rem}
+  .mob-svc{font-size:.72rem;padding:.4rem .7rem}
 }
 </style>
 <script type="application/ld+json">
@@ -491,4 +496,4 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 
 <script src="programmes-immersifs.js"></script>
 </body>
-</html>                                                                                                                                                                                                                                                                                                                                                                                                       
+</html>                                                                                                                                                                                                                 
