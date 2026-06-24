@@ -37,6 +37,7 @@
   --space-xl:32px; --space-2xl:48px; --space-3xl:64px; --space-4xl:96px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden}
 html{scroll-behavior:smooth}
 body{font-family:'Epilogue',sans-serif;color:var(--txt);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
@@ -281,13 +282,27 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   /* Tarifs */
   .plan-custom-row{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .plan-custom-right{align-items:flex-start}
+  .pricing-grid{grid-template-columns:1fr 1fr;gap:.75rem}
+  .plan{padding:1.25rem;max-width:100%;overflow:hidden}
+  .plan-amt{font-size:1.7rem}
+  .plan-extras-box{display:none}
+  /* Comparatif mobile: stacked cards */
+  .cmp-table-wrap{display:none}
+  .cmp-mobile{display:flex;flex-direction:column;gap:.65rem;margin-top:1.5rem}
+  .cmp-row-mob{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.5rem}
+  .cmp-crit{font-family:'Bricolage Grotesque',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.2rem}
+  .cmp-vals{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+  .cmp-val{display:flex;flex-direction:column;gap:.15rem}
+  .cmp-val-lbl{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:.7}
+  .cmp-val-lbl.lbl-us{color:var(--teal)}
+  .cmp-val-txt{font-size:.78rem;line-height:1.4}
+  .cmp-val-txt.txt-us{font-weight:600;color:var(--navy)}
+  .cmp-val-txt.txt-them{color:var(--muted)}
   /* Moments */
   .moments-grid{grid-template-columns:1fr}
   .mc:nth-child(1),.mc:nth-child(2),.mc:nth-child(3){min-height:200px}
   /* Services */
   .profil-grid{grid-template-columns:1fr}
-  .pricing-grid{grid-template-columns:1fr}
-  .plan-amt{font-size:1.9rem}
   .tarifs-annual{font-size:.68rem}
   .srv-grid{grid-template-columns:1fr}
   .srv-card{padding:1.25rem}
@@ -320,6 +335,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .foot-bottom{flex-direction:column;text-align:center;gap:.5rem}
 }
 @media(max-width:480px){
+  .pricing-grid{grid-template-columns:1fr}
   section{padding:2rem 0}
   .container{padding:0 .9rem}
   h1{font-size:1.75rem}
@@ -405,6 +421,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .plan-custom-row>div>p{font-size:.82rem;color:oklch(97% 0.005 85 / 0.48);max-width:54ch;line-height:1.55}
 .plan-custom-right{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0}
 .plan-custom-price{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--sable)}
+.cmp-mobile{display:none}
 
 
 /* ── TARIFS TOGGLE ── */
@@ -742,7 +759,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
     <span class="eyebrow" data-i18n="cmp_label">Pourquoi pas une agence</span>
     <h2 class="fade" data-i18n="cmp_h2">Pas une agence.<br>Un chargé de voyage qui vous connaît.</h2>
     <p class="fade" style="transition-delay:.08s;max-width:56ch;margin-bottom:3rem" data-i18n="cmp_sub">La différence entre appeler un centre d'appel et parler à quelqu'un qui connaît votre nom, vos habitudes et vos préférences.</p>
-    <div class="fade" style="transition-delay:.12s;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch">
+    <div class="cmp-mobile">
+      <div class="cmp-row-mob"><div class="cmp-crit">Interlocuteur</div><div class="cmp-vals"><div class="cmp-val"><span class="cmp-val-lbl">Agence classique</span><span class="cmp-val-txt txt-them">Centre d'appel anonyme</span></div><div class="cmp-val"><span class="cmp-val-lbl lbl-us">Alchimia Corporate</span><span class="cmp-val-txt txt-us">Interlocuteur dédié nommé</span></div></div></div>
+      <div class="cmp-row-mob"><div class="cmp-crit">Disponibilité</div><div class="cmp-vals"><div class="cmp-val"><span class="cmp-val-lbl">Agence classique</span><span class="cmp-val-txt txt-them">Horaires de bureau</span></div><div class="cmp-val"><span class="cmp-val-lbl lbl-us">Alchimia Corporate</span><span class="cmp-val-txt txt-us">Disponible 7j/7</span></div></div></div>
+      <div class="cmp-row-mob"><div class="cmp-crit">Réactivité</div><div class="cmp-vals"><div class="cmp-val"><span class="cmp-val-lbl">Agence classique</span><span class="cmp-val-txt txt-them">Vous recontacte sous 24h</span></div><div class="cmp-val"><span class="cmp-val-lbl lbl-us">Alchimia Corporate</span><span class="cmp-val-txt txt-us">Répond en moins d'1h</span></div></div></div>
+      <div class="cmp-row-mob"><div class="cmp-crit">Connaissance client</div><div class="cmp-vals"><div class="cmp-val"><span class="cmp-val-lbl">Agence classique</span><span class="cmp-val-txt txt-them">Ne connaît pas vos habitudes</span></div><div class="cmp-val"><span class="cmp-val-lbl lbl-us">Alchimia Corporate</span><span class="cmp-val-txt txt-us">Cartographie vos préférences dès J1</span></div></div></div>
+      <div class="cmp-row-mob"><div class="cmp-crit">Facturation</div><div class="cmp-vals"><div class="cmp-val"><span class="cmp-val-lbl">Agence classique</span><span class="cmp-val-txt txt-them">À la transaction</span></div><div class="cmp-val"><span class="cmp-val-lbl lbl-us">Alchimia Corporate</span><span class="cmp-val-txt txt-us">Abonnement mensuel prévisible</span></div></div></div>
+    </div>
+    <div class="cmp-table-wrap fade" style="transition-delay:.12s;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch">
       <table style="width:100%;border-collapse:collapse">
         <thead>
           <tr>
@@ -779,7 +803,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           </tr>
         </tbody>
       </table>
-    </div>
+    </div><!-- /cmp-table-wrap -->
   </div>
 </section>
 
