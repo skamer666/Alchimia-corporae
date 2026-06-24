@@ -53,4 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('glang-en').addEventListener('click', function() { setLang('en'); });
 
   document.querySelectorAll('.gate-panel').forEach(function(p) {
-    p.addEventListener('keydown', function(
+    p.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); p.click(); }
+    });
+  });
+});
