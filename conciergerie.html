@@ -120,12 +120,12 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 
 /* ─── CONCEPT ─── */
 .concept-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:5rem;align-items:start}
-.concept-card{background:var(--navy);border-radius:14px;padding:2.75rem;color:var(--white)}
+.concept-card{position:relative;overflow:hidden;border-radius:14px;padding:2.75rem;color:var(--white);background:var(--navy);background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80');background-size:cover;background-position:center bottom}.concept-card::before{content:'';position:absolute;inset:0;background:oklch(16% 0.04 195 / 0.9);z-index:0}.concept-card h3,.concept-card>p,.concept-feature{position:relative;z-index:1}
 .concept-card h3{font-size:1.3rem;color:var(--white);margin-bottom:1rem}
 .concept-card > p{color:oklch(97% 0.005 85 / 0.55);font-size:.9rem;margin-bottom:2rem}
 .concept-feature{display:flex;align-items:flex-start;gap:.85rem;padding:.9rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.06)}
 .concept-feature:last-child{border-bottom:none}
-.cf-ico{width:34px;height:34px;flex-shrink:0;background:oklch(72% 0.09 75 / 0.12);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.cf-ico{display:none}
 .cf-ico svg{width:15px;height:15px;stroke:var(--sable);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .concept-feature h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:2px}
 .concept-feature p{font-size:.78rem;color:oklch(97% 0.005 85 / 0.45);line-height:1.6}
@@ -134,7 +134,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .concept-steps{display:flex;flex-direction:column;gap:0}
 .cstep{display:flex;gap:1.25rem;padding:1.1rem 0;border-bottom:1px solid var(--border)}
 .cstep:last-child{border-bottom:none}
-.cstep-num{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--teal-pale);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-size:.7rem;font-weight:700;color:var(--teal)}
+.cstep-num{flex-shrink:0;font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal);line-height:1;min-width:1.6rem;padding-top:.05rem}
 .cstep h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:2px}
 .cstep p{font-size:.8rem}
 
@@ -142,9 +142,9 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
 .srv-grid .srv:last-child:nth-child(3n+1){grid-column:1/3}
 .srv{background:var(--white);border-radius:10px;border:1px solid var(--border);padding:2rem;transition:box-shadow .2s,transform .2s;position:relative;overflow:hidden}
-.srv:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
-.srv::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--border)}
-.srv-ico{width:44px;height:44px;border-radius:10px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.srv:hover{border-color:oklch(46% 0.08 200 / 0.5);background:oklch(97% 0.006 195)}
+.srv::before{display:none}
+.srv-ico{display:none}
 .srv-ico svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .srv h3{font-size:.97rem;color:var(--navy);margin-bottom:.4rem}
 .srv > p{font-size:.82rem;margin-bottom:.9rem}
@@ -186,7 +186,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .eco-list{display:flex;flex-direction:column;gap:0;margin-top:2rem}
 .eco-row{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--border)}
 .eco-row:last-child{border-bottom:none}
-.eco-ico{width:36px;height:36px;flex-shrink:0;background:oklch(92% 0.02 155);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.eco-ico{display:none}
 .eco-ico svg{width:17px;height:17px;stroke:oklch(36% 0.1 155);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .eco-row h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:2px}
 .eco-right-panel{background:var(--navy);border:1px solid oklch(72% 0.09 75 / 0.12);border-radius:14px;padding:2.75rem;color:var(--white)}
@@ -266,8 +266,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   /* Pourquoi / Pour qui */
   .why-card{padding:1.5rem}
   .why-grid{gap:2rem}
-  .profil-card{padding:1.5rem}
-  .profil-num{font-size:1.8rem}
+  .profil-card{padding:1.25rem 0}
+  .profil-num{font-size:2.2rem}
   /* Tarifs */
   .plan-custom-row{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .plan-custom-right{align-items:flex-start}
@@ -343,7 +343,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .why-card h3{font-size:1.05rem;color:var(--white);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid oklch(97% 0.005 85 / 0.08)}
 .why-item{display:flex;gap:1rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.06)}
 .why-item:last-child{border-bottom:none}
-.why-ico{width:32px;height:32px;flex-shrink:0;background:oklch(72% 0.09 75 / 0.12);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.why-ico{display:none}
 .why-ico svg{width:14px;height:14px;stroke:var(--sable);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .why-item h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.84rem;font-weight:600;color:var(--white);margin-bottom:2px}
 .why-item p{font-size:.76rem;color:oklch(97% 0.005 85 / 0.45);line-height:1.6}
@@ -351,14 +351,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .why-points{display:flex;flex-direction:column;gap:0}
 .wpt{display:flex;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--border)}
 .wpt:last-child{border-bottom:none}
-.wpt-num{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:var(--teal-pale);border:1.5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-size:.68rem;font-weight:700;color:var(--teal)}
+.wpt-num{flex-shrink:0;font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal);line-height:1;min-width:1.6rem;padding-top:.05rem}
 .wpt h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:2px}
 .wpt p{font-size:.8rem}
 /* ── POUR QUI ── */
 .profil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.profil-card{border-radius:12px;border:1px solid var(--border);padding:2rem;background:var(--white);transition:box-shadow .2s,transform .2s}
-.profil-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-.profil-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2.2rem;font-weight:800;color:var(--teal);line-height:1;margin-bottom:.5rem}
+.profil-card{padding:1.75rem 0;border-top:1px solid var(--border)}
+
+.profil-num{font-family:'Bricolage Grotesque',sans-serif;font-size:3rem;font-weight:800;color:var(--sable);line-height:1;margin-bottom:.3rem;letter-spacing:-.03em}
 .profil-card h3{font-size:.95rem;color:var(--navy);margin-bottom:.4rem}
 /* ── TARIFS ── */
 .tarifs-note{margin-bottom:1rem}
