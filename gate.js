@@ -2,7 +2,7 @@ const T = {
   fr: {
     tb_tag:'Événements · Local & International',
     tb_h:'Événements<span class="gate-sub">Local ou international</span>',
-    tb_p:'Séminaires, teambuilding et galas — en local ou à l\'international.',
+    tb_p:'Séminaires, teambuilding et galas, en local ou à l\'international.',
     tb_cta:'Explorer les événements',
     cv_tag:'Votre assistant personnel',
     cv_h:'Travel<br>Manager',
@@ -12,7 +12,7 @@ const T = {
   en: {
     tb_tag:'Events · Local & International',
     tb_h:'Events<span class="gate-sub">Local or international</span>',
-    tb_p:'Seminars, team building and galas — local or international.',
+    tb_p:'Seminars, team building and galas, local or international.',
     tb_cta:'Explore events',
     cv_tag:'Your personal assistant',
     cv_h:'Travel<br>Manager',
