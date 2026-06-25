@@ -84,14 +84,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// ── Why-card accordion (mobile) ──────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function() {
-  var whyToggle = document.querySelector('.why-card-toggle');
-  if (!whyToggle) return;
-  whyToggle.addEventListener('click', function() {
-    var card = whyToggle.closest('.why-card');
-    var open = card.classList.toggle('why-open');
-    whyToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    whyToggle.querySelector('span').textContent = open ? 'Masquer' : 'Voir les 4 autres services';
-  });
-});
