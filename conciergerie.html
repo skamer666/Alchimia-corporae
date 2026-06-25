@@ -204,8 +204,8 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .eco-promise-list{display:flex;flex-direction:column;gap:0;counter-reset:ep}
 .eco-promise{display:grid;grid-template-columns:2.2rem 1fr;align-items:baseline;padding:.7rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.07);counter-increment:ep}
 .eco-promise:last-child{border-bottom:none}
-.eco-promise-check{font-size:0;display:block}
-.eco-promise-check::after{content:counter(ep,decimal-leading-zero);font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:800;letter-spacing:.1em;color:var(--sable);display:block;padding-top:.15rem}
+.eco-promise-check{font-size:0;display:block;padding-top:.18rem}
+.eco-promise-check::after{content:counter(ep,decimal-leading-zero);font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:800;letter-spacing:.1em;color:var(--sable);display:block}
 .eco-promise span:last-child{font-size:.83rem;color:oklch(97% 0.005 85 / 0.82);line-height:1.62;font-family:'Epilogue',sans-serif}
 
 /* ─── CONTACT ─── */
@@ -1017,8 +1017,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
           <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep4">Objectifs de réduction CO₂ codéfinis avec vous</span></div>
           <div class="eco-promise"><span class="eco-promise-check">✦</span><span data-i18n="ep5">Compensation carbone optionnelle intégrée à la facturation</span></div>
         </div>
-        <br>
-        <a href="#contact" class="btn btn-sable" style="margin-top:.5rem" data-i18n="etp_cta">Demander un bilan voyage</a>
+        <a href="#contact" class="btn btn-sable" style="margin-top:1.25rem;display:flex;justify-content:center;text-align:center" data-i18n="etp_cta">Demander un bilan voyage</a>
       </div>
     </div>
   </div>
