@@ -245,7 +245,6 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .why-grid{grid-template-columns:1fr;gap:2.5rem}
   .profil-grid{grid-template-columns:1fr 1fr}
   .pricing-grid{grid-template-columns:1fr 1fr}
   .concept-steps{grid-template-columns:1fr}
@@ -279,16 +278,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .hero-pillar{font-size:.72rem}
   /* Pourquoi / Pour qui */
   
-  .why-grid{gap:2rem}
-  /* Pourquoi externaliser — compact mobile */
-  .why-grid{display:flex;flex-direction:column;gap:1.25rem}
-  .why-right>p{display:none}
-  /* 4 avantages : 1 ligne horizontale */
-  .why-points{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem}
-  .wpt{background:var(--lin);border-radius:8px;padding:.6rem .5rem;border:none;display:flex;flex-direction:column;align-items:flex-start;gap:.2rem}
-  .wpt-num{font-size:.85rem;min-width:auto;flex-shrink:0;color:var(--teal);font-weight:800}
-  .wpt h4{font-size:.6rem;line-height:1.25;font-weight:700;color:var(--navy)}
-  .wpt p{display:none}
+  /* Pourquoi externaliser — mobile */
+  .why-grid{margin-top:1.5rem}
+  .why-right>p{font-size:.85rem;margin-bottom:.9rem;max-width:100%}
+  .why-points{grid-template-columns:1fr 1fr;gap:.65rem;margin-top:1.25rem}
+  .wpt{padding:1rem;gap:.5rem}
+  .wpt-num{font-size:1.5rem}
+  .wpt h4{font-size:.8rem}
+  .wpt p{font-size:.74rem}
   /* Rectangle horizontal services */
   
   
@@ -394,8 +391,13 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 }
 
 /* ── POURQUOI EXTERNALISER ── */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem}
-.why-grid>*{min-width:0}
+.why-grid{margin-top:2.5rem}
+.why-right>p{margin-bottom:1.25rem;max-width:60ch;color:var(--muted);font-size:.95rem;line-height:1.72}
+.why-points{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.wpt{background:var(--lin);border-radius:12px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;gap:.75rem;border:1px solid var(--border)}
+.wpt-num{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:var(--teal);line-height:1}
+.wpt h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.3}
+.wpt p{font-size:.8rem;color:var(--muted);line-height:1.55;margin-top:.1rem}
 
 
 
@@ -404,13 +406,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 
 
 
-.why-right>p{margin-bottom:1.5rem;max-width:52ch}
-.why-points{display:flex;flex-direction:column;gap:0}
-.wpt{display:flex;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--border)}
-.wpt:last-child{border-bottom:none}
-.wpt-num{flex-shrink:0;font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal);line-height:1;min-width:1.6rem;padding-top:.05rem}
-.wpt h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:2px}
-.wpt p{font-size:.8rem}
+
 /* ── POUR QUI ── */
 .profil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .profil-card{padding:1.75rem 0;border-top:1px solid var(--border)}
