@@ -202,10 +202,10 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .eco-right-panel h3{font-size:1.25rem;color:var(--white);margin-bottom:.8rem;text-align:center}
 .eco-right-panel > p{color:oklch(97% 0.005 85 / 0.6);font-size:.88rem;margin-bottom:2rem}
 .eco-promise-list{display:flex;flex-direction:column;gap:0;counter-reset:ep}
-.eco-promise{display:grid;grid-template-columns:2.2rem 1fr;align-items:baseline;padding:.7rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.07);counter-increment:ep}
+.eco-promise{display:flex;gap:1rem;align-items:flex-start;padding:.7rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.07);counter-increment:ep}
 .eco-promise:last-child{border-bottom:none}
-.eco-promise-check{font-size:0;display:block;padding-top:.18rem}
-.eco-promise-check::after{content:counter(ep,decimal-leading-zero);font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:800;letter-spacing:.1em;color:var(--sable);display:block}
+.eco-promise-check{color:transparent;font-size:0;flex-shrink:0;width:2rem}
+.eco-promise-check::after{content:counter(ep,decimal-leading-zero);font-family:'Bricolage Grotesque',sans-serif;font-size:.58rem;font-weight:800;letter-spacing:.1em;color:var(--sable);line-height:calc(.83rem * 1.62);display:flex;align-items:center}
 .eco-promise span:last-child{font-size:.83rem;color:oklch(97% 0.005 85 / 0.82);line-height:1.62;font-family:'Epilogue',sans-serif}
 
 /* ─── CONTACT ─── */
