@@ -70,7 +70,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 /* NAV */
 #nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:oklch(98% 0.004 85 / 0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
 #nav.scrolled{box-shadow:0 2px 28px oklch(22% 0.035 195 / 0.08)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:.5rem}
 .nav-logo{display:flex;flex-direction:column;line-height:1;gap:3px}
 .nav-logo-a{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:800;color:var(--navy);letter-spacing:-.015em}
 .nav-logo-b{font-size:.5rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--sable)}
@@ -232,20 +232,23 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .meth-intro{grid-template-columns:1fr;gap:2rem}
   .steps{grid-template-columns:repeat(3,1fr)}
   .ev-std{grid-template-columns:1fr 1fr}
+  .ev-std .pc{min-width:0}
   .ev-std .pc:nth-child(1){grid-column:1/-1}
   .ev-std .pc:nth-child(4){grid-column:1/-1}
   .eco-grid{grid-template-columns:1fr;gap:2.5rem}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:768px){
-  section{padding:2.5rem 0}
-  .container{padding:0 1.1rem}
-  /* Nav */
+@media(max-width:920px){
   .nav-services{display:none}
   .nav-sep{display:none}
   .nav-links{display:none}
   .nav-right .btn{display:none}
   .ham{display:flex}
+}
+@media(max-width:768px){
+  section{padding:2.5rem 0}
+  .container{padding:0 1.1rem}
+  /* Nav handled at 920px */
   /* Hero */
   .hero{min-height:auto;padding:calc(68px + 2rem) 0 2rem}
   .hero-content{padding:0}

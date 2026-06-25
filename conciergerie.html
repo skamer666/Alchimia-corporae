@@ -80,7 +80,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
   transition:box-shadow .25s;
 }
 #nav.scrolled{box-shadow:0 2px 28px oklch(22% 0.035 195 / 0.08)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:.5rem}
 .nav-logo{display:flex;flex-direction:column;line-height:1;gap:3px}
 .nav-logo-a{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:800;color:var(--navy);letter-spacing:-.015em}
 .nav-logo-b{font-size:.5rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--sable)}
@@ -250,21 +250,24 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .pricing-grid{grid-template-columns:1fr 1fr}
   .concept-steps{grid-template-columns:1fr}
   .srv-grid{grid-template-columns:repeat(2,1fr)}
+  .srv-grid>:last-child:nth-child(odd){grid-column:1/-1}
   .dest-grid{grid-template-columns:repeat(2,1fr)}
   .moments-grid{grid-template-columns:1fr 1fr}
   .dest-intro{grid-template-columns:1fr;gap:1.5rem}
-  .eco-travel-grid{grid-template-columns:1fr;gap:2.5rem}
+  .eco-travel-grid{grid-template-columns:1fr;gap:2rem}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:768px){
-  section{padding:2.5rem 0}
-  .container{padding:0 1.1rem}
-  /* Nav */
+@media(max-width:920px){
   .nav-services{display:none}
   .nav-sep{display:none}
   .nav-links{display:none}
   .nav-right .btn{display:none}
   .ham{display:flex}
+}
+@media(max-width:768px){
+  section{padding:2.5rem 0}
+  .container{padding:0 1.1rem}
+  /* Nav handled at 920px */
   /* Hero */
   .hero{min-height:auto;padding:calc(68px + 2.5rem) 0 2.5rem}
   .hero-content{padding:0}
@@ -385,6 +388,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 
 /* ── POURQUOI EXTERNALISER ── */
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem}
+.why-grid>*{min-width:0}
 .why-card{background:var(--navy);border-radius:14px;padding:2.5rem;color:var(--white)}
 .why-card h3{font-size:1.05rem;color:var(--white);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid oklch(97% 0.005 85 / 0.08)}
 .why-item{display:flex;gap:1rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px solid oklch(97% 0.005 85 / 0.06)}
@@ -436,7 +440,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
 .plan-cta-white:hover{background:oklch(97% 0.005 85 / 0.07);border-color:oklch(97% 0.005 85 / 0.4)}
 .plan-cta-sable{background:var(--sable);color:var(--navy)}
 .plan-cta-sable:hover{background:var(--sable-dk)}
-.plan-custom-row{background:oklch(27% 0.028 195);border:1px solid oklch(72% 0.09 75 / 0.18);border-radius:14px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.plan-custom-row{background:oklch(27% 0.028 195);border:1px solid oklch(72% 0.09 75 / 0.18);border-radius:14px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
 .plan-custom-row h3{font-size:1.15rem;color:var(--white);margin-bottom:.35rem}
 .plan-custom-row>div>p{font-size:.82rem;color:oklch(97% 0.005 85 / 0.48);max-width:54ch;line-height:1.55}
 .plan-custom-right{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0}
