@@ -68,7 +68,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .fade{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease-expo),transform .55s var(--ease-expo)}
 .fade.in{opacity:1;transform:none}
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:oklch(98% 0.004 85 / 0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:oklch(98% 0.004 85 / 0.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
 #nav.scrolled{box-shadow:0 2px 28px oklch(22% 0.035 195 / 0.08)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:.5rem}
 .nav-logo{display:flex;flex-direction:column;line-height:1;gap:3px}
@@ -248,7 +248,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .container{padding:0 1.1rem}
   /* Nav handled at 920px */
   /* Hero */
-  .hero{min-height:auto;padding:calc(68px + 2rem) 0 2rem}
+  .hero{min-height:0;padding:calc(68px + 2rem) 0 2rem}
   .hero-content{padding:0}
   h1{font-size:clamp(1.8rem,7vw,2.6rem)}
   .h1-loc{font-size:clamp(.95rem,5vw,1.4rem);margin-top:.3rem}
@@ -366,8 +366,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </ul>
       <div class="nav-right">
         <div class="lang-pill">
-          <button class="lang-btn active" id="btn-fr">FR</button>
-          <button class="lang-btn" id="btn-en">EN</button>
+          <button class="lang-btn active" id="btn-fr" aria-label="Français">FR</button>
+          <button class="lang-btn" id="btn-en" aria-label="English">EN</button>
         </div>
         <a href="#contact" class="btn btn-coral" data-i18n="n_cta">Demander un devis</a>
         <button class="ham" id="ham" aria-label="Menu">
@@ -635,14 +635,14 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </div>
       <div class="cf fade" style="transition-delay:.15s">
         <div class="cf-row">
-          <div class="fg"><label data-i18n="cf1">Prénom</label><input type="text" placeholder="Julie"></div>
-          <div class="fg"><label data-i18n="cf2">Nom</label><input type="text" placeholder="Dupont"></div>
+          <div class="fg"><label for="cf-prenom" data-i18n="cf1">Prénom</label><input id="cf-prenom" name="prenom" type="text" placeholder="Julie"></div>
+          <div class="fg"><label for="cf-nom" data-i18n="cf2">Nom</label><input id="cf-nom" name="nom" type="text" placeholder="Dupont"></div>
         </div>
         <div class="cf-row">
-          <div class="fg"><label data-i18n="cf3">Entreprise</label><input type="text" placeholder="Nom de l'entreprise"></div>
+          <div class="fg"><label for="cf-entreprise" data-i18n="cf3">Entreprise</label><input id="cf-entreprise" name="entreprise" type="text" placeholder="Nom de l'entreprise"></div>
           <div class="fg"><label data-i18n="cf4">Fonction</label><input type="text" placeholder="DRH"></div>
         </div>
-        <div class="fg"><label data-i18n="cf5">Email professionnel</label><input type="email" placeholder="julie@entreprise.be"></div>
+        <div class="fg"><label for="cf-email" data-i18n="cf5">Email professionnel</label><input id="cf-email" name="email" type="email" placeholder="julie@entreprise.be"></div>
         <div class="fg">
           <label data-i18n="cf6">Type d'événement</label>
           <select>

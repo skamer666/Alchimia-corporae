@@ -75,7 +75,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 #nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   background:oklch(98% 0.004 85 / 0.97);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
   transition:box-shadow .25s;
 }
@@ -268,7 +268,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   .container{padding:0 1.1rem}
   /* Nav handled at 920px */
   /* Hero */
-  .hero{min-height:auto;padding:calc(68px + 2.5rem) 0 2.5rem}
+  .hero{min-height:0;padding:calc(68px + 2.5rem) 0 2.5rem}
   .hero-content{padding:0}
   h1{font-size:clamp(1.9rem,7vw,2.6rem)}
   .hero-sub{font-size:.9rem;max-width:100%}
@@ -577,8 +577,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </ul>
       <div class="nav-right">
         <div class="lang-pill">
-          <button class="lang-btn active" id="btn-fr">FR</button>
-          <button class="lang-btn" id="btn-en">EN</button>
+          <button class="lang-btn active" id="btn-fr" aria-label="Français">FR</button>
+          <button class="lang-btn" id="btn-en" aria-label="English">EN</button>
         </div>
         <a href="#contact" class="btn btn-sable" data-i18n="n_cta">Prendre contact</a>
         <button class="ham" id="ham" aria-label="Menu">
@@ -1068,17 +1068,17 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </div>
       <div class="cf fade" style="transition-delay:.15s">
         <div class="cf-row">
-          <div class="fg"><label data-i18n="cf1">Prénom</label><input type="text" placeholder="Julie"></div>
-          <div class="fg"><label data-i18n="cf2">Nom</label><input type="text" placeholder="Dupont"></div>
+          <div class="fg"><label for="cf-prenom" data-i18n="cf1">Prénom</label><input id="cf-prenom" name="prenom" type="text" placeholder="Julie"></div>
+          <div class="fg"><label for="cf-nom" data-i18n="cf2">Nom</label><input id="cf-nom" name="nom" type="text" placeholder="Dupont"></div>
         </div>
         <div class="cf-row">
-          <div class="fg"><label data-i18n="cf3">Entreprise</label><input type="text" placeholder="Nom de l'entreprise"></div>
-          <div class="fg"><label data-i18n="cf4">Fonction</label><input type="text" placeholder="Office Manager"></div>
+          <div class="fg"><label for="cf-entreprise" data-i18n="cf3">Entreprise</label><input id="cf-entreprise" name="entreprise" type="text" placeholder="Nom de l'entreprise"></div>
+          <div class="fg"><label for="cf-fonction" data-i18n="cf4">Fonction</label><input id="cf-fonction" name="fonction" type="text" placeholder="Office Manager"></div>
         </div>
-        <div class="fg"><label data-i18n="cf5">Email professionnel</label><input type="email" placeholder="julie@entreprise.be"></div>
+        <div class="fg"><label for="cf-email" data-i18n="cf5">Email professionnel</label><input id="cf-email" name="email" type="email" placeholder="julie@entreprise.be"></div>
         <div class="fg">
-          <label data-i18n="cf6">Besoin principal</label>
-          <select>
+          <label for="cf-besoin" data-i18n="cf6">Besoin principal</label>
+          <select id="cf-besoin" name="besoin">
             <option data-i18n="cf6_0">Choisir...</option>
             <option data-i18n="cf6_1">Voyages d'affaires réguliers</option>
             <option data-i18n="cf6_2">Événement / séminaire groupe</option>
@@ -1086,7 +1086,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
             <option data-i18n="cf6_4">Mission ponctuelle</option>
           </select>
         </div>
-        <div class="fg"><label data-i18n="cf8">Contexte &amp; attentes</label><textarea placeholder="Fréquence de voyages, destinations habituelles, standards souhaités..."></textarea></div>
+        <div class="fg"><label for="cf-contexte" data-i18n="cf8">Contexte &amp; attentes</label><textarea id="cf-contexte" name="contexte" placeholder="Fréquence de voyages, destinations habituelles, standards souhaités..."></textarea></div>
         <button type="button" class="btn btn-sable" style="width:100%;justify-content:center" data-i18n="cf_send">
           Envoyer ma demande
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>

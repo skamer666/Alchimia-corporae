@@ -60,7 +60,7 @@ p,li,h1,h2,h3,h4{overflow-wrap:break-word;word-break:break-word}
 .fade{opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease-expo),transform .55s var(--ease-expo)}
 .fade.in{opacity:1;transform:none}
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:oklch(98% 0.004 85 / 0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:oklch(98% 0.004 85 / 0.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
 #nav.scrolled{box-shadow:0 2px 28px oklch(22% 0.035 195 / 0.08)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:.5rem}
 .nav-logo{display:flex;flex-direction:column;line-height:1;gap:3px}
@@ -208,7 +208,7 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
   /* Breadcrumb */
   .breadcrumb-inner{font-size:.68rem}
   /* Hero */
-  .hero{min-height:auto;padding:calc(68px + 2rem) 0 2rem}
+  .hero{min-height:0;padding:calc(68px + 2rem) 0 2rem}
   .hero-content{padding:0}
   h1{font-size:clamp(1.8rem,7vw,2.6rem)}
   .hero-sub{font-size:.88rem;max-width:100%;margin-bottom:1.5rem}
@@ -294,8 +294,8 @@ footer{background:oklch(14% 0.025 195);padding:3.5rem 0 2rem;border-top:1px soli
       </ul>
       <div class="nav-right">
         <div class="lang-pill">
-          <button class="lang-btn active" id="btn-fr">FR</button>
-          <button class="lang-btn" id="btn-en">EN</button>
+          <button class="lang-btn active" id="btn-fr" aria-label="Français">FR</button>
+          <button class="lang-btn" id="btn-en" aria-label="English">EN</button>
         </div>
         <a href="#contact" class="btn btn-coral" data-i18n="n_cta">Demander un devis</a>
         <button class="ham" id="ham" aria-label="Menu">
