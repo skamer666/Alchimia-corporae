@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var saved = sessionStorage.getItem('alchimia-lang');
   if (saved === 'fr' || saved === 'en') setLang(saved);
 
-  document.getElementById('panel-tb').addEventListener('click', function() { enterSite('teambuilding.html'); });
-  document.getElementById('panel-cv').addEventListener('click', function() { enterSite('conciergerie.html'); });
+  document.getElementById('panel-tb').addEventListener('click', function() { enterSite('/evenements'); });
+  document.getElementById('panel-cv').addEventListener('click', function() { enterSite('/travel-management'); });
 
   document.getElementById('glang-fr').addEventListener('click', function() { setLang('fr'); });
   document.getElementById('glang-en').addEventListener('click', function() { setLang('en'); });

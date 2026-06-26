@@ -1,4 +1,4 @@
-/* programmes-immersifs.js */
+/* programmes.js */
 const TB=[
   {
     id:'centrale',cat:'codir',emoji:'⚡',bg:'#080e1a',img:'img_centrale_1.png',

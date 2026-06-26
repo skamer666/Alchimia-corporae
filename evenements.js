@@ -1,4 +1,4 @@
-/* teambuilding.js : events hub */
+/* evenements.js : events hub */
 const T={
 fr:{
 n_ev:'Événements',n_meth:'Méthode',n_conc:'Travel Manager',n_contact:'Contact',n_prog:'Programmes',n_cta:'Demander un devis',

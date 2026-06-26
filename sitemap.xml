@@ -9,23 +9,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alchimia-corporae.vercel.app/teambuilding.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/teambuilding.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/teambuilding.html"/>
+    <loc>https://alchimia-corporae.vercel.app/evenements</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/evenements"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/evenements"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://alchimia-corporae.vercel.app/conciergerie.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/conciergerie.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/conciergerie.html"/>
+    <loc>https://alchimia-corporae.vercel.app/travel-management</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/travel-management"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/travel-management"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://alchimia-corporae.vercel.app/programmes-immersifs.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/programmes-immersifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/programmes-immersifs.html"/>
+    <loc>https://alchimia-corporae.vercel.app/programmes</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alchimia-corporae.vercel.app/programmes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alchimia-corporae.vercel.app/programmes"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
