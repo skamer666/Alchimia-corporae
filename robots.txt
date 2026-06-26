@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://alchimia-corporae.vercel.app/sitemap.xml
+Sitemap: https://www.alchimia-corporate.com/sitemap.xml
