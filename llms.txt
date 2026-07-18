@@ -11,7 +11,6 @@ Un chargé de voyage dédié prend en charge l'intégralité des déplacements p
 **Pourquoi externaliser ?**
 - Coût 10 à 15 fois inférieur à un travel manager salarié (50 000–70 000 € brut/an + charges en Belgique)
 - Opérationnel sous 48h après signature
-- Sans engagement annuel
 
 **Plans tarifaires :**
 - Micro : 290 €/mois — entrée de gamme, idéal PME jusqu'à 10 voyages/mois
