@@ -6,27 +6,26 @@ Alchimia Corporate propose deux offres complémentaires aux PME et ETI belges :
 
 ## Travel Management Externalisé
 
-Un chargé de voyage dédié prend en charge l'intégralité des déplacements professionnels : vols, hôtels, transferts, visas, rail. Disponible 7j/7, l'interlocuteur est nommé et connaît les habitudes de l'entreprise dès le premier jour.
+Un chargé de voyage dédié prend en charge l'intégralité des déplacements professionnels : vols, hôtels, transferts, visas, rail. Disponible 7j/7, opérationnel sous 48h.
 
 **Pourquoi externaliser ?**
-- Coût 3 à 5 fois inférieur à un travel manager salarié (50 000–70 000 € brut/an + charges en Belgique)
+- Coût 10 à 15 fois inférieur à un travel manager salarié (50 000–70 000 € brut/an + charges en Belgique)
 - Opérationnel sous 48h après signature
 - Sans engagement annuel
 
 **Plans tarifaires :**
-- Essentiel : à partir de 890 €/mois — jusqu'à 15 voyages/mois, 1 travel manager dédié, disponibilité lun–sam 8h–20h
-- Business : à partir de 1 490 €/mois — voyages illimités, 2 TM dédiés, disponibilité 7j/7 24h/24
-- Premium : à partir de 2 290 €/mois — account manager senior, reporting mensuel, négociation tarifaire hôtels/compagnies
-- Sur mesure : tarification sur devis
+- Micro : 290 €/mois — entrée de gamme, idéal PME jusqu'à 10 voyages/mois
+- Starter : 590 €/mois — usage régulier, travel manager dédié, lun–sam
+- Business : 1 890 €/mois — voyages illimités, disponibilité 7j/7
+- Premium : 3 290 €/mois — account manager senior, reporting, négociation tarifaire
 
-**Cible :** PME et ETI de 10 à 500 salariés avec au moins 10 voyages/mois. Secteurs : consulting, finance, pharma, tech, industrie, cabinets d'avocats.
+**Cible :** PME et ETI de 10 à 500 salariés. Secteurs : consulting, finance, pharma, tech, industrie, cabinets d'avocats.
 
 ## Événements Corporate
 
-Organisation clé-en-main d'événements professionnels : séminaires stratégiques, soirées d'entreprise, incentives, conférences, lancements produit, teambuilding.
+Organisation clé-en-main : séminaires stratégiques, soirées d'entreprise, incentives, conférences, lancements produit, teambuilding.
 
 **Programmes OPÉRATION (teambuilding immersif) :**
-Quatre programmes basés sur les sciences cognitives et la psychologie organisationnelle (Bjork, Roediger — retrieval practice ; Deci & Ryan — autodétermination) :
 - OPÉRATION Frontière : décision sous contrainte et coopération inter-équipes
 - OPÉRATION Centrale : gestion de crise et communication en situation de pression
 - OPÉRATION Silence : écoute active, signaux faibles, leadership silencieux
@@ -40,8 +39,9 @@ Quatre programmes basés sur les sciences cognitives et la psychologie organisat
 
 ## Pages
 
-- Page d'accueil : https://www.alchimia-corporate.com
-- Travel management : https://www.alchimia-corporate.com/travel-management
-- Événements : https://www.alchimia-corporate.com/evenements
-- Programmes immersifs : https://www.alchimia-corporate.com/programmes
-- Mentions légales : https://www.alchimia-corporate.com/legal
+- [Accueil](https://www.alchimia-corporate.com): Page principale d'Alchimia Corporate
+- [Travel Management](https://www.alchimia-corporate.com/travel-management): Service de travel manager externalisé pour PME belges
+- [Événements Corporate](https://www.alchimia-corporate.com/evenements): Organisation d'événements d'entreprise clé en main
+- [Programmes Immersifs](https://www.alchimia-corporate.com/programmes): Programmes OPÉRATION de teambuilding basés sur les sciences cognitives
+- [Blog](https://www.alchimia-corporate.com/blog): Guides et conseils sur le travel management et les événements corporate
+- [Mentions légales](https://www.alchimia-corporate.com/legal): Informations légal
