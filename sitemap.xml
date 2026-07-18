@@ -41,4 +41,42 @@
   </url>
   <url>
     <loc>https://www.alchimia-corporate.com/blog</loc>
-    <xh
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.alchimia-corporate.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alchimia-corporate.com/blog"/>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.alchimia-corporate.com/blog/agence-voyage-affaires-belgique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.alchimia-corporate.com/blog/agence-voyage-affaires-belgique"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alchimia-corporate.com/blog/agence-voyage-affaires-belgique"/>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.alchimia-corporate.com/blog/travel-manager-externalise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.alchimia-corporate.com/blog/travel-manager-externalise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alchimia-corporate.com/blog/travel-manager-externalise"/>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.alchimia-corporate.com/blog/voyage-incentive-entreprise</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.alchimia-corporate.com/blog/voyage-incentive-entreprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alchimia-corporate.com/blog/voyage-incentive-entreprise"/>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.alchimia-corporate.com/blog/note-de-frais-voyage</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.alchimia-corporate.com/blog/note-de-frais-voyage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alchimia-corporate.com/blog/note-de-frais-voyage"/>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>
